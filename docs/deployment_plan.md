@@ -1,8 +1,25 @@
 # Deployment & Operations Plan
 
-**Project:** Spotify Review Discovery Engine  
-**Hosting:** Streamlit Community Cloud (primary)  
-**Last updated:** 2026-06-21
+**Project:** Spotify Review Discovery Engine
+**Hosting:** Hugging Face Spaces (recommended) or Streamlit Community Cloud
+**Entry point:** `streamlit_app.py` (root) → calls `src/dashboard/app.py`
+**Last updated:** 2026-06-22
+
+---
+
+## 0. Which platform should I use?
+
+The pipeline rebuilds a **27k-review Chroma index** with `sentence-transformers` on
+cold start. That needs RAM and a few minutes, which drives the platform choice:
+
+| Platform | RAM (free) | 27k rebuild | Verdict |
+|---|---|---|---|
+| **Hugging Face Spaces (Streamlit SDK)** | ~16 GB | Reliable | **Recommended** — handles the embedding rebuild comfortably; persistent disk keeps `vector_store/` warm |
+| **Streamlit Community Cloud** | ~1 GB | Tight | Works for the demo, but the cold-start rebuild can OOM. Commit a smaller corpus or pre-warm |
+| **Render / Railway (Docker)** | configurable | Reliable | Best for always-on; add a persistent disk for `vector_store/` |
+
+**Recommendation:** deploy to **Hugging Face Spaces** for reliability. Steps in §2.5.
+Streamlit Community Cloud steps remain in §2 for the lightweight path.
 
 ---
 
@@ -31,15 +48,17 @@
 1. Push repo to GitHub (do **not** commit `.env` or `.streamlit/secrets.toml`).
 2. Open [share.streamlit.io](https://share.streamlit.io) → **New app**.
 3. Connect the GitHub repo and branch (`main`).
-4. **Main file path:** `src/dashboard/app.py`
+4. **Main file path:** `streamlit_app.py`
 5. **App settings → Secrets** — paste TOML (see `.streamlit/secrets.toml.example`):
 
    ```toml
    GROQ_API_KEY = "gsk_..."
    EMBEDDING_BACKEND = "local"
    LOCAL_EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-   RAG_TOP_K = "8"
-   RAG_SIMILARITY_THRESHOLD = "0.35"
+   GROQ_CHAT_MODEL = "llama-3.3-70b-versatile"
+   RAG_TOP_K = "4"
+   RAG_SIMILARITY_THRESHOLD = "0.30"
+   RAG_FALLBACK = "true"
    ```
 
 6. Deploy and wait for build (~3–5 min first time; longer if Chroma rebuild runs).
@@ -47,8 +66,17 @@
 ### 2.3 Local run (same entry point)
 
 ```bash
-streamlit run src/dashboard/app.py
+streamlit run streamlit_app.py
 ```
+
+### 2.5 Hugging Face Spaces (recommended)
+
+1. Create a new **Space** → SDK **Streamlit** → hardware **CPU basic** (free, ~16 GB).
+2. Push this repo to the Space (or link the GitHub repo).
+3. Ensure the Space runs `streamlit_app.py` (default `app.py`/`streamlit_app.py` is auto-detected).
+4. **Settings → Variables and secrets** → add `GROQ_API_KEY` (secret) and
+   `EMBEDDING_BACKEND=local` (variable). Optionally add `HF_TOKEN`.
+5. First boot rebuilds the Chroma index from `normalized_reviews.json`; subsequent boots reuse it.
 
 ---
 
@@ -154,14 +182,16 @@ Run after every deploy or refresh (`python scripts/smoke_test.py` locally, or ma
 | # | Check |
 |---|---|
 | 1 | App loads at public URL without 500 |
-| 2 | Overview: themes + charts render |
-| 3 | Theme Deep-Dive: summary + quotes |
-| 4 | Segments: disclaimer banner visible |
-| 5 | Unmet Needs: ranked list |
-| 6 | Chatbot: grounded question retrieves sources |
-| 7 | Chatbot: stock price / CEO question refused without Groq |
-| 8 | No reviewer names or PII on any tab |
-| 9 | Cold start: Chatbot builds index if `vector_store/` empty |
+| 2 | Header shows "Pipeline online" + sync time; Refresh pipeline button works |
+| 3 | Overview: metrics + theme/volume/rating charts render with clear titles |
+| 4 | Themes & Chat: theme cards (left) + grounded chat (right); deep-dive below |
+| 5 | Segments: inferred-not-verified disclaimer visible |
+| 6 | Unmet Needs: ranked list with quotes |
+| 7 | Review Discovery: search/rating/sort filters + rating distribution |
+| 8 | Chat: grounded question retrieves cited sources |
+| 9 | Chat: stock price / CEO question refused |
+| 10 | No reviewer names, avatars, or PII on any tab |
+| 11 | Cold start: chat builds index if `vector_store/` empty |
 
 ---
 

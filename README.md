@@ -31,12 +31,14 @@ Open http://localhost:8501 — five tabs: Overview, Themes, Segments, Unmet Need
 | 6 Weekly refresh | `python -m src.ops.run refresh` |
 | 6 Smoke test | `python scripts/smoke_test.py` |
 
-## Deploy (Streamlit Cloud)
+## Deploy
 
-See **`docs/deployment_plan.md`** for full instructions.
+See **`docs/deployment_plan.md`** for full instructions and platform comparison.
+
+**Recommended: Hugging Face Spaces** (Streamlit SDK, ~16 GB RAM handles the 27k Chroma rebuild).
 
 1. Push repo to GitHub (commit `data/processed/*.json`, not `.env` or `vector_store/`)
-2. [share.streamlit.io](https://share.streamlit.io) → New app → main file `src/dashboard/app.py`
+2. New Space (Streamlit SDK) **or** [share.streamlit.io](https://share.streamlit.io) → main file `streamlit_app.py`
 3. Set Secrets: `GROQ_API_KEY`, `EMBEDDING_BACKEND=local`
 4. Run smoke test checklist from deployment plan
 

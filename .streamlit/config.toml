@@ -1,10 +1,15 @@
 [server]
 headless = true
+# Avoid Streamlit's source watcher introspecting torch/transformers submodules
+# (produces noisy tracebacks and is unnecessary in deployment).
+fileWatcherType = "none"
 
 [browser]
 gatherUsageStats = false
 
 [theme]
 primaryColor = "#1DB954"
-backgroundColor = "#0E1117"
-secondaryBackgroundColor = "#262730"
+backgroundColor = "#121212"
+secondaryBackgroundColor = "#181818"
+textColor = "#FFFFFF"
+font = "sans serif"

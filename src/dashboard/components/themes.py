@@ -1,30 +1,76 @@
-"""Theme Deep-Dive tab."""
+"""Theme discovery cards + per-theme deep-dive (grounded in review_ids only)."""
 
 from __future__ import annotations
 
 from collections import Counter
 
+import altair as alt
 import pandas as pd
 import streamlit as st
 
 from src.analysis.tags import iso_week
 from src.dashboard.constants import MAX_SUMMARY_WORDS
 from src.dashboard.data_loader import DashboardData
+from src.dashboard.style import SPOTIFY_GREEN, esc, render_html, stars
+
+_AXIS = alt.Axis(labelColor="#B3B3B3", titleColor="#FFFFFF", gridColor="#222222", tickColor="#333333")
 
 
-def _render_quote(text: str) -> None:
-    quoted = "\n".join(f"> {line}" if line else ">" for line in text.splitlines())
-    st.markdown(quoted)
+def _theme_stats(theme: dict, data: DashboardData, total: int) -> dict:
+    rids = theme.get("supporting_review_ids", [])
+    ratings = [data.reviews_by_id[r].rating for r in rids if r in data.reviews_by_id]
+    avg = round(sum(ratings) / len(ratings), 1) if ratings else 0.0
+    count = len(rids)
+    pct = round(100 * count / total, 1) if total else 0.0
+    severity = round(count * (5 - avg), 1)
+    return {"count": count, "avg": avg, "pct": pct, "severity": severity}
 
 
-def _truncate_summary(text: str, max_words: int = MAX_SUMMARY_WORDS) -> tuple[str, bool]:
-    words = text.split()
-    if len(words) <= max_words:
-        return text, False
-    return " ".join(words[:max_words]) + " …", True
+def _trend_badge(avg: float) -> str:
+    if avg <= 2.2:
+        return '<span class="rd-badge neg">▲ High friction</span>'
+    if avg <= 3.2:
+        return '<span class="rd-badge warn">▲ Trending up</span>'
+    return '<span class="rd-badge">● Stable</span>'
 
 
-def _theme_weekly_counts(theme: dict, data: DashboardData) -> pd.DataFrame:
+def render_theme_cards(data: DashboardData) -> None:
+    total = len(data.reviews) or 1
+    render_html(
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;">'
+        '<div class="rd-section-title">Theme discovery</div>'
+        f'<div style="color:#B3B3B3;font-size:.8rem;font-weight:600;">{len(data.themes)} active themes</div>'
+        '</div>'
+        '<div class="rd-section-sub">Discovery & recommendation pain clusters mined from review text. '
+        'Cited by internal review_id only — no reviewer identity.</div>'
+    )
+
+    if not data.themes:
+        st.warning("No themes in artifacts.")
+        return
+
+    for theme in data.themes:
+        s = _theme_stats(theme, data, total)
+        label = esc(theme.get("label", theme.get("theme_id", "")))
+        render_html(
+            f"""
+            <div class="rd-card accent">
+              <div class="rd-card-head">
+                <div class="rd-card-title">{label}</div>
+                {_trend_badge(s['avg'])}
+              </div>
+              <div class="rd-card-desc">Cluster of {s['count']} sampled reviews · average rating {s['avg']}★</div>
+              <div class="rd-meta">
+                <span><b>{s['count']}</b> reviews</span>
+                <span><b>{s['pct']}%</b> of corpus</span>
+                <span>severity <b>{s['severity']}</b></span>
+              </div>
+            </div>
+            """
+        )
+
+
+def _weekly_counts(theme: dict, data: DashboardData) -> pd.DataFrame:
     counts: Counter[str] = Counter()
     for rid in theme.get("supporting_review_ids", []):
         review = data.reviews_by_id.get(rid)
@@ -32,75 +78,60 @@ def _theme_weekly_counts(theme: dict, data: DashboardData) -> pd.DataFrame:
             counts[iso_week(review.date)] += 1
     if not counts:
         return pd.DataFrame(columns=["week", "count"])
-    rows = [{"week": w, "count": counts[w]} for w in sorted(counts)]
-    return pd.DataFrame(rows).set_index("week")
+    return pd.DataFrame([{"week": w, "count": counts[w]} for w in sorted(counts)])
 
 
-def _theme_segment_breakdown(theme: dict, data: DashboardData) -> pd.DataFrame:
-    seg_counts: Counter[str] = Counter()
-    for rid in theme.get("supporting_review_ids", []):
-        seg = data.segments_by_review.get(rid)
-        if seg:
-            seg_counts[seg.get("inferred_segment", "unknown")] += 1
-    if not seg_counts:
-        return pd.DataFrame(columns=["segment", "count"])
-    return pd.DataFrame(
-        [{"segment": k, "count": v} for k, v in seg_counts.most_common()]
-    ).set_index("segment")
+def render_theme_deepdive(data: DashboardData) -> None:
+    if not data.themes:
+        return
+    render_html('<div class="rd-section-title" style="margin-top:1.2rem;">Theme deep-dive</div>')
+
+    labels = [t.get("label", t.get("theme_id", "")) for t in data.themes]
+    selected = st.selectbox("Select a theme to explore", labels, key="theme_select")
+    theme = next(t for t in data.themes if t.get("label") == selected)
+
+    summary = theme.get("summary", "") or theme.get("description", "")
+    words = summary.split()
+    truncated = len(words) > MAX_SUMMARY_WORDS
+    display = " ".join(words[:MAX_SUMMARY_WORDS]) + (" …" if truncated else "")
+
+    left, right = st.columns([1.4, 1])
+    with left:
+        render_html(f'<div class="rd-card"><div class="rd-card-title">Summary</div>'
+                    f'<div class="rd-card-desc">{esc(display)}</div>'
+                    f'<div class="rd-meta"><span>{len(display.split())} words '
+                    f'(≤{MAX_SUMMARY_WORDS})</span>'
+                    f'<span><b>{len(theme.get("supporting_review_ids", []))}</b> supporting reviews</span></div></div>')
+
+        quotes = theme.get("quotes", [])
+        if quotes:
+            render_html('<div class="rd-card-title" style="margin-top:.4rem;">Verbatim quotes</div>')
+            for q in quotes:
+                rid = esc(q.get("review_id", ""))
+                txt = esc(q.get("text", ""))
+                render_html(f'<div class="rd-quote">“{txt}”<div class="rd-meta" '
+                            f'style="margin-top:.3rem;"><span>review_id <b>{rid[:8]}</b></span></div></div>')
+
+    with right:
+        render_html('<div class="rd-card-title">Frequency by week</div>')
+        wdf = _weekly_counts(theme, data)
+        if wdf.empty:
+            st.info("No dated reviews for this theme.")
+        else:
+            chart = (
+                alt.Chart(wdf)
+                .mark_bar(color=SPOTIFY_GREEN, cornerRadiusEnd=3)
+                .encode(
+                    x=alt.X("week:N", title="ISO week", axis=_AXIS),
+                    y=alt.Y("count:Q", title="Reviews in theme", axis=_AXIS),
+                    tooltip=["week", "count"],
+                )
+                .properties(height=260, background="transparent")
+            )
+            st.altair_chart(chart, use_container_width=True)
 
 
 def render_themes(data: DashboardData) -> None:
-    st.subheader("Theme Deep-Dive")
-
-    if not data.themes:
-        st.warning("No themes in artifacts.")
-        return
-
-    labels = [t.get("label", t.get("theme_id", "")) for t in data.themes]
-    selected = st.selectbox("Select theme", labels, key="theme_select")
-    theme = next(t for t in data.themes if t.get("label") == selected)
-
-    st.markdown(f"**{theme.get('label')}**")
-    if theme.get("description"):
-        st.caption(theme["description"])
-
-    summary = theme.get("summary", "")
-    display_summary, truncated = _truncate_summary(summary)
-    st.markdown("#### Summary")
-    st.write(display_summary)
-    if truncated:
-        st.caption(f"Summary truncated to {MAX_SUMMARY_WORDS} words for display.")
-
-    word_count = len(display_summary.split())
-    st.caption(f"Word count: {word_count}")
-
-    st.markdown("#### Supporting quotes")
-    quotes = theme.get("quotes", [])
-    if not quotes:
-        st.info("No quotes attached to this theme.")
-    for quote in quotes:
-        rid = quote.get("review_id", "")
-        text = quote.get("text", "")
-        _render_quote(text)
-        st.caption(f"review_id: `{rid}`")
-
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown("#### Frequency by week")
-        week_df = _theme_weekly_counts(theme, data)
-        if week_df.empty:
-            st.info("No dated reviews for this theme.")
-        else:
-            st.line_chart(week_df)
-
-    with col2:
-        st.markdown("#### Segment breakdown")
-        seg_df = _theme_segment_breakdown(theme, data)
-        if seg_df.empty:
-            st.info("No segment data for this theme.")
-        else:
-            st.bar_chart(seg_df)
-
-    st.caption(
-        f"{len(theme.get('supporting_review_ids', []))} supporting reviews in sample"
-    )
+    """Backward-compatible full themes view."""
+    render_theme_cards(data)
+    render_theme_deepdive(data)

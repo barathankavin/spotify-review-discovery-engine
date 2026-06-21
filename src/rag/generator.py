@@ -51,7 +51,7 @@ def generate_answer(question: str, retrieved: list[RetrievedReview]) -> tuple[st
 
     model = os.getenv("GROQ_CHAT_MODEL", GROQ_CHAT_MODEL)
     max_tokens = int(os.getenv("RAG_MAX_ANSWER_TOKENS", RAG_MAX_ANSWER_TOKENS))
-    client = Groq(api_key=key)
+    client = Groq(api_key=key, max_retries=10)
 
     user_prompt = (
         f"Question: {question}\n\n"
@@ -71,7 +71,7 @@ def generate_answer(question: str, retrieved: list[RetrievedReview]) -> tuple[st
         )
     except RateLimitError as exc:
         logger.warning("Groq rate limited during chat: %s", exc)
-        raise
+        raise exc
 
     answer = (response.choices[0].message.content or "").strip()
     usage = getattr(response, "usage", None)

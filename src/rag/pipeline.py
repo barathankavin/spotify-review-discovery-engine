@@ -108,12 +108,12 @@ def answer_question(
     allowed_ids = {r.review_id for r in retrieved}
     try:
         answer, meta = generate_answer(question, retrieved)
-    except RateLimitError:
+    except RateLimitError as exc:
         if _fallback_enabled():
             return _finish_with_fallback(question, retrieved, sim, "groq_rate_limit")
         return ChatResult(
             question=question,
-            answer="Groq rate limit reached. Retrieval excerpts are shown below.",
+            answer=f"Groq API rate limit reached ({exc}). Please try again later.",
             retrieved=retrieved,
             refused=True,
             groq_called=False,
