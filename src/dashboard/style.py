@@ -103,6 +103,22 @@ blockquote { border-left: 4px solid #1DB954 !important; padding: .25rem 0 .25rem
 ::-webkit-scrollbar-thumb { background: #282828; border-radius: 8px; }
 ::-webkit-scrollbar-thumb:hover { background: #3a3a3a; }
 
+/* ---- Responsive / mobile ---- */
+@media (max-width: 768px) {
+    .block-container { padding-left: .8rem !important; padding-right: .8rem !important; padding-top: 1rem !important; }
+    /* Let tab bar scroll horizontally instead of squashing on phones */
+    .stTabs [data-baseweb="tab-list"] { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; padding-bottom: .35rem; }
+    .stTabs [data-baseweb="tab"] { flex: 0 0 auto; font-size: .78rem !important; padding: .4rem 1rem !important; }
+    [data-testid="stMetricValue"] { font-size: 1.6rem !important; }
+    .rd-card { padding: .9rem 1rem; }
+    .rd-card-title { font-size: .96rem; }
+    .rd-section-title { font-size: 1.05rem; }
+}
+@media (max-width: 480px) {
+    [data-testid="stMetricValue"] { font-size: 1.35rem !important; }
+    .rd-meta { gap: .6rem; font-size: .72rem; }
+}
+
 /* ---- custom card primitives ---- */
 .rd-card {
     background: #181818; border: 1px solid #282828; border-radius: 14px; padding: 1.1rem 1.25rem;
