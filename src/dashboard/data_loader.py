@@ -1,0 +1,130 @@
+"""Load and validate dashboard artifacts with last-known-good fallback."""
+
+from __future__ import annotations
+
+import json
+import shutil
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Any
+
+from src.analysis.validators import validate_themes, validate_unmet_needs
+from src.dashboard.constants import (
+    ARTIFACT_DIR,
+    LKG_DIR,
+    REVIEWS_FILE,
+    RUN_METADATA_FILE,
+    SEGMENTS_FILE,
+    THEMES_FILE,
+    UNMET_NEEDS_FILE,
+)
+from src.ingestion.schema import NormalizedReview
+
+
+@dataclass
+class DashboardData:
+    themes: list[dict[str, Any]]
+    unmet_needs: list[dict[str, Any]]
+    segments: list[dict[str, Any]]
+    segments_by_review: dict[str, dict[str, Any]]
+    reviews: list[NormalizedReview]
+    reviews_by_id: dict[str, NormalizedReview]
+    run_metadata: dict[str, Any]
+    using_lkg: bool = False
+    load_warnings: list[str] = field(default_factory=list)
+
+
+def _read_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _write_json(path: Path, data: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def _copy_artifacts(source: Path, dest: Path) -> None:
+    dest.mkdir(parents=True, exist_ok=True)
+    for name in (THEMES_FILE, UNMET_NEEDS_FILE, SEGMENTS_FILE, RUN_METADATA_FILE):
+        src = source / name
+        if src.exists():
+            shutil.copy2(src, dest / name)
+
+
+def _load_bundle(directory: Path) -> tuple[list, list, list, dict]:
+    themes = _read_json(directory / THEMES_FILE)
+    unmet = _read_json(directory / UNMET_NEEDS_FILE)
+    segments = _read_json(directory / SEGMENTS_FILE)
+    meta_path = directory / RUN_METADATA_FILE
+    metadata = _read_json(meta_path) if meta_path.exists() else {}
+    return themes, unmet, segments, metadata
+
+
+def _validate_bundle(
+    themes: list[dict],
+    unmet: list[dict],
+    corpus: dict[str, NormalizedReview],
+) -> list[str]:
+    errors: list[str] = []
+    theme_result = validate_themes(themes, corpus)
+    if not theme_result.ok:
+        errors.extend(theme_result.errors)
+    unmet_result = validate_unmet_needs(unmet, corpus)
+    if not unmet_result.ok:
+        errors.extend(unmet_result.errors)
+    return errors
+
+
+def load_dashboard_data(artifact_dir: Path | None = None) -> DashboardData:
+    base = artifact_dir or ARTIFACT_DIR
+    warnings: list[str] = []
+
+    reviews_path = base / REVIEWS_FILE
+    if not reviews_path.exists():
+        raise FileNotFoundError(f"Missing {reviews_path} — run Phase 1 ingestion first.")
+
+    raw_reviews = _read_json(reviews_path)
+    reviews = [NormalizedReview.from_dict(r) for r in raw_reviews]
+    reviews_by_id = {r.review_id: r for r in reviews}
+
+    sample_ids = {r.review_id for r in reviews}
+    for name in (THEMES_FILE, UNMET_NEEDS_FILE, SEGMENTS_FILE):
+        if not (base / name).exists():
+            raise FileNotFoundError(f"Missing {base / name} — run Phase 3 analysis first.")
+
+    themes, unmet, segments, metadata = _load_bundle(base)
+    errors = _validate_bundle(themes, unmet, reviews_by_id)
+
+    using_lkg = False
+    if errors:
+        warnings.append("Current artifacts failed validation:")
+        warnings.extend(errors[:8])
+        if LKG_DIR.exists() and (LKG_DIR / THEMES_FILE).exists():
+            themes, unmet, segments, metadata = _load_bundle(LKG_DIR)
+            lkg_errors = _validate_bundle(themes, unmet, reviews_by_id)
+            if lkg_errors:
+                raise ValueError(
+                    "Both current and last-known-good artifacts failed validation. "
+                    + "; ".join(lkg_errors[:5])
+                )
+            using_lkg = True
+            warnings.append("Showing last-known-good snapshot instead of invalid current run.")
+        else:
+            raise ValueError("Artifact validation failed and no last-known-good snapshot exists.")
+    else:
+        _copy_artifacts(base, LKG_DIR)
+
+    segments_by_review = {s["review_id"]: s for s in segments if "review_id" in s}
+    sample_corpus = {rid: reviews_by_id[rid] for rid in sample_ids if rid in reviews_by_id}
+
+    return DashboardData(
+        themes=themes,
+        unmet_needs=sorted(unmet, key=lambda n: n.get("rank", 999)),
+        segments=segments,
+        segments_by_review=segments_by_review,
+        reviews=reviews,
+        reviews_by_id=reviews_by_id,
+        run_metadata=metadata,
+        using_lkg=using_lkg,
+        load_warnings=warnings,
+    )

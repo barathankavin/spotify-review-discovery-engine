@@ -1,0 +1,188 @@
+{
+  "total_reviews": 27222,
+  "date_min": "2026-04-12",
+  "date_max": "2026-06-20",
+  "iso_weeks": 11,
+  "ratings": {
+    "1": 8876,
+    "2": 2273,
+    "3": 2307,
+    "4": 3117,
+    "5": 10649
+  },
+  "rating_tiers": {
+    "negative": 11149,
+    "positive": 13766,
+    "neutral": 2307
+  },
+  "word_count": {
+    "median": 18,
+    "p90": 62,
+    "max": 112
+  },
+  "keyword_hits": {
+    "recommendation": 1072,
+    "discover": 222,
+    "playlist": 2347,
+    "repetition": 604,
+    "discover_weekly": 47,
+    "search_browse": 541,
+    "personalization": 315,
+    "premium_free": 8852
+  },
+  "keyword_pct": {
+    "recommendation": 3.94,
+    "discover": 0.82,
+    "playlist": 8.62,
+    "repetition": 2.22,
+    "discover_weekly": 0.17,
+    "search_browse": 1.99,
+    "personalization": 1.16,
+    "premium_free": 32.52
+  },
+  "discovery_scope_estimate": {
+    "count": 4470,
+    "pct": 16.42
+  },
+  "off_topic_only_estimate": {
+    "count": 1512,
+    "pct": 5.55
+  },
+  "unmet_language": {
+    "i_wish": 196,
+    "i_want": 880,
+    "why_cant": 72,
+    "please_add": 75,
+    "bring_back": 620
+  },
+  "negative_reviews": 11149,
+  "negative_with_discovery_signal": 2143,
+  "high_star_with_complaint_language": 608,
+  "tier_week_cells": 33,
+  "cells_over_200": 27,
+  "anomaly_weeks": [],
+  "top_weeks_by_volume": [
+    [
+      "2026-W20",
+      3545
+    ],
+    [
+      "2026-W24",
+      3231
+    ],
+    [
+      "2026-W21",
+      2829
+    ],
+    [
+      "2026-W22",
+      2827
+    ],
+    [
+      "2026-W23",
+      2714
+    ]
+  ],
+  "example_snippets": {
+    "repetition": [
+      {
+        "review_id": "8f89fbde-85b6-4158-aa65-a27d18523f5d",
+        "rating": 1,
+        "date": "2026-06-20",
+        "snippet": "can't even let us play what song we like after a while of playing music and also can't rewind the same song at some point without buying premium. Absolute rubbish"
+      },
+      {
+        "review_id": "e6a41082-1b35-4310-8383-c45f72a3bd54",
+        "rating": 1,
+        "date": "2026-06-20",
+        "snippet": "I've been having the same issue over and over on my PS5 of not being able to turn off the \"Shuffle\" option, keeps shuffling the Playlist, and that's not what it used to be. Used to"
+      },
+      {
+        "review_id": "03dc82cf-9ede-46a6-a81f-1b5f41fbebcd",
+        "rating": 2,
+        "date": "2026-06-20",
+        "snippet": "two stars because I've waited to open Spotify but suddenly it won't open and like it stuck on the loading screen please fixed it because this app makes me like to chill around"
+      }
+    ],
+    "discover_weekly": [
+      {
+        "review_id": "a8112429-e2a2-4681-8fc0-14018680a0da",
+        "rating": 5,
+        "date": "2026-06-19",
+        "snippet": "I really love this app.. I love to hear songs while studying and this app helps me in the best way!! Spotify helps me to discover new songs. This has been the best part of my music"
+      },
+      {
+        "review_id": "b5c787bf-9d57-465f-8ab6-785bba6ea9ff",
+        "rating": 5,
+        "date": "2026-06-18",
+        "snippet": "\u200bThe gold standard for audio streaming. Its personalized playlists (like Discover Weekly) are brilliantly curated, and the seamless transition when switching playback from your pho"
+      },
+      {
+        "review_id": "4c1f5022-a1a9-44e0-a0b6-40c614b8ffc2",
+        "rating": 5,
+        "date": "2026-06-18",
+        "snippet": "Discover Weekly reads my mind. Offline playlists carry me through LRT rides with bad signal. Podcasts + music in one app keeps it simple. Audio quality is consistently solid."
+      }
+    ],
+    "recommendation": [
+      {
+        "review_id": "9f27a4b8-400d-41e6-b0ee-2d7c646f812e",
+        "rating": 3,
+        "date": "2026-06-20",
+        "snippet": "remove recommendations from liked songs.they are worst. and I can't afford premium."
+      },
+      {
+        "review_id": "e2598380-8b46-40d6-b531-9f8020e7824c",
+        "rating": 5,
+        "date": "2026-06-20",
+        "snippet": "Great app for listening to music and podcasts. The recommendations are personalized, and the interface is easy to use."
+      },
+      {
+        "review_id": "4b524021-c992-43ff-9f84-09acaf1d01e1",
+        "rating": 2,
+        "date": "2026-06-20",
+        "snippet": "i just want to listen to the playlist I created. stop injecting your music into my playlist. why bother building one at all. Edit- More forced garbage recommendations, ignoring my "
+      }
+    ],
+    "search_browse": [
+      {
+        "review_id": "45c67253-297a-46a6-8a76-78998a98184d",
+        "rating": 1,
+        "date": "2026-06-20",
+        "snippet": "what is wrong with you app I got a premium but I can even search anything. now all my downloaded songs are gone fix your stupid app."
+      },
+      {
+        "review_id": "d9fb22f4-75a6-47a8-9f57-32bbf27ac611",
+        "rating": 5,
+        "date": "2026-06-20",
+        "snippet": "perfect app for play and search music \ud83d\udc4c"
+      },
+      {
+        "review_id": "a65816d6-06a3-4b2a-b63e-01e2345f1405",
+        "rating": 2,
+        "date": "2026-06-20",
+        "snippet": "It's a great but after latest changes, you can't skip more than six times an hour and you can't play any song you want. like you search a song name and when it appears and when you"
+      }
+    ],
+    "premium_free": [
+      {
+        "review_id": "b078c8b1-3721-42d1-9121-524aa954c88e",
+        "rating": 1,
+        "date": "2026-06-20",
+        "snippet": "ONLY AD's..Spotify is Worstify Better we can call this app as \"Ad\"ify app\"... Too many ad's and interrupting often as it makes you come out of the app instead listening music and f"
+      },
+      {
+        "review_id": "9d2a6e48-5809-44ad-a813-1192e87ee6bd",
+        "rating": 1,
+        "date": "2026-06-20",
+        "snippet": "Can't afford Spotify premium now that I am not a student anymore and they refuse to let me use the app at all until I give them 13 bucks a month and continue a premium membership. "
+      },
+      {
+        "review_id": "9f27a4b8-400d-41e6-b0ee-2d7c646f812e",
+        "rating": 3,
+        "date": "2026-06-20",
+        "snippet": "remove recommendations from liked songs.they are worst. and I can't afford premium."
+      }
+    ]
+  }
+}
