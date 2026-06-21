@@ -7,6 +7,7 @@ app_version, thumbs_up) per problemStatement.md sections 5.2 and 11.
 from __future__ import annotations
 
 import html
+from datetime import date
 
 import streamlit as st
 
@@ -142,6 +143,15 @@ def inject_global_css() -> None:
 
 def esc(text: str) -> str:
     return html.escape(str(text or ""))
+
+
+def week_label(iso_week_str: str) -> str:
+    """Convert '2026-W15' to a readable 'Apr 06' (week-start date)."""
+    try:
+        year, week = iso_week_str.split("-W")
+        return date.fromisocalendar(int(year), int(week), 1).strftime("%b %d")
+    except (ValueError, AttributeError):
+        return iso_week_str
 
 
 def stars(rating: int) -> str:

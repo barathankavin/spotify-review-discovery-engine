@@ -11,9 +11,12 @@ import streamlit as st
 from src.analysis.tags import iso_week
 from src.dashboard.constants import MAX_SUMMARY_WORDS
 from src.dashboard.data_loader import DashboardData
-from src.dashboard.style import SPOTIFY_GREEN, esc, render_html, stars
+from src.dashboard.style import SPOTIFY_GREEN, esc, render_html, review_card, stars, week_label
 
-_AXIS = alt.Axis(labelColor="#B3B3B3", titleColor="#FFFFFF", gridColor="#222222", tickColor="#333333")
+_AXIS = alt.Axis(labelColor="#B3B3B3", titleColor="#FFFFFF", gridColor="#222222",
+                 tickColor="#333333", labelLimit=1000, labelFontSize=11)
+_WEEK_AXIS = alt.Axis(labelColor="#B3B3B3", titleColor="#FFFFFF", gridColor="#222222",
+                      tickColor="#333333", labelAngle=-40, labelFontSize=11)
 
 
 def _theme_stats(theme: dict, data: DashboardData, total: int) -> dict:
@@ -49,12 +52,12 @@ def render_theme_cards(data: DashboardData) -> None:
         st.warning("No themes in artifacts.")
         return
 
-    for theme in data.themes:
+    for idx, theme in enumerate(data.themes):
         s = _theme_stats(theme, data, total)
         label = esc(theme.get("label", theme.get("theme_id", "")))
         render_html(
             f"""
-            <div class="rd-card accent">
+            <div class="rd-card accent" style="margin-bottom:.35rem;">
               <div class="rd-card-head">
                 <div class="rd-card-title">{label}</div>
                 {_trend_badge(s['avg'])}
@@ -68,6 +71,24 @@ def render_theme_cards(data: DashboardData) -> None:
             </div>
             """
         )
+        with st.expander(f"View supporting reviews ({s['count']})"):
+            rids = theme.get("supporting_review_ids", [])
+            shown = 0
+            for rid in rids:
+                review = data.reviews_by_id.get(rid)
+                if not review:
+                    continue
+                render_html(review_card(
+                    review_id=review.review_id, rating=review.rating, date=review.date,
+                    app_version=review.app_version, body=review.body, thumbs_up=review.thumbs_up,
+                ))
+                shown += 1
+                if shown >= 12:
+                    break
+            if shown == 0:
+                st.info("Supporting reviews are outside the current corpus snapshot.")
+            elif len(rids) > shown:
+                st.caption(f"Showing {shown} of {len(rids)} supporting reviews.")
 
 
 def _weekly_counts(theme: dict, data: DashboardData) -> pd.DataFrame:
@@ -77,8 +98,10 @@ def _weekly_counts(theme: dict, data: DashboardData) -> pd.DataFrame:
         if review:
             counts[iso_week(review.date)] += 1
     if not counts:
-        return pd.DataFrame(columns=["week", "count"])
-    return pd.DataFrame([{"week": w, "count": counts[w]} for w in sorted(counts)])
+        return pd.DataFrame(columns=["week", "Week", "count"])
+    return pd.DataFrame(
+        [{"week": w, "Week": week_label(w), "count": counts[w]} for w in sorted(counts)]
+    )
 
 
 def render_theme_deepdive(data: DashboardData) -> None:
@@ -122,11 +145,13 @@ def render_theme_deepdive(data: DashboardData) -> None:
                 alt.Chart(wdf)
                 .mark_bar(color=SPOTIFY_GREEN, cornerRadiusEnd=3)
                 .encode(
-                    x=alt.X("week:N", title="ISO week", axis=_AXIS),
+                    x=alt.X("Week:N", title="Week starting",
+                            sort=alt.SortField(field="week", order="ascending"), axis=_WEEK_AXIS),
                     y=alt.Y("count:Q", title="Reviews in theme", axis=_AXIS),
-                    tooltip=["week", "count"],
+                    tooltip=["Week", "count"],
                 )
                 .properties(height=260, background="transparent")
+                .configure_view(strokeWidth=0)
             )
             st.altair_chart(chart, use_container_width=True)
 

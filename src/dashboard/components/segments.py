@@ -12,7 +12,8 @@ from src.dashboard.constants import SEGMENT_DISCLAIMER
 from src.dashboard.data_loader import DashboardData
 from src.dashboard.style import SPOTIFY_GREEN, render_html
 
-_AXIS = alt.Axis(labelColor="#B3B3B3", titleColor="#FFFFFF", gridColor="#222222", tickColor="#333333")
+_AXIS = alt.Axis(labelColor="#B3B3B3", titleColor="#FFFFFF", gridColor="#222222",
+                 tickColor="#333333", labelLimit=1000, labelFontSize=11)
 
 _LABELS = {
     "mentions_premium": "Mentions premium / subscription",
@@ -50,14 +51,15 @@ def _bar(df: pd.DataFrame, height: int = 240):
             tooltip=["Segment", "Reviews"],
         )
         .properties(height=height, background="transparent")
+        .configure_view(strokeWidth=0)
     )
 
 
 def render_segments(data: DashboardData) -> None:
     render_html('<div class="rd-section-title">Inferred segments</div>'
                 '<div class="rd-section-sub">Behavioral cuts derived from review text signals.</div>')
-    render_html(f'<div class="rd-card" style="border-left:3px solid #F2C744;">'
-                f'<div class="rd-card-desc" style="margin:0;color:#F2C744;">⚠ {SEGMENT_DISCLAIMER}</div></div>')
+    render_html(f'<div class="rd-card" style="border-left:3px solid #1DB954;background:#13211a;">'
+                f'<div class="rd-card-desc" style="margin:0;color:#9fe3b5;">ℹ&nbsp; {SEGMENT_DISCLAIMER}</div></div>')
 
     render_html('<div class="rd-section-title" style="font-size:1.02rem;margin-top:.6rem;">'
                 'Corpus-wide segment distribution</div>')

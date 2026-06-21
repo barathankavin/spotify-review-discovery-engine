@@ -11,9 +11,13 @@ import streamlit as st
 from src.analysis.tags import iso_week
 from src.dashboard.constants import ANOMALY_Z_THRESHOLD
 from src.dashboard.data_loader import DashboardData
-from src.dashboard.style import SPOTIFY_GREEN, render_html
+from src.dashboard.style import SPOTIFY_GREEN, render_html, week_label
 
-_AXIS = alt.Axis(labelColor="#B3B3B3", titleColor="#FFFFFF", gridColor="#222222", tickColor="#333333")
+_AXIS = alt.Axis(labelColor="#B3B3B3", titleColor="#FFFFFF", gridColor="#222222",
+                 tickColor="#333333", labelLimit=1000, labelFontSize=11)
+_WEEK_AXIS = alt.Axis(labelColor="#B3B3B3", titleColor="#FFFFFF", gridColor="#222222",
+                      tickColor="#333333", labelAngle=-40, labelFontSize=11)
+_WEEK_SORT = alt.SortField(field="week", order="ascending")
 
 
 def _weekly_volume(reviews) -> pd.DataFrame:
@@ -29,6 +33,7 @@ def _weekly_volume(reviews) -> pd.DataFrame:
         rows.append(
             {
                 "week": week,
+                "Week": week_label(week),
                 "Review volume": counts[week],
                 "Average rating": round(sum(rs) / len(rs), 2),
             }
@@ -72,7 +77,7 @@ def render_overview(data: DashboardData) -> None:
         render_html('<div class="rd-section-title" style="font-size:1.02rem;">Reviews per theme</div>'
                     '<div class="rd-section-sub">How many sampled reviews support each discovered theme.</div>')
         theme_rows = [
-            {"Theme": t.get("label", t.get("theme_id", ""))[:34],
+            {"Theme": t.get("label", t.get("theme_id", "")),
              "Supporting reviews": len(t.get("supporting_review_ids", []))}
             for t in data.themes
         ]
@@ -86,7 +91,8 @@ def render_overview(data: DashboardData) -> None:
                     y=alt.Y("Theme:N", sort="-x", title=None, axis=_AXIS),
                     tooltip=["Theme", "Supporting reviews"],
                 )
-                .properties(height=240, background="transparent")
+                .properties(height=260, background="transparent")
+                .configure_view(strokeWidth=0)
             )
             st.altair_chart(chart, use_container_width=True)
 
@@ -103,11 +109,12 @@ def render_overview(data: DashboardData) -> None:
                            alt.GradientStop(color="rgba(29,185,84,0.45)", offset=1)],
                     x1=1, x2=1, y1=1, y2=0))
                 .encode(
-                    x=alt.X("week:N", title="ISO week", axis=_AXIS),
+                    x=alt.X("Week:N", title="Week starting", sort=_WEEK_SORT, axis=_WEEK_AXIS),
                     y=alt.Y("Review volume:Q", title="Reviews", axis=_AXIS),
-                    tooltip=["week", "Review volume"],
+                    tooltip=["Week", "Review volume"],
                 )
-                .properties(height=240, background="transparent")
+                .properties(height=260, background="transparent")
+                .configure_view(strokeWidth=0)
             )
             st.altair_chart(vol_chart, use_container_width=True)
 
@@ -130,12 +137,13 @@ def render_overview(data: DashboardData) -> None:
             alt.Chart(weekly)
             .mark_line(color=SPOTIFY_GREEN, point=alt.OverlayMarkDef(color=SPOTIFY_GREEN))
             .encode(
-                x=alt.X("week:N", title="ISO week", axis=_AXIS),
+                x=alt.X("Week:N", title="Week starting", sort=_WEEK_SORT, axis=_WEEK_AXIS),
                 y=alt.Y("Average rating:Q", title="Average rating (stars)",
                         scale=alt.Scale(domain=[1, 5]), axis=_AXIS),
-                tooltip=["week", "Average rating"],
+                tooltip=["Week", "Average rating"],
             )
-            .properties(height=220, background="transparent")
+            .properties(height=240, background="transparent")
+            .configure_view(strokeWidth=0)
         )
         st.altair_chart(rating_chart, use_container_width=True)
 

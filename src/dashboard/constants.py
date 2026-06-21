@@ -17,8 +17,9 @@ MAX_SUMMARY_WORDS = 250
 ANOMALY_Z_THRESHOLD = 1.75
 
 SEGMENT_DISCLAIMER = (
-    "Inferred from review text, not verified. "
-    "Segments are heuristic labels — not demographic or subscription data."
+    "How to read this: segments are inferred from review wording (e.g. mentions of "
+    "\"premium\", \"ads\", or low ratings) — they are directional signals only, "
+    "not verified demographic or subscription data."
 )
 
 APP_TITLE = "Spotify Review Discovery Engine"
