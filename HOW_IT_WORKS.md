@@ -238,7 +238,7 @@ flowchart TB
     OOS -- yes --> REF1["Refuse:<br/>'not enough signal'"]
     OOS -- no --> EMB["embed question (MiniLM)"]
     EMB --> FETCH["Chroma: fetch RAG_FETCH_K=40<br/>candidates + embeddings"]
-    FETCH --> MMR["MMR re-rank<br/>(λ=0.7) -> top RAG_TOP_K=12"]
+    FETCH --> MMR["MMR re-rank<br/>(λ=0.7) -> top RAG_TOP_K=8"]
     MMR --> TH{"max similarity<br/>>= threshold (0.30)?"}
     TH -- no --> FB1["Retrieval-only fallback<br/>or refusal"]
     TH -- yes --> USE{"RAG_USE_GROQ?"}
@@ -257,7 +257,7 @@ dominated by keyword-matching praise even for "why do users struggle" questions)
 fixes this:
 
 1. Pull a **candidate pool** of `RAG_FETCH_K` (default **40**) most-similar reviews.
-2. Iteratively select `RAG_TOP_K` (default **12**) that balance **relevance to the query**
+2. Iteratively select `RAG_TOP_K` (default **8**) that balance **relevance to the query**
    against **diversity from already-selected results**, controlled by `RAG_MMR_LAMBDA`
    (default **0.7**; 1.0 = pure relevance, 0.0 = pure diversity).
 3. If embeddings are unavailable for any reason, it safely falls back to plain similarity
@@ -390,7 +390,7 @@ variables (`.env` locally, platform Secrets in deployment).
 | `LOOKBACK_WEEKS` | `10` | Rolling ingestion window |
 | `RAG_USE_GROQ` | `true` | Use Groq for chat answers |
 | `RAG_FALLBACK` | `true` | Retrieval-only answer when Groq unavailable |
-| `RAG_TOP_K` | `12` | Reviews sent to the LLM (kept ≤13 for context budget) |
+| `RAG_TOP_K` | `8` | Reviews sent to the LLM (kept ≤13 for context budget) |
 | `RAG_FETCH_K` | `40` | Candidate pool before MMR |
 | `RAG_MMR_LAMBDA` | `0.7` | MMR relevance/diversity trade-off |
 | `RAG_SIMILARITY_THRESHOLD` | `0.30` | Min similarity to call the LLM |
@@ -458,7 +458,7 @@ flowchart TB
 | Symptom | Cause | Fix |
 |---|---|---|
 | `Retrieval-only fallback · GROQ_API_KEY not found` | Key not in Secrets, or app not rebooted | Add `GROQ_API_KEY` to Secrets (top-level TOML, quoted), then **Reboot app** |
-| Chat cites only 4 reviews | `RAG_TOP_K` overridden to a low value in Secrets | Set `RAG_TOP_K = "12"` in Secrets and reboot |
+| Chat cites only 4 reviews | `RAG_TOP_K` overridden to a low value in Secrets | Set `RAG_TOP_K = "8"` in Secrets and reboot |
 | `Retrieval-only fallback · groq_rate_limit` | Hit Groq's daily/min token cap | Wait for reset, or enable + switch to `llama-3.1-8b-instant` (higher limits) |
 | `Retrieval-only fallback · groq_model_not_available` | Model not enabled in your Groq project (403) | Set `GROQ_CHAT_MODEL` to a model your project allows, or enable it in the Groq console |
 | Dashboard shows "last-known-good" warning | Latest analysis failed validation | Re-run analysis; check `run_metadata.json` |
