@@ -16,8 +16,9 @@ GROQ_EMBEDDING_MODEL = "nomic-embed-text-v1.5"
 EMBED_BATCH_SIZE = 128
 EMBED_BATCH_SLEEP_S = 1.0
 
-# Phase 3 — Groq chat model (enable llama-3.1-8b-instant in Groq project for 500K TPD)
-GROQ_CHAT_MODEL = "llama-3.3-70b-versatile"
+# Phase 3 — Groq chat model. 8b-instant has a much higher daily token limit
+# (~500K TPD vs ~100K for 70b), which keeps the RAG chat from hitting rate limits.
+GROQ_CHAT_MODEL = "llama-3.1-8b-instant"
 ANALYSIS_SAMPLE_CAP = 450
 UNMET_NEEDS_SAMPLE_CAP = 300
 ANALYSIS_BATCH_SIZE = 20
