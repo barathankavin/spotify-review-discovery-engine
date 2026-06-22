@@ -44,6 +44,12 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           EMBEDDING_BACKEND: local
           LOOKBACK_WEEKS: ${{ github.event.inputs.lookback_weeks || '10' }}
+          # Proactively pace Groq analysis calls to stay under the free-tier
+          # per-minute limits (avoids the 429 burst + slow backoff loop).
+          GROQ_THROTTLE: "true"
+          GROQ_RPM_LIMIT: "28"
+          GROQ_TPM_LIMIT: "11000"
+          GROQ_CALL_SLEEP_S: "0.5"
         run: |
           set -e
           WEEKS="${LOOKBACK_WEEKS:-10}"

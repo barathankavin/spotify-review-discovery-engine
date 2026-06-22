@@ -28,7 +28,7 @@ class AnalysisGroqClient:
         key = os.getenv("GROQ_API_KEY")
         if not key:
             raise RuntimeError("GROQ_API_KEY is not set in .env")
-        self.client = Groq(api_key=key)
+        self.client = Groq(api_key=key, max_retries=10)
         self.model = model or os.getenv("GROQ_CHAT_MODEL", GROQ_CHAT_MODEL)
         self.sleep_s = float(sleep_s if sleep_s is not None else os.getenv("GROQ_CALL_SLEEP_S", GROQ_CALL_SLEEP_S))
         self.tpm_limit = int(os.getenv("GROQ_TPM_LIMIT", "120000"))
