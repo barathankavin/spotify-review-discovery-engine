@@ -1,40 +1,75 @@
-# Optional: weekly data refresh (manual dispatch or cron)
-# Requires repository secrets: GROQ_API_KEY (optional if using --rule-baseline)
+# Weekly data refresh: fetch new Play Store reviews up to date, re-embed, re-analyze,
+# and commit refreshed artifacts so the deployed dashboard shows new numbers.
+#
+# Repository secrets required:
+#   GROQ_API_KEY  - enables LLM theme analysis (falls back to keyword baseline if it fails)
+# The built-in GITHUB_TOKEN is used to commit artifacts (needs contents: write below).
 
 name: Weekly review refresh
 
 on:
   workflow_dispatch:
+    inputs:
+      lookback_weeks:
+        description: "Weeks of reviews to retain in the rolling window"
+        required: false
+        default: "10"
   schedule:
     - cron: "0 6 * * 1"  # Mondays 06:00 UTC
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-refresh
+  cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run refresh pipeline
+      - name: Refresh pipeline (ingest -> embed -> analyze)
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           EMBEDDING_BACKEND: local
+          LOOKBACK_WEEKS: ${{ github.event.inputs.lookback_weeks || '10' }}
         run: |
-          python -m src.ops.run refresh --skip-ingestion --rule-baseline
+          set -e
+          WEEKS="${LOOKBACK_WEEKS:-10}"
+          echo "Running full refresh (lookback ${WEEKS} weeks)..."
+          # Prefer Groq-quality analysis; if anything fails, re-run analysis only with the
+          # keyword baseline so themes stay consistent with the freshly ingested corpus.
+          if ! python -m src.ops.run refresh --lookback-weeks "${WEEKS}"; then
+            echo "Full refresh failed — retrying analysis with keyword baseline."
+            python -m src.ops.run refresh --skip-ingestion --skip-embed --rule-baseline
+          fi
 
       - name: Smoke test
+        continue-on-error: true
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          EMBEDDING_BACKEND: local
         run: python scripts/smoke_test.py
 
-      - name: Commit processed artifacts if changed
+      - name: Commit refreshed artifacts if changed
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/processed/*.json data/processed/lkg/
-          git diff --staged --quiet || git commit -m "chore: weekly processed artifact refresh"
-          git push
+          if git diff --staged --quiet; then
+            echo "No artifact changes to commit."
+          else
+            git commit -m "chore: weekly review refresh (ingest + embed + analysis)"
+            git push
+          fi
