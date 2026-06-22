@@ -1,8 +1,10 @@
 # Weekly data refresh: fetch new Play Store reviews up to date, re-embed, re-analyze,
 # and commit refreshed artifacts so the deployed dashboard shows new numbers.
 #
-# Repository secrets required:
-#   GROQ_API_KEY  - enables LLM theme analysis (falls back to keyword baseline if it fails)
+# Groq tokens: by default the refresh uses ZERO Groq tokens — ingestion is scraping,
+# embeddings are local (MiniLM), and theme analysis uses the keyword baseline. Groq
+# tokens are reserved for the live RAG chat. Set the "use_groq" input to true on a
+# manual run only if you want richer LLM themes (this spends tokens).
 # The built-in GITHUB_TOKEN is used to commit artifacts (needs contents: write below).
 
 name: Weekly review refresh
@@ -14,6 +16,10 @@ on:
         description: "Weeks of reviews to retain in the rolling window"
         required: false
         default: "10"
+      use_groq:
+        description: "Use Groq for richer theme analysis (SPENDS TOKENS). Default false = keyword baseline, no tokens."
+        required: false
+        default: "false"
   schedule:
     - cron: "0 6 * * 1"  # Mondays 06:00 UTC
 
@@ -44,8 +50,8 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           EMBEDDING_BACKEND: local
           LOOKBACK_WEEKS: ${{ github.event.inputs.lookback_weeks || '10' }}
-          # Proactively pace Groq analysis calls to stay under the free-tier
-          # per-minute limits (avoids the 429 burst + slow backoff loop).
+          USE_GROQ: ${{ github.event.inputs.use_groq || 'false' }}
+          # Only used when USE_GROQ=true: pace calls under free-tier per-minute limits.
           GROQ_THROTTLE: "true"
           GROQ_RPM_LIMIT: "28"
           GROQ_TPM_LIMIT: "11000"
@@ -53,19 +59,19 @@ jobs:
         run: |
           set -e
           WEEKS="${LOOKBACK_WEEKS:-10}"
-          echo "Running full refresh (lookback ${WEEKS} weeks)..."
-          # Prefer Groq-quality analysis; if anything fails, re-run analysis only with the
-          # keyword baseline so themes stay consistent with the freshly ingested corpus.
-          if ! python -m src.ops.run refresh --lookback-weeks "${WEEKS}"; then
-            echo "Full refresh failed — retrying analysis with keyword baseline."
-            python -m src.ops.run refresh --skip-ingestion --skip-embed --rule-baseline
+          if [ "${USE_GROQ}" = "true" ]; then
+            echo "Refresh WITH Groq theme analysis (spends tokens), lookback ${WEEKS} weeks..."
+            python -m src.ops.run refresh --lookback-weeks "${WEEKS}"
+          else
+            echo "Refresh with keyword baseline — NO Groq tokens, lookback ${WEEKS} weeks..."
+            python -m src.ops.run refresh --lookback-weeks "${WEEKS}" --rule-baseline
           fi
 
-      - name: Smoke test
+      - name: Smoke test (no Groq tokens)
         continue-on-error: true
         env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           EMBEDDING_BACKEND: local
+          RAG_USE_GROQ: "false"  # validate retrieval without spending chat tokens
         run: python scripts/smoke_test.py
 
       - name: Commit refreshed artifacts if changed

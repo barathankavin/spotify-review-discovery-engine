@@ -327,15 +327,13 @@ There are **two ways** the data gets refreshed, both running the same pipeline.
 ```mermaid
 flowchart TB
     TRIG["Schedule (Mon 06:00 UTC)<br/>or manual / UI dispatch"] --> JOB["weekly-refresh.yml"]
-    JOB --> ING["ingest newest reviews"]
-    ING --> EMB["embed"]
-    EMB --> AN{"analyze with Groq"}
-    AN -- ok --> COMMIT
-    AN -- fail --> RB["re-run analysis<br/>(keyword baseline)"]
-    RB --> COMMIT["commit data/processed/*.json"]
+    JOB --> ING["ingest newest reviews<br/>(scrape, no Groq)"]
+    ING --> EMB["embed<br/>(local MiniLM, no Groq)"]
+    EMB --> AN["analyze themes<br/>(keyword baseline, NO Groq tokens)"]
+    AN --> COMMIT["commit data/processed/*.json"]
     COMMIT --> PUSH["push to master"]
     PUSH --> REDEPLOY["Streamlit Cloud auto-redeploys"]
-    REDEPLOY --> REBUILD["ensure_vector_store rebuilds<br/>Chroma from new corpus"]
+    REDEPLOY --> REBUILD["ensure_vector_store embeds<br/>the new delta (local)"]
     REBUILD --> LIVE["dashboard shows new numbers"]
 ```
 
@@ -345,8 +343,10 @@ weekly job updates `normalized_reviews.json` but not the committed index,
 `ensure_vector_store` only embeds the **small weekly delta** (the newly ingested reviews)
 on the next cold start, which takes seconds rather than minutes.
 
-The workflow prefers Groq analysis but falls back to the keyword baseline so themes stay
-consistent with the freshly ingested corpus and the commit always lands.
+**The refresh spends zero Groq tokens by default** — ingestion is scraping, embeddings are
+local, and theme analysis uses the keyword baseline. Your Groq token budget is reserved
+entirely for the live RAG chat. If you ever want richer LLM themes, run the workflow
+manually with the `use_groq` input set to `true` (that run will spend tokens).
 
 ### B) In-app "Refresh pipeline" button
 
