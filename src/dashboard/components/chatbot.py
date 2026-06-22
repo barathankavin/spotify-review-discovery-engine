@@ -95,7 +95,7 @@ def render_chat_panel() -> None:
 
     _ensure_store_once()
     retriever = _get_retriever()
-    engine = os.getenv("GROQ_CHAT_MODEL", "llama-3.1-8b-instant")
+    engine = os.getenv("GROQ_CHAT_MODEL", "llama-3.3-70b-versatile")
     render_html(f'<div class="rd-pill-row"><span class="rd-badge muted">Groq · {esc(engine)}</span>'
                 f'<span class="rd-badge muted">{retriever.corpus_size:,} reviews indexed</span></div>')
 

@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass, field
 
-from groq import RateLimitError
+from groq import APIError, RateLimitError
 
 from src.analysis.validators import validate_chat_answer
 from src.rag.fallback_answer import build_retrieval_answer
@@ -130,6 +130,25 @@ def answer_question(
             groq_called=False,
             max_similarity=sim,
         )
+    except APIError as exc:
+        # Any other Groq API problem (e.g. 403 PermissionDenied for a model not
+        # enabled on the project, auth, or server errors). Never crash the app.
+        reason = "groq_model_not_available" if getattr(exc, "status_code", None) == 403 else "groq_api_error"
+        if _fallback_enabled():
+            return _finish_with_fallback(question, retrieved, sim, reason)
+        return ChatResult(
+            question=question,
+            answer=f"Groq is unavailable right now ({reason}). Showing retrieved reviews instead.",
+            retrieved=retrieved,
+            refused=True,
+            groq_called=False,
+            max_similarity=sim,
+        )
+    except Exception:
+        # Last-resort safety net: a fallback answer is always better than a crash.
+        if _fallback_enabled():
+            return _finish_with_fallback(question, retrieved, sim, "groq_unexpected_error")
+        raise
 
     validation = validate_chat_answer(answer, allowed_ids)
     if not validation.ok:

@@ -78,7 +78,7 @@ flowchart TB
 | Scraping | `google-play-scraper` |
 | Embeddings | `sentence-transformers` (MiniLM, local) — Groq embeddings optional |
 | Vector DB | `chromadb` (persistent, cosine distance) |
-| LLM | Groq (`llama-3.1-8b-instant`) |
+| LLM | Groq (`llama-3.3-70b-versatile`; `llama-3.1-8b-instant` for higher limits) |
 | UI | `streamlit` (custom Spotify-style design system) |
 | Automation | GitHub Actions |
 
@@ -386,7 +386,7 @@ variables (`.env` locally, platform Secrets in deployment).
 | `HF_TOKEN` | — (secret) | Hugging Face token (quiet local-embedding downloads) |
 | `EMBEDDING_BACKEND` | `local` | `local` (MiniLM) or `groq` |
 | `LOCAL_EMBEDDING_MODEL` | `all-MiniLM-L6-v2` | sentence-transformers model |
-| `GROQ_CHAT_MODEL` | `llama-3.1-8b-instant` | Groq chat model (high daily token limit) |
+| `GROQ_CHAT_MODEL` | `llama-3.3-70b-versatile` | Groq chat model (must be enabled in your Groq project) |
 | `LOOKBACK_WEEKS` | `10` | Rolling ingestion window |
 | `RAG_USE_GROQ` | `true` | Use Groq for chat answers |
 | `RAG_FALLBACK` | `true` | Retrieval-only answer when Groq unavailable |
@@ -459,7 +459,8 @@ flowchart TB
 |---|---|---|
 | `Retrieval-only fallback · GROQ_API_KEY not found` | Key not in Secrets, or app not rebooted | Add `GROQ_API_KEY` to Secrets (top-level TOML, quoted), then **Reboot app** |
 | Chat cites only 4 reviews | `RAG_TOP_K` overridden to a low value in Secrets | Set `RAG_TOP_K = "12"` in Secrets and reboot |
-| `Retrieval-only fallback · groq_rate_limit` | Hit Groq's daily/min token cap | Use `GROQ_CHAT_MODEL = "llama-3.1-8b-instant"` (higher limits); or wait for reset |
+| `Retrieval-only fallback · groq_rate_limit` | Hit Groq's daily/min token cap | Wait for reset, or enable + switch to `llama-3.1-8b-instant` (higher limits) |
+| `Retrieval-only fallback · groq_model_not_available` | Model not enabled in your Groq project (403) | Set `GROQ_CHAT_MODEL` to a model your project allows, or enable it in the Groq console |
 | Dashboard shows "last-known-good" warning | Latest analysis failed validation | Re-run analysis; check `run_metadata.json` |
 | Refresh button only reloads locally | `GH_DISPATCH_TOKEN` / `GH_REPO` not set | Add them to Secrets (see §7B) |
 | Chat feels slow | Large candidate pool | Lower `RAG_FETCH_K` to `30` |
