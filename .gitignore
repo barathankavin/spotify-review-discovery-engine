@@ -7,8 +7,10 @@ __pycache__/
 .mypy_cache/
 
 data/raw/
-vector_store/
 data/processed/backups/
+# NOTE: vector_store/ is intentionally committed so deployments (Streamlit Cloud /
+# HF Spaces) load the prebuilt Chroma index instantly instead of re-embedding the
+# whole corpus on a cold start. Cold starts only embed the small weekly delta.
 data/processed/analysis_run.log
 
 .streamlit/secrets.toml
