@@ -7,6 +7,7 @@ import os
 import streamlit as st
 
 from src.ops.ensure_vector_store import ensure_vector_store
+from src.dashboard.bootstrap import secret_key_names
 from src.dashboard.style import esc, render_html, stars
 from src.rag.pipeline import ChatResult, answer_question
 from src.rag.retriever import ReviewRetriever
@@ -50,6 +51,33 @@ def _render_sources(result: ChatResult) -> None:
                 f'<span>id <b>{esc(item.review_id[:8])}</b></span></div>'
                 f'<div style="color:#C9C9C9;font-size:.86rem;line-height:1.5;">{doc}</div></div>'
             )
+
+
+def _render_key_diagnostic() -> None:
+    secret_names = secret_key_names(st)
+    env_has_key = bool(os.environ.get("GROQ_API_KEY"))
+    with st.expander("Why isn't Groq running? (config diagnostic)"):
+        st.markdown(
+            "The app cannot read **`GROQ_API_KEY`**. Fix it in "
+            "**Manage app → Settings → Secrets** (Streamlit Cloud) and **reboot**."
+        )
+        if secret_names:
+            st.markdown(
+                "Secret key names the app currently sees (values hidden): "
+                + ", ".join(f"`{n}`" for n in secret_names)
+            )
+            if "GROQ_API_KEY" not in secret_names:
+                st.warning(
+                    "`GROQ_API_KEY` is **not** among the visible secret names — "
+                    "check for a typo or a wrong key name."
+                )
+        else:
+            st.warning(
+                "No secrets are visible at all. Paste this into the Secrets box "
+                "(top level, no section header) and save:"
+            )
+        st.code('GROQ_API_KEY = "gsk_your_real_key_here"', language="toml")
+        st.caption(f"GROQ_API_KEY present in environment: {env_has_key}")
 
 
 def _answer_and_store(prompt: str, retriever: ReviewRetriever) -> None:
@@ -97,7 +125,10 @@ def render_chat_panel() -> None:
         render_html(f'<div class="rd-card accent"><div style="color:#E8E8E8;font-size:.92rem;'
                     f'line-height:1.6;white-space:pre-wrap;">{esc(result.answer)}</div></div>')
         if result.meta.get("fallback"):
-            st.caption(f"Retrieval-only fallback · {result.meta.get('fallback_reason', 'n/a')}")
+            reason = result.meta.get("fallback_reason", "n/a")
+            st.caption(f"Retrieval-only fallback · {reason}")
+            if "GROQ_API_KEY" in str(reason):
+                _render_key_diagnostic()
         elif result.groq_called:
             st.caption(f"Groq {result.meta.get('model', '')} · top match {result.max_similarity:.0%}")
         elif result.refused:
