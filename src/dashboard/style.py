@@ -7,9 +7,12 @@ app_version, thumbs_up) per problemStatement.md sections 5.2 and 11.
 from __future__ import annotations
 
 import html
+import re
 from datetime import date
 
 import streamlit as st
+
+_CITATION_RE = re.compile(r"\[\s*review_id\s*:\s*([0-9a-fA-F-]{6,})\s*\]")
 
 SPOTIFY_GREEN = "#1DB954"
 SPOTIFY_GREEN_BRIGHT = "#1ED760"
@@ -149,6 +152,16 @@ blockquote { border-left: 4px solid #1DB954 !important; padding: .25rem 0 .25rem
 .rd-quote { border-left: 3px solid #1DB954; padding: .1rem 0 .1rem .9rem; color: #C9C9C9; font-style: italic; font-size: .9rem; margin: .5rem 0; }
 
 .rd-pill-row { display: flex; flex-wrap: wrap; gap: .4rem; margin: .2rem 0 .6rem 0; }
+
+/* ---- Chat answer: bold insights, de-emphasised inline citations ---- */
+.rd-answer { color: #FFFFFF; font-size: 1.05rem; font-weight: 600; line-height: 1.7;
+    letter-spacing: -.005em; white-space: pre-wrap; }
+.rd-answer .rd-cite {
+    display: inline-block; font-size: .62rem; font-weight: 700; line-height: 1;
+    color: #8A8A8A; background: #1E1E1E; border: 1px solid #2C2C2C; border-radius: 500px;
+    padding: .12rem .42rem; margin: 0 .12rem; vertical-align: middle; letter-spacing: .03em;
+    white-space: nowrap; }
+@media (max-width: 480px) { .rd-answer { font-size: .98rem; } }
 </style>
 """
 
@@ -210,6 +223,19 @@ def review_card(*, review_id: str, rating: int, date: str, app_version: str,
       <div class="rd-meta">{''.join(meta_bits)}</div>
     </div>
     """
+
+
+def format_chat_answer(answer: str) -> str:
+    """Render a grounded answer with prominent insight text and small, de-emphasised
+    [review_id: ...] citations shown as compact id pills."""
+    escaped = esc(answer)
+
+    def _cite(match: re.Match) -> str:
+        rid = match.group(1)
+        return f'<span class="rd-cite">id {esc(rid[:8])}</span>'
+
+    body = _CITATION_RE.sub(_cite, escaped)
+    return f'<div class="rd-answer">{body}</div>'
 
 
 def render_html(markup: str) -> None:

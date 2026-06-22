@@ -118,11 +118,15 @@ class ReviewVectorStore:
         self,
         query_embedding: list[float],
         n_results: int = 5,
+        include_embeddings: bool = False,
     ) -> dict[str, Any]:
+        include = ["documents", "metadatas", "distances"]
+        if include_embeddings:
+            include.append("embeddings")
         return self.collection.query(
             query_embeddings=[query_embedding],
             n_results=n_results,
-            include=["documents", "metadatas", "distances"],
+            include=include,
         )
 
     @staticmethod

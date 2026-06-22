@@ -8,7 +8,7 @@ import streamlit as st
 
 from src.ops.ensure_vector_store import ensure_vector_store
 from src.dashboard.bootstrap import secret_key_names
-from src.dashboard.style import esc, render_html, stars
+from src.dashboard.style import esc, format_chat_answer, render_html, stars
 from src.rag.pipeline import ChatResult, answer_question
 from src.rag.retriever import ReviewRetriever
 
@@ -122,8 +122,7 @@ def render_chat_panel() -> None:
         render_html(f'<div class="rd-card" style="border-left:3px solid #404040;">'
                     f'<div class="rd-meta" style="margin-bottom:.35rem;"><span>YOU ASKED</span></div>'
                     f'<div style="color:#fff;font-weight:600;">{esc(question)}</div></div>')
-        render_html(f'<div class="rd-card accent"><div style="color:#E8E8E8;font-size:.92rem;'
-                    f'line-height:1.6;white-space:pre-wrap;">{esc(result.answer)}</div></div>')
+        render_html(f'<div class="rd-card accent">{format_chat_answer(result.answer)}</div>')
         if result.meta.get("fallback"):
             reason = result.meta.get("fallback_reason", "n/a")
             st.caption(f"Retrieval-only fallback · {reason}")

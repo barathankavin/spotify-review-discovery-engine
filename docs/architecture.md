@@ -221,14 +221,28 @@ Tabs:
 **Responsibility**: Answer free-form questions grounded only in the review corpus.
 
 Flow:
-1. Embed the user's question with the **same Groq embedding model** used in Phase 2.
-2. Retrieve top-k (e.g. 8) most similar reviews from Chroma.
+1. Embed the user's question with the configured embedding model (local MiniLM by default,
+   same model family used in Phase 2).
+2. Pull a candidate pool of `RAG_FETCH_K` (default 40) most similar reviews from Chroma,
+   then re-select `RAG_TOP_K` (default 12, capped ≤13 for the context budget) using
+   **Maximal Marginal Relevance (MMR, `RAG_MMR_LAMBDA=0.7`)**. MMR balances query relevance
+   against inter-result diversity, so the LLM sees a broader, less duplicative evidence set
+   instead of several near-identical reviews. MMR falls back to plain similarity order if
+   candidate embeddings are unavailable.
 3. If max similarity is below a configured threshold → return "not enough signal in the
    reviews to answer that" instead of calling Groq.
 4. Otherwise, call Groq with a system prompt restricting it to the retrieved excerpts only,
    requiring a `review_id` citation for every claim.
 5. Run the answer through the same PII/provenance validators as analysis output before
-   rendering.
+   rendering. The UI emphasises the insight text and renders `[review_id: …]` citations as
+   compact, de-emphasised id pills.
+
+**In-app "Refresh pipeline" button**: always clears the artifact cache and reloads the
+latest processed artifacts from disk. When `GH_DISPATCH_TOKEN` + `GH_REPO` are configured
+(via `.env` or platform Secrets), the button additionally fires a `workflow_dispatch` for
+the `weekly-refresh.yml` GitHub Actions workflow over the REST API, re-running the pipeline
+remotely; the committed artifacts then auto-deploy. Without those secrets it degrades
+gracefully to the local reload only.
 
 ### 5.7 Orchestration, configuration, observability
 - **Configuration** (non-secret): lookback weeks, sample caps, theme limit, similarity

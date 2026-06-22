@@ -1,12 +1,17 @@
-"""Retrieve reviews from Chroma using the Phase 2 embedding model."""
+"""Retrieve reviews from Chroma using the Phase 2 embedding model.
+
+Retrieval pulls a larger candidate pool (RAG_FETCH_K) from Chroma, then applies
+Maximal Marginal Relevance (MMR) to pick RAG_TOP_K reviews that are both relevant
+and diverse. This avoids returning several near-duplicate reviews and improves
+thematic coverage without inflating the prompt token budget.
+"""
 
 from __future__ import annotations
 
 import os
 from dataclasses import dataclass
-from typing import Any
 
-from src.config import RAG_TOP_K
+from src.config import RAG_FETCH_K, RAG_MMR_LAMBDA, RAG_TOP_K
 from src.embeddings.local_embedder import LocalEmbedder
 from src.embeddings.store import ReviewVectorStore
 
@@ -33,21 +38,28 @@ class ReviewRetriever:
 
     def retrieve(self, question: str, top_k: int | None = None) -> list[RetrievedReview]:
         k = top_k if top_k is not None else int(os.getenv("RAG_TOP_K", RAG_TOP_K))
-        if self.store.count() == 0:
+        count = self.store.count()
+        if count == 0:
             return []
 
+        fetch_k = max(k, int(os.getenv("RAG_FETCH_K", RAG_FETCH_K)))
         vector = self.embedder.embed_one(question)
-        results = self.store.query(vector, n_results=min(k, self.store.count()))
+        results = self.store.query(
+            vector,
+            n_results=min(fetch_k, count),
+            include_embeddings=True,
+        )
 
         ids = results["ids"][0]
         documents = results["documents"][0]
         metadatas = results["metadatas"][0]
         distances = results["distances"][0]
+        embeddings = (results.get("embeddings") or [None])[0]
 
-        retrieved: list[RetrievedReview] = []
+        candidates: list[RetrievedReview] = []
         for rid, doc, meta, dist in zip(ids, documents, metadatas, distances):
             meta = meta or {}
-            retrieved.append(
+            candidates.append(
                 RetrievedReview(
                     review_id=str(rid),
                     document=str(doc or ""),
@@ -57,4 +69,50 @@ class ReviewRetriever:
                     similarity=ReviewVectorStore.distance_to_similarity(float(dist)),
                 )
             )
-        return retrieved
+
+        order = self._mmr_order(vector, embeddings, len(candidates), k)
+        return [candidates[i] for i in order]
+
+    @staticmethod
+    def _mmr_order(
+        query_vec: list[float],
+        cand_vecs: object,
+        n_candidates: int,
+        k: int,
+    ) -> list[int]:
+        """Return candidate indices reordered by MMR. Falls back to Chroma's
+        relevance order if embeddings are unavailable or anything goes wrong."""
+        fallback = list(range(min(k, n_candidates)))
+        if cand_vecs is None or n_candidates == 0:
+            return fallback
+        try:
+            import numpy as np
+
+            lambda_mult = float(os.getenv("RAG_MMR_LAMBDA", RAG_MMR_LAMBDA))
+            q = np.asarray(query_vec, dtype=float)
+            mat = np.asarray(cand_vecs, dtype=float)
+            if mat.ndim != 2 or mat.shape[0] != n_candidates:
+                return fallback
+
+            q_norm = q / (np.linalg.norm(q) + 1e-9)
+            mat_norm = mat / (np.linalg.norm(mat, axis=1, keepdims=True) + 1e-9)
+            query_sim = mat_norm @ q_norm
+            sim_matrix = mat_norm @ mat_norm.T
+
+            selected: list[int] = []
+            remaining = set(range(n_candidates))
+            target = min(k, n_candidates)
+            while remaining and len(selected) < target:
+                if not selected:
+                    best = max(remaining, key=lambda i: query_sim[i])
+                else:
+                    best = max(
+                        remaining,
+                        key=lambda i: lambda_mult * query_sim[i]
+                        - (1.0 - lambda_mult) * max(sim_matrix[i][j] for j in selected),
+                    )
+                selected.append(best)
+                remaining.discard(best)
+            return selected
+        except Exception:
+            return fallback

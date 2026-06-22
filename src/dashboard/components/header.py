@@ -4,6 +4,10 @@ from __future__ import annotations
 
 import streamlit as st
 
+from src.dashboard.pipeline_refresh import (
+    github_refresh_configured,
+    trigger_github_refresh,
+)
 from src.dashboard.pipeline_status import PipelineStatus
 from src.dashboard.style import render_html
 
@@ -80,8 +84,31 @@ def render_header(status: PipelineStatus) -> None:
         )
         if st.button("Refresh pipeline", key="refresh_pipeline", use_container_width=True):
             st.cache_data.clear()
-            st.session_state["_pipeline_refreshed"] = True
+            if github_refresh_configured():
+                outcome = trigger_github_refresh()
+                st.session_state["_refresh_outcome"] = {
+                    "ok": outcome.ok,
+                    "message": outcome.message,
+                    "actions_url": outcome.actions_url,
+                }
+            else:
+                st.session_state["_refresh_outcome"] = {
+                    "ok": True,
+                    "message": "Reloaded latest artifacts from disk.",
+                    "actions_url": None,
+                }
             st.rerun()
 
-    if st.session_state.pop("_pipeline_refreshed", False):
-        st.toast("Reloaded latest artifacts from disk.", icon="✅")
+    outcome = st.session_state.pop("_refresh_outcome", None)
+    if outcome:
+        if outcome["ok"]:
+            st.toast(outcome["message"], icon="✅")
+            if outcome.get("actions_url"):
+                st.caption(
+                    f"Live run started — track it on "
+                    f"[GitHub Actions]({outcome['actions_url']}). "
+                    "New artifacts auto-deploy when the run commits."
+                )
+        else:
+            st.toast("Remote refresh failed — showing local artifacts.", icon="⚠️")
+            st.caption(outcome["message"])

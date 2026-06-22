@@ -24,6 +24,8 @@ ANALYSIS_BATCH_SIZE = 20
 GROQ_CALL_SLEEP_S = 0.5
 
 # Phase 5 — RAG chatbot
-RAG_TOP_K = 4
+RAG_TOP_K = 12          # final reviews sent to the LLM (kept <=13 for context budget)
+RAG_FETCH_K = 40        # candidate pool pulled from Chroma before MMR re-selection
+RAG_MMR_LAMBDA = 0.7    # MMR trade-off: 1.0 = pure relevance, 0.0 = pure diversity
 RAG_SIMILARITY_THRESHOLD = 0.35
 RAG_MAX_ANSWER_TOKENS = 512
