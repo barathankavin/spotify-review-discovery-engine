@@ -47,7 +47,10 @@ def _format_context(retrieved: list[RetrievedReview]) -> str:
 def generate_answer(question: str, retrieved: list[RetrievedReview]) -> tuple[str, dict[str, Any]]:
     key = os.getenv("GROQ_API_KEY")
     if not key:
-        raise RuntimeError("GROQ_API_KEY is not set in .env")
+        raise RuntimeError(
+            "GROQ_API_KEY not found. Add it to .env locally, or to your platform "
+            "Secrets (Streamlit Cloud / Hugging Face Spaces) and reboot the app."
+        )
 
     model = os.getenv("GROQ_CHAT_MODEL", GROQ_CHAT_MODEL)
     max_tokens = int(os.getenv("RAG_MAX_ANSWER_TOKENS", RAG_MAX_ANSWER_TOKENS))

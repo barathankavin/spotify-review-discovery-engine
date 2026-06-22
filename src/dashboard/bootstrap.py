@@ -17,29 +17,20 @@ from src.config import PROJECT_ROOT  # noqa: E402
 
 load_dotenv(PROJECT_ROOT / ".env")
 
-_SECRETS_PATHS = (
-    PROJECT_ROOT / ".streamlit" / "secrets.toml",
-    Path.home() / ".streamlit" / "secrets.toml",
-    Path(__file__).resolve().parent / ".streamlit" / "secrets.toml",
-)
-
-
-def secrets_file_exists() -> bool:
-    return any(p.is_file() for p in _SECRETS_PATHS)
-
 
 def apply_streamlit_secrets(st_module) -> None:
-    """Map Streamlit Cloud secrets into os.environ; no-op if no secrets.toml."""
-    if not secrets_file_exists():
-        return
-    try:
-        from streamlit.errors import StreamlitSecretNotFoundError
-    except ImportError:
-        StreamlitSecretNotFoundError = Exception  # type: ignore[misc, assignment]
+    """Map Streamlit secrets into os.environ.
 
+    Works on Streamlit Community Cloud and Hugging Face Spaces, where secrets are
+    injected via st.secrets without a local secrets.toml at a predictable path.
+    Existing os.environ values (e.g. HF Spaces env-var secrets) take precedence.
+    """
     try:
-        for key, value in st_module.secrets.items():
-            if isinstance(value, str) and key not in os.environ:
+        secrets = st_module.secrets
+        for key in list(secrets.keys()):
+            value = secrets[key]
+            if isinstance(value, str) and not os.environ.get(key):
                 os.environ[key] = value
-    except StreamlitSecretNotFoundError:
+    except Exception:
+        # No secrets configured (e.g. local run with only .env) — that's fine.
         return
