@@ -53,8 +53,8 @@ External systems                         Your pipeline
 ─────────────────                         ─────────────
 Play Store public review pages   ──────▶  Ingestion & Normalization
                                                  │
-Groq Embeddings API              ◀──────  Embedding (Phase 2)
-  (nomic-embed-text-v1.5)                        │
+Local embeddings (MiniLM)        ◀──────  Embedding (Phase 2)
+  (all-MiniLM-L6-v2, 384-dim)                    │
                                                  ▼
                                            Chroma vector store
                                                  │
@@ -65,11 +65,13 @@ Groq LLM API (chat completions)  ◀──────  Stage A/B/C/D analysis
                                            Streamlit Dashboard ──▶ Operator/PM (browser)
                                                  │
 Groq LLM API (chat completions)  ◀──────  RAG Chatbot tab
-Groq Embeddings API              ◀──────  (query embedding, same model as Phase 2)
+Local embeddings (MiniLM)        ◀──────  (query embedding, same model as Phase 2)
 ```
 
-Your orchestration talks to **Groq** for embeddings (Phase 2 + chatbot retrieval), chat
-completions (analysis + chatbot generation), and a local Chroma vector store for similarity
+Embeddings run **locally** with `sentence-transformers/all-MiniLM-L6-v2` (Phase 2 indexing +
+Phase 5 query encoding) — see DEC-003a, which superseded the original Groq-embeddings plan
+(DEC-003). Your orchestration talks to **Groq** only for chat completions (Phase 5 chatbot
+generation, and optional Phase 3 analysis), and to a local Chroma vector store for similarity
 search. There is no external write surface (no Docs/Gmail) — the dashboard *is* the output.
 
 ## 4. High-Level Pipeline
@@ -82,7 +84,7 @@ Inputs
 Ingest & normalize ──▶ Dedupe / language filter / PII scrub
       │
       ▼
-Embed (Groq embeddings) ──▶ Upsert into Chroma (keyed by review_id)
+Embed (local MiniLM) ──▶ Upsert into Chroma (keyed by review_id)
       │
       ▼
 Stratified sample (rating tier × week)
@@ -150,23 +152,24 @@ valid, surface a warning with row counts.
 ### 5.2 Embedding & vector store
 **Responsibility**: Make every normalized review retrievable by meaning, for the chatbot.
 
-- **Embedding provider**: Groq Embeddings API via the `groq` Python SDK
-  (`client.embeddings.create()`).
-- **Embedding model**: `nomic-embed-text-v1.5` (or current Groq equivalent — verify at
-  `console.groq.com/docs/models`). Same model **must** be used for Phase 2 corpus indexing
-  and Phase 5 chatbot query embedding.
-- **Auth**: `GROQ_API_KEY` in `.env` / platform secrets (required from Phase 2 onward).
-- **Batching**: embed reviews in batches (e.g. 64–128 texts per request); sleep/backoff on
-  rate limits; checkpoint progress so a mid-run 429 resumes instead of restarting.
-- **Store**: Chroma, file-persisted under `vector_store/`.
+- **Embedding provider**: **local** `sentence-transformers` (CPU), via `LocalEmbedder`
+  (`EMBEDDING_BACKEND=local`). See DEC-003a — this superseded the original Groq-embeddings
+  plan. A `GroqEmbedder` backend still exists in the code but is not the default.
+- **Embedding model**: `sentence-transformers/all-MiniLM-L6-v2` (384-dim). The same local
+  model is used for Phase 2 corpus indexing **and** Phase 5 chatbot query embedding.
+- **Auth**: no key needed for embeddings (local). `HF_TOKEN` is optional (quiet model
+  downloads). `GROQ_API_KEY` is required only for generation (Phase 5 chat / optional Phase 3).
+- **Batching**: embed reviews in local batches (`EMBED_BATCH_SIZE`, default 128); checkpoint
+  progress so an interrupted run resumes instead of restarting.
+- **Store**: Chroma, file-persisted under `vector_store/` (committed for fast deploys).
 - **Upsert keyed by `review_id`** so re-running ingestion only embeds new/changed reviews
   (no full rebuild each week). Skip unchanged bodies via content-hash metadata.
 - **Document text**: `title + body` concatenation (title often empty for Play Store).
 - This pool feeds **both** the chatbot's retrieval and, optionally, the Stage A/B sampling
   (sampling still draws from the full normalized set, embeddings are just a side index).
 
-**Quota note**: ~27k reviews implies hundreds of embedding API calls on first run — budget
-Groq embedding RPM/TPM alongside chat-completion quota in §9.
+**Quota note**: embeddings consume **no API tokens** (they run locally on CPU). Only the
+Groq chat-completion quota (§9) matters, and it's reserved for the RAG chat.
 
 ### 5.3 Analysis (LLM-centric, Groq)
 **Responsibility**: Transform normalized reviews into theming, summaries, unmet needs, and
@@ -221,7 +224,7 @@ Tabs:
 **Responsibility**: Answer free-form questions grounded only in the review corpus.
 
 Flow:
-1. Embed the user's question with the **same Groq embedding model** used in Phase 2.
+1. Embed the user's question with the **same local MiniLM model** used in Phase 2.
 2. Retrieve top-k (e.g. 8) most similar reviews from Chroma.
 3. If max similarity is below a configured threshold → return "not enough signal in the
    reviews to answer that" instead of calling Groq.
@@ -272,7 +275,7 @@ change in this document's changelog (or a `decision.md` if you choose to keep on
 Operator → Orchestrator: start weekly run
 Orchestrator → Ingestion: load export
 Ingestion → Orchestrator: normalized reviews
-Orchestrator → Embedding: upsert by review_id (Groq embeddings API)
+Orchestrator → Embedding: upsert by review_id (local MiniLM embeddings)
 Orchestrator → Sampler: stratified sample (rating × week)
 Sampler → Groq: Stage A theme discovery
 Groq → Orchestrator: ThemeCluster[]
@@ -283,7 +286,7 @@ alt valid:
 alt invalid:
   Validators → Orchestrator: errors → bounded repair retry → re-validate
 Operator → Chatbot tab: ask question
-Chatbot → Groq: embed question (same model as Phase 2)
+Chatbot → LocalEmbedder: embed question (same MiniLM model as Phase 2)
 Chatbot → VectorStore: retrieve top-k
 Chatbot → Groq: grounded generation (or skip if low similarity)
 Chatbot → Validators: citation/PII check
@@ -349,14 +352,13 @@ Always **checkpoint after each batch** so a mid-run 429 resumes instead of resta
 
 ### Embeddings (Phase 2 & 5 query encoding)
 
-Model: `nomic-embed-text-v1.5` — embedding limits are **separate** from chat limits above;
-verify at `console.groq.com/docs/rate-limits`.
+Model: `sentence-transformers/all-MiniLM-L6-v2` (384-dim), run **locally on CPU** (DEC-003a).
+**No API rate limits or tokens** apply — embeddings are free and offline.
 
 Given ~27k normalized reviews:
-- Batch **64–128** texts per `embeddings.create` call → **~213–425** embedding requests
-  on first full index.
-- Budget embedding runs separately from the **100K chat TPD** cap.
-- Weekly refresh: hash-skip unchanged reviews to minimize embedding calls.
+- Local batches of `EMBED_BATCH_SIZE` (default 128) → ~213 batches on first full index.
+- Embeddings do **not** touch the Groq chat TPD cap — the full Groq budget is for chat.
+- Weekly refresh: hash-skip unchanged reviews so only the new delta is embedded.
 
 ### Shared discipline (all Groq calls)
 
@@ -378,7 +380,7 @@ Given ~27k normalized reviews:
 | 7 | Off-topic reviews (competitor mentions, unrelated bugs) | Keyword/relevance filter scoped to discovery/recommendation topics; route to an "Other" bucket excluded from headline themes |
 | 8 | Same complaint persists across app versions | Tag reviews with `app_version`; allow trend-by-version drill-down instead of treating as a new theme each time |
 | 9 | Vector store staleness on weekly refresh | Upsert by `review_id`, never full rebuild |
-| 10 | Groq rate-limit/timeout mid-run | Exponential backoff + per-batch checkpointing (embeddings and chat) |
+| 10 | Groq rate-limit/timeout mid-run | Exponential backoff + per-batch checkpointing (chat/analysis; embeddings are local and unaffected) |
 | 11 | Chatbot hallucinating beyond retrieved reviews | Strict "answer only from provided excerpts" system prompt + post-hoc citation validation against corpus text |
 | 12 | Chatbot question outside corpus scope (e.g. "what's Spotify's stock price?") | Low retrieval similarity → explicit fallback message, never a general-knowledge answer |
 | 13 | Over-confident segment claims | Always label inferred segments as "inferred, not verified" in the UI |
@@ -400,9 +402,10 @@ Given ~27k normalized reviews:
 
 ### 12.1 Local development (Cursor)
 - Python virtual environment, `requirements.txt` (google-play-scraper, groq, chromadb,
-  streamlit, langdetect, python-dotenv, pandas). `sentence-transformers` is **not** required
-  for embeddings — Groq handles embedding via API.
-- `.env` (not committed) with `GROQ_API_KEY=...` (required from Phase 2 onward).
+  streamlit, langdetect, python-dotenv, pandas, sentence-transformers). `sentence-transformers`
+  **is required** — embeddings run locally (DEC-003a), not via Groq.
+- `.env` (not committed) with `GROQ_API_KEY=...` (required for chat generation / optional
+  Phase 3 analysis; **not** needed for embeddings).
 - Phase 2 CLI: `python -m src.embeddings.run`
 - Dashboard: `streamlit run src/dashboard/app.py`.
 

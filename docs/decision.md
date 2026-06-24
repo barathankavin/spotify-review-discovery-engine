@@ -83,22 +83,55 @@ Gmail, or Google Docs integration.
 
 | Field | Value |
 |---|---|
-| **Status** | Accepted |
+| **Status** | **Superseded** (embeddings reverted to local — see DEC-003a) |
 | **Date** | 2026-06-21 |
 | **Phase** | 2, 3, 5 |
 | **Category** | Tech |
 
 **Context** — Embeddings could use a local model or Groq; generation already uses Groq.
 
-**Decision** — Use **Groq Embeddings API** (`nomic-embed-text-v1.5`) for Phase 2 corpus
-indexing and Phase 5 query encoding. Use Groq chat completions for Phase 3 analysis and
-Phase 5 answer generation.
+**Decision (original, NOT what shipped)** — Use **Groq Embeddings API**
+(`nomic-embed-text-v1.5`) for Phase 2 corpus indexing and Phase 5 query encoding. Use Groq
+chat completions for Phase 3 analysis and Phase 5 answer generation.
 
 **Alternatives considered** — Local `sentence-transformers/all-MiniLM-L6-v2` (prior plan);
 OpenAI embeddings.
 
 **Consequences** — Single vendor and API key; must budget embedding RPM/TPM for ~27k
 reviews on first index; `GROQ_API_KEY` required from Phase 2 onward.
+
+> ⚠ **Superseded in practice.** The embeddings half of this decision was reversed during
+> implementation — see **DEC-003a**. Groq is used for generation only (Phase 5 chat, and
+> optional Phase 3 analysis). Embeddings (Phase 2 indexing **and** Phase 5 query encoding)
+> use the local `sentence-transformers/all-MiniLM-L6-v2` model.
+
+---
+
+### DEC-003a — Embeddings use local sentence-transformers (supersedes DEC-003 embeddings)
+
+| Field | Value |
+|---|---|
+| **Status** | Accepted |
+| **Date** | 2026-06-22 |
+| **Phase** | 2, 5 |
+| **Category** | Tech |
+
+**Context** — Groq's hosted embedding endpoint was not reliably available on the project's
+tier, and the deployed build needed a dependable, free, offline-capable embedder.
+
+**Decision** — Use **local `sentence-transformers/all-MiniLM-L6-v2`** (384-dim) for both
+Phase 2 corpus indexing and Phase 5 query encoding (`EMBEDDING_BACKEND=local`). Groq is
+retained only for generation (Phase 5 chat; optional Phase 3 theme analysis). A Groq
+embedding backend remains in the code (`GroqEmbedder`) but is not the default.
+
+**Evidence of what shipped** — `data/processed/embed_checkpoint.json` records
+`embedding_backend: "local"`, `embedding_model: "sentence-transformers/all-MiniLM-L6-v2"`;
+`EMBEDDING_BACKEND=local` in `.env`, `.env.example`, README deploy step, and deployment
+secrets; `ReviewRetriever` instantiates `LocalEmbedder` for query encoding.
+
+**Consequences** — No embedding tokens consumed (Groq budget reserved for chat); embeddings
+run on CPU locally and in CI; vectors are 384-dim (MiniLM), not 768-dim (nomic). Indexing
+and query encoding must use the same local model (they do).
 
 ---
 
@@ -181,7 +214,8 @@ Add entries below or in the linked phase `decision.md` files as you build.
 |---|---|---|---|
 | DEC-001 | Dashboard as delivery surface | Accepted | Cross-cutting |
 | DEC-002 | Plain Python ingestion | Accepted | 1 |
-| DEC-003 | Groq for embeddings and generation | Accepted | 2, 3, 5 |
+| DEC-003 | Groq for embeddings and generation | Superseded (embeddings) | 2, 3, 5 |
+| DEC-003a | Embeddings use local sentence-transformers | Accepted | 2, 5 |
 | DEC-004 | Chroma local vector store | Accepted | 2 |
 | DEC-005 | Max 5 themes | Accepted | 3 |
 | DEC-006 | Segments inferred not verified | Accepted | 3, 4, 5 |
