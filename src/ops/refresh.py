@@ -46,12 +46,19 @@ def refresh(
     skip_embed: bool = False,
     skip_analysis: bool = False,
     rule_baseline: bool = False,
+    incremental: bool = False,
+    overlap_days: int | None = None,
 ) -> dict:
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     backup_artifacts(run_id)
 
     if not skip_ingestion:
-        _run_module("src.ingestion.run", ["--lookback-weeks", str(lookback_weeks)])
+        ingest_args = ["--lookback-weeks", str(lookback_weeks)]
+        if incremental:
+            ingest_args.append("--incremental")
+            if overlap_days is not None:
+                ingest_args += ["--overlap-days", str(overlap_days)]
+        _run_module("src.ingestion.run", ingest_args)
 
     if not skip_embed:
         _run_module("src.embeddings.run")

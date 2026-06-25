@@ -31,6 +31,18 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Use keyword baseline instead of Groq for analysis",
     )
+    refresh_p.add_argument(
+        "--incremental",
+        action="store_true",
+        help="Fetch only reviews newer than the last collected date and merge "
+        "into the existing corpus (fast, additive)",
+    )
+    refresh_p.add_argument(
+        "--overlap-days",
+        type=int,
+        default=None,
+        help="Incremental safety overlap in days (default: INCREMENTAL_OVERLAP_DAYS or 3)",
+    )
 
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
@@ -48,6 +60,8 @@ def main(argv: list[str] | None = None) -> int:
                 skip_embed=args.skip_embed,
                 skip_analysis=args.skip_analysis,
                 rule_baseline=args.rule_baseline,
+                incremental=args.incremental,
+                overlap_days=args.overlap_days,
             )
             print(json.dumps(result, indent=2))
             if not result.get("theme_validation_ok"):

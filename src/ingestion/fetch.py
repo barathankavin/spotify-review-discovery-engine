@@ -73,10 +73,20 @@ def fetch_reviews(
     lookback_weeks: int | None = None,
     country: str = DEFAULT_COUNTRY,
     lang: str = DEFAULT_LANG,
+    since: datetime | None = None,
 ) -> tuple[list[dict[str, Any]], Counter[str]]:
+    """Fetch newest-first Play Store reviews until the cutoff is reached.
+
+    When ``since`` is given (incremental refresh), it is used directly as the
+    cutoff so only reviews newer than the last collected date are pulled.
+    Otherwise the cutoff is ``now - lookback_weeks`` (full rolling window).
+    """
     package = package_name or os.getenv("PACKAGE_NAME", DEFAULT_PACKAGE)
-    weeks = lookback_weeks or int(os.getenv("LOOKBACK_WEEKS", DEFAULT_LOOKBACK_WEEKS))
-    cutoff = datetime.now(timezone.utc) - timedelta(weeks=weeks)
+    if since is not None:
+        cutoff = _ensure_utc(since)
+    else:
+        weeks = lookback_weeks or int(os.getenv("LOOKBACK_WEEKS", DEFAULT_LOOKBACK_WEEKS))
+        cutoff = datetime.now(timezone.utc) - timedelta(weeks=weeks)
 
     stats: Counter[str] = Counter()
     collected: list[dict[str, Any]] = []

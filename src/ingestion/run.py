@@ -6,6 +6,7 @@ import logging
 import os
 import sys
 from collections import Counter
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -26,21 +27,75 @@ def _merge_stats(*counters: Counter[str]) -> Counter[str]:
     return merged
 
 
+def _load_existing(output_path: Path) -> list[NormalizedReview]:
+    """Load the previously saved corpus, tolerating a missing/corrupt file."""
+    if not output_path.exists():
+        return []
+    try:
+        data = json.loads(output_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    out: list[NormalizedReview] = []
+    for row in data if isinstance(data, list) else []:
+        if isinstance(row, dict):
+            try:
+                out.append(NormalizedReview.from_dict(row))
+            except (KeyError, TypeError, ValueError):
+                continue
+    return out
+
+
 def run_ingestion(
     output_path: Path | None = None,
     lookback_weeks: int | None = None,
     min_word_count: int | None = None,
     save_raw: bool = False,
+    incremental: bool = False,
+    overlap_days: int | None = None,
 ) -> tuple[list[NormalizedReview], Counter[str]]:
     output_path = output_path or DEFAULT_OUTPUT
     min_words = min_word_count or int(os.getenv("MIN_WORD_COUNT", "6"))
     weeks = lookback_weeks or int(os.getenv("LOOKBACK_WEEKS", "10"))
 
-    raw_reviews, fetch_stats = fetch_reviews(lookback_weeks=weeks)
+    existing: list[NormalizedReview] = []
+    since: datetime | None = None
+    if incremental:
+        overlap = overlap_days if overlap_days is not None else int(
+            os.getenv("INCREMENTAL_OVERLAP_DAYS", "3")
+        )
+        existing = _load_existing(output_path)
+        _, latest = date_range(existing)
+        if latest:
+            try:
+                since = datetime.fromisoformat(latest).replace(tzinfo=timezone.utc) - timedelta(
+                    days=max(overlap, 0)
+                )
+            except ValueError:
+                since = None
+
+    if since is not None:
+        raw_reviews, fetch_stats = fetch_reviews(since=since)
+    else:
+        raw_reviews, fetch_stats = fetch_reviews(lookback_weeks=weeks)
+
     if save_raw:
         save_raw_snapshot(raw_reviews, str(DEFAULT_RAW_SNAPSHOT))
 
-    normalized, norm_stats = normalize_reviews(raw_reviews, min_word_count=min_words)
+    normalized_new, norm_stats = normalize_reviews(raw_reviews, min_word_count=min_words)
+
+    if existing:
+        merged: dict[str, NormalizedReview] = {r.review_id: r for r in existing}
+        added = 0
+        for review in normalized_new:
+            if review.review_id not in merged:
+                added += 1
+            merged[review.review_id] = review
+        normalized = sorted(merged.values(), key=lambda r: r.date)
+        norm_stats["existing_count"] = len(existing)
+        norm_stats["newly_added"] = added
+    else:
+        normalized = normalized_new
+
     stats = _merge_stats(fetch_stats, norm_stats)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -64,7 +119,10 @@ def print_report(stats: Counter[str], output_path: Path) -> None:
     print(f"Dropped (emoji-only):  {stats.get('dropped_emoji_only', 0)}")
     print(f"Dropped (non-English): {stats.get('dropped_non_english', 0)}")
     print(f"Dropped (duplicate):   {stats.get('dropped_duplicate', 0)}")
-    print(f"Normalized count:      {stats.get('normalized_count', 0)}")
+    print(f"Normalized (new fetch):{stats.get('normalized_count', 0)}")
+    if "existing_count" in stats:
+        print(f"Existing corpus:       {stats.get('existing_count', 0)}")
+        print(f"Newly added (merged):  {stats.get('newly_added', 0)}")
     print(f"Date range:            {stats.get('date_min')} -> {stats.get('date_max')}")
     print("========================\n")
 
@@ -81,7 +139,20 @@ def build_parser() -> argparse.ArgumentParser:
         "--lookback-weeks",
         type=int,
         default=None,
-        help="Weeks of reviews to retain (default: LOOKBACK_WEEKS env or 10)",
+        help="Weeks of reviews to fetch on a full build (default: LOOKBACK_WEEKS env or 10)",
+    )
+    parser.add_argument(
+        "--incremental",
+        action="store_true",
+        help="Only fetch reviews newer than the last collected date and merge "
+        "into the existing corpus (additive; never shrinks the dataset)",
+    )
+    parser.add_argument(
+        "--overlap-days",
+        type=int,
+        default=None,
+        help="Incremental safety overlap re-fetched before the last date "
+        "(default: INCREMENTAL_OVERLAP_DAYS env or 3)",
     )
     parser.add_argument(
         "--min-word-count",
@@ -118,6 +189,8 @@ def main(argv: list[str] | None = None) -> int:
             lookback_weeks=args.lookback_weeks,
             min_word_count=args.min_word_count,
             save_raw=args.save_raw,
+            incremental=args.incremental,
+            overlap_days=args.overlap_days,
         )
     except Exception as exc:
         logging.error("Ingestion failed: %s", exc)

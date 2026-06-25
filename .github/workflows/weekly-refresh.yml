@@ -1,5 +1,8 @@
-# Weekly data refresh: fetch new Play Store reviews up to date, re-embed, re-analyze,
-# and commit refreshed artifacts so the deployed dashboard shows new numbers.
+# Weekly data refresh: fetch ONLY reviews newer than the last collected date,
+# merge them into the existing corpus (additive — never shrinks the dataset),
+# re-embed just the new reviews, re-analyze, and commit so the deployed dashboard
+# shows new numbers. Incremental fetch keeps each run fast (it stops paging as soon
+# as it reaches reviews we already have).
 #
 # Groq tokens: by default the refresh uses ZERO Groq tokens — ingestion is scraping,
 # embeddings are local (MiniLM), and theme analysis uses the keyword baseline. Groq
@@ -13,7 +16,7 @@ on:
   workflow_dispatch:
     inputs:
       lookback_weeks:
-        description: "Weeks of reviews to retain in the rolling window"
+        description: "Full-build window if there's no existing corpus yet (incremental runs ignore this)"
         required: false
         default: "10"
       use_groq:
@@ -35,9 +38,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -59,12 +62,15 @@ jobs:
         run: |
           set -e
           WEEKS="${LOOKBACK_WEEKS:-10}"
+          # --incremental: fetch only reviews newer than the last collected date
+          # and merge into the existing corpus. The lookback window is only used
+          # for the first/full build when no corpus exists yet.
           if [ "${USE_GROQ}" = "true" ]; then
-            echo "Refresh WITH Groq theme analysis (spends tokens), lookback ${WEEKS} weeks..."
-            python -m src.ops.run refresh --lookback-weeks "${WEEKS}"
+            echo "Incremental refresh WITH Groq theme analysis (spends tokens)..."
+            python -m src.ops.run refresh --incremental --lookback-weeks "${WEEKS}"
           else
-            echo "Refresh with keyword baseline — NO Groq tokens, lookback ${WEEKS} weeks..."
-            python -m src.ops.run refresh --lookback-weeks "${WEEKS}" --rule-baseline
+            echo "Incremental refresh with keyword baseline — NO Groq tokens..."
+            python -m src.ops.run refresh --incremental --lookback-weeks "${WEEKS}" --rule-baseline
           fi
 
       - name: Smoke test (no Groq tokens)
