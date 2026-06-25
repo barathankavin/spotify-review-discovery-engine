@@ -30,8 +30,19 @@ def _get_retriever() -> ReviewRetriever:
 def _ensure_store_once() -> dict:
     if st.session_state.get("vector_store_ready"):
         return st.session_state.get("vector_store_status", {})
+    status: dict = {}
     with st.spinner("Checking search index…"):
-        status = ensure_vector_store()
+        try:
+            status = ensure_vector_store()
+        except Exception as exc:  # noqa: BLE001 — never crash the dashboard for Chroma
+            status = {
+                "action": "error",
+                "warning": (
+                    "Search index check failed; chat may use a partial index. "
+                    "Try rebooting the app after a pipeline refresh."
+                ),
+                "error": str(exc)[:200],
+            }
     st.session_state.vector_store_ready = True
     st.session_state.vector_store_status = status
     return status
@@ -93,7 +104,14 @@ def render_chat_panel() -> None:
         'review_id; out-of-scope questions are refused.</div>'
     )
 
-    _ensure_store_once()
+    status = _ensure_store_once()
+    if status.get("warning"):
+        st.caption(f"ℹ️ {status['warning']}")
+    elif status.get("action") == "updated" and status.get("newly_embedded"):
+        st.caption(
+            f"Search index updated — {status['newly_embedded']:,} new reviews embedded locally."
+        )
+
     retriever = _get_retriever()
     engine = os.getenv("GROQ_CHAT_MODEL", "llama-3.3-70b-versatile")
     render_html(f'<div class="rd-pill-row"><span class="rd-badge muted">Groq · {esc(engine)}</span>'

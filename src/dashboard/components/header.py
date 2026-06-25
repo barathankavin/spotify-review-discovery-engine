@@ -84,6 +84,9 @@ def render_header(status: PipelineStatus) -> None:
         )
         if st.button("Refresh pipeline", key="refresh_pipeline", use_container_width=True):
             st.cache_data.clear()
+            st.cache_resource.clear()
+            st.session_state.pop("vector_store_ready", None)
+            st.session_state.pop("vector_store_status", None)
             if github_refresh_configured():
                 outcome = trigger_github_refresh()
                 st.session_state["_refresh_outcome"] = {

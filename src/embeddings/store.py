@@ -5,13 +5,16 @@ from __future__ import annotations
 import hashlib
 import json
 import logging
+import os
 from pathlib import Path
 from typing import Any
 
 import chromadb
 from chromadb.api.models.Collection import Collection
+from chromadb.errors import ChromaError
 
 from src.config import PROCESSED_DIR, VECTOR_STORE_DIR
+from src.embeddings.persist_dir import resolve_chroma_persist_dir
 from src.ingestion.schema import NormalizedReview
 
 logger = logging.getLogger(__name__)
@@ -46,8 +49,9 @@ def review_metadata(review: NormalizedReview, doc_hash: str) -> dict[str, str | 
 
 class ReviewVectorStore:
     def __init__(self, persist_dir: Path | None = None) -> None:
-        path = str(persist_dir or VECTOR_STORE_DIR)
-        Path(path).mkdir(parents=True, exist_ok=True)
+        path = str(persist_dir or resolve_chroma_persist_dir())
+        self.persist_dir = Path(path)
+        self.persist_dir.mkdir(parents=True, exist_ok=True)
         self.client = chromadb.PersistentClient(path=path)
         self.collection: Collection = self.client.get_or_create_collection(
             name=COLLECTION_NAME,
@@ -107,12 +111,54 @@ class ReviewVectorStore:
 
         ids = [r.review_id for r in reviews]
         metadatas = [review_metadata(r, h) for r, h in zip(reviews, hashes)]
-        self.collection.upsert(
-            ids=ids,
-            embeddings=embeddings,
-            documents=documents,
-            metadatas=metadatas,
-        )
+        chunk = max(1, int(os.getenv("CHROMA_UPSERT_CHUNK", "32")))
+        for start in range(0, len(ids), chunk):
+            end = start + chunk
+            self._upsert_chunk(
+                ids=ids[start:end],
+                embeddings=embeddings[start:end],
+                documents=documents[start:end],
+                metadatas=metadatas[start:end],
+            )
+
+    def _upsert_chunk(
+        self,
+        ids: list[str],
+        embeddings: list[list[float]],
+        documents: list[str],
+        metadatas: list[dict[str, str | int]],
+        retries: int = 3,
+    ) -> None:
+        last_exc: Exception | None = None
+        for attempt in range(retries):
+            try:
+                self.collection.upsert(
+                    ids=ids,
+                    embeddings=embeddings,
+                    documents=documents,
+                    metadatas=metadatas,
+                )
+                return
+            except ChromaError as exc:
+                last_exc = exc
+                logger.warning(
+                    "Chroma upsert failed (attempt %s/%s, %s ids): %s",
+                    attempt + 1,
+                    retries,
+                    len(ids),
+                    exc,
+                )
+            except Exception as exc:  # noqa: BLE001 — surface as retryable store error
+                last_exc = exc
+                logger.warning(
+                    "Upsert failed (attempt %s/%s, %s ids): %s",
+                    attempt + 1,
+                    retries,
+                    len(ids),
+                    exc,
+                )
+        if last_exc is not None:
+            raise last_exc
 
     def query(
         self,

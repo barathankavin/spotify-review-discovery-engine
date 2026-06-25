@@ -8,7 +8,8 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from src.config import PROCESSED_DIR, PROJECT_ROOT, VECTOR_STORE_DIR
+from src.config import PROCESSED_DIR, PROJECT_ROOT
+from src.embeddings.persist_dir import is_streamlit_cloud, resolve_chroma_persist_dir
 from src.embeddings.run import load_reviews, run_embed_all
 from src.embeddings.store import (
     ReviewVectorStore,
@@ -54,8 +55,10 @@ def ensure_vector_store(
     """
     load_dotenv(PROJECT_ROOT / ".env")
     reviews_path = reviews_path or DEFAULT_REVIEWS
-    persist_dir = persist_dir or VECTOR_STORE_DIR
+    persist_dir = persist_dir or resolve_chroma_persist_dir()
     batch_size = batch_size or int(os.getenv("EMBED_BATCH_SIZE", "128"))
+    if is_streamlit_cloud():
+        batch_size = min(batch_size, int(os.getenv("EMBED_BATCH_SIZE_CLOUD", "32")))
 
     store = ReviewVectorStore(persist_dir=persist_dir)
     count = store.count()
@@ -63,18 +66,33 @@ def ensure_vector_store(
     if count > 0:
         if not reviews_path.exists():
             logger.info("Vector store ready (%s vectors)", count)
-            return {"action": "ready", "count": count}
+            return {"action": "ready", "count": count, "persist_dir": str(persist_dir)}
         pending = _count_pending(reviews_path, store)
         if pending == 0:
             logger.info("Vector store ready (%s vectors, no new reviews)", count)
-            return {"action": "ready", "count": count}
+            return {"action": "ready", "count": count, "persist_dir": str(persist_dir)}
         logger.info("Vector store has %s new/changed reviews — embedding them", pending)
-        stats = run_embed_all(reviews_path, batch_size, persist_dir)
+        try:
+            stats = run_embed_all(reviews_path, batch_size, persist_dir)
+        except Exception as exc:
+            logger.exception("Incremental embed failed — continuing with existing index")
+            return {
+                "action": "ready_degraded",
+                "count": count,
+                "pending_skipped": pending,
+                "warning": (
+                    "Could not update the search index on this host; chat uses the "
+                    f"existing {count:,} indexed reviews."
+                ),
+                "error": str(exc)[:200],
+                "persist_dir": str(persist_dir),
+            }
         return {
             "action": "updated",
             "count": ReviewVectorStore(persist_dir).count(),
             "newly_embedded": stats.get("newly_embedded", 0),
             "duration_seconds": stats.get("duration_seconds"),
+            "persist_dir": str(persist_dir),
         }
 
     if not reviews_path.exists():
@@ -83,11 +101,19 @@ def ensure_vector_store(
         )
 
     logger.info("Vector store empty — embedding from %s", reviews_path)
-    stats = run_embed_all(reviews_path, batch_size, persist_dir)
+    try:
+        stats = run_embed_all(reviews_path, batch_size, persist_dir)
+    except Exception as exc:
+        logger.exception("Full embed failed")
+        raise RuntimeError(
+            "Search index could not be built on this host. "
+            "Try rebooting the app or run the weekly refresh workflow."
+        ) from exc
     new_count = ReviewVectorStore(persist_dir).count()
     return {
         "action": "rebuilt",
         "count": new_count,
         "newly_embedded": stats.get("newly_embedded", 0),
         "duration_seconds": stats.get("duration_seconds"),
+        "persist_dir": str(persist_dir),
     }
