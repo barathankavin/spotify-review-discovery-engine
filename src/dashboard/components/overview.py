@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from collections import defaultdict
 
 import altair as alt
@@ -11,7 +12,8 @@ import streamlit as st
 from src.analysis.tags import iso_week
 from src.dashboard.constants import ANOMALY_Z_THRESHOLD
 from src.dashboard.data_loader import DashboardData
-from src.dashboard.style import SPOTIFY_GREEN, render_html, week_label
+from src.dashboard.exec_summary import generate_executive_summary
+from src.dashboard.style import SPOTIFY_GREEN, esc, render_html, week_label
 
 _AXIS = alt.Axis(labelColor="#B3B3B3", titleColor="#FFFFFF", gridColor="#222222",
                  tickColor="#333333", labelLimit=1000, labelFontSize=11)
@@ -52,6 +54,63 @@ def _anomaly_weeks(df: pd.DataFrame) -> set[str]:
     return set(flagged["week"].tolist())
 
 
+def _render_exec_summary(data: DashboardData) -> None:
+    meta = data.run_metadata
+    run_id = str(meta.get("run_id", "—"))
+    has_key = bool(os.environ.get("GROQ_API_KEY"))
+
+    render_html('<div class="rd-section-title" style="font-size:1.05rem;">AI executive summary</div>'
+                '<div class="rd-section-sub">Groq distills the current themes, unmet needs, and rating '
+                'mix into a PM-ready brief. Generated once per data refresh and cached (no extra tokens '
+                'on re-view).</div>')
+
+    cached = st.session_state.get("exec_summary")
+    btn_col, note_col = st.columns([1, 2.4])
+    with btn_col:
+        label = "Regenerate AI summary" if (cached and cached.get("run_id") == run_id) else "Generate AI summary"
+        clicked = st.button(label, use_container_width=True, disabled=not has_key, key="gen_exec_summary")
+    with note_col:
+        if not has_key:
+            st.caption("Add **GROQ_API_KEY** to Secrets to enable the AI executive summary.")
+        elif cached and cached.get("run_id") != run_id:
+            st.caption("Data was refreshed since the last summary — regenerate for the latest numbers.")
+
+    if clicked:
+        with st.spinner("Groq is summarizing the analysis…"):
+            try:
+                result = generate_executive_summary(data)
+                result["run_id"] = run_id
+                st.session_state["exec_summary"] = result
+                cached = result
+            except Exception as exc:  # noqa: BLE001 - surface any Groq/config issue gracefully
+                cached = None
+                st.session_state.pop("exec_summary", None)
+                st.warning(f"Could not generate the summary right now: {exc}")
+
+    if cached and cached.get("run_id") == run_id and cached.get("summary"):
+        findings = "".join(
+            f'<li style="margin:.35rem 0;color:#D6D6D6;line-height:1.55;">{esc(f)}</li>'
+            for f in cached.get("key_findings", [])
+        )
+        findings_block = (
+            f'<div style="color:#fff;font-weight:800;margin:.9rem 0 .2rem 0;">Key findings</div>'
+            f'<ul style="margin:0;padding-left:1.1rem;">{findings}</ul>'
+            if findings else ""
+        )
+        render_html(
+            '<div class="rd-card accent" style="border-left:3px solid #1DB954;">'
+            '<div class="rd-card-title" style="display:flex;align-items:center;gap:.5rem;">'
+            '<span>✨ AI-generated summary</span></div>'
+            f'<div style="color:#EDEDED;font-size:.96rem;line-height:1.65;margin-top:.4rem;">'
+            f'{esc(cached["summary"])}</div>'
+            f'{findings_block}'
+            '</div>'
+        )
+        st.caption(f"Groq {cached.get('model', '')} · run {run_id} · cached until next refresh")
+
+    st.markdown("####  ")
+
+
 def render_overview(data: DashboardData) -> None:
     render_html('<div class="rd-section-title">Pipeline overview</div>'
                 '<div class="rd-section-sub">Corpus health, theme spread, and weekly review trends '
@@ -71,6 +130,7 @@ def render_overview(data: DashboardData) -> None:
     st.caption(f"Date range: {date_span}  ·  Run {meta.get('run_id', '—')}  ·  Model {meta.get('model_id', '—')}")
 
     st.markdown("####  ")
+    _render_exec_summary(data)
     left, right = st.columns([1, 1])
 
     with left:
