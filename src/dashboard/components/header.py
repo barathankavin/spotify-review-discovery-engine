@@ -90,11 +90,17 @@ def render_header(status: PipelineStatus) -> None:
                     "ok": outcome.ok,
                     "message": outcome.message,
                     "actions_url": outcome.actions_url,
+                    "configured": True,
                 }
             else:
                 st.session_state["_refresh_outcome"] = {
-                    "ok": True,
-                    "message": "Reloaded latest artifacts from disk.",
+                    "ok": False,
+                    "configured": False,
+                    "message": (
+                        "Live refresh isn't connected yet, so the numbers can't change. "
+                        "Add **GH_DISPATCH_TOKEN** and **GH_REPO** to Secrets to let this "
+                        "button re-run the pipeline on GitHub. (Local artifacts reloaded.)"
+                    ),
                     "actions_url": None,
                 }
             st.rerun()
@@ -107,8 +113,12 @@ def render_header(status: PipelineStatus) -> None:
                 st.caption(
                     f"Live run started — track it on "
                     f"[GitHub Actions]({outcome['actions_url']}). "
-                    "New artifacts auto-deploy when the run commits."
+                    "New numbers appear automatically once the run commits and the "
+                    "app redeploys (~3–6 min)."
                 )
-        else:
+        elif outcome.get("configured", True):
             st.toast("Remote refresh failed — showing local artifacts.", icon="⚠️")
+            st.caption(outcome["message"])
+        else:
+            st.toast("Live refresh not connected — see note below.", icon="ℹ️")
             st.caption(outcome["message"])
