@@ -1,8 +1,8 @@
 # Weekly data refresh: fetch ONLY reviews newer than the last collected date,
 # merge them into the existing corpus (additive — never shrinks the dataset),
-# re-embed just the new reviews, re-analyze, and commit so the deployed dashboard
-# shows new numbers. Incremental fetch keeps each run fast (it stops paging as soon
-# as it reaches reviews we already have).
+# re-embed just the new reviews, re-analyze, and commit JSON + vector_store so the
+# deployed dashboard AND chat search index stay in sync after auto-redeploy.
+# Incremental fetch stops paging as soon as it reaches reviews we already have.
 #
 # Groq tokens: by default the refresh uses ZERO Groq tokens — ingestion is scraping,
 # embeddings are local (MiniLM), and theme analysis uses the keyword baseline. Groq
@@ -80,14 +80,19 @@ jobs:
           RAG_USE_GROQ: "false"  # validate retrieval without spending chat tokens
         run: python scripts/smoke_test.py
 
+      - name: Verify search index matches corpus
+        env:
+          EMBEDDING_BACKEND: local
+        run: python scripts/verify_index.py
+
       - name: Commit refreshed artifacts if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/processed/*.json data/processed/lkg/
+          git add data/processed/*.json data/processed/lkg/ vector_store/
           if git diff --staged --quiet; then
             echo "No artifact changes to commit."
           else
-            git commit -m "chore: weekly review refresh (ingest + embed + analysis)"
+            git commit -m "chore: weekly review refresh (ingest + embed + analysis + search index)"
             git push
           fi

@@ -62,15 +62,26 @@ def ensure_vector_store(
 
     store = ReviewVectorStore(persist_dir=persist_dir)
     count = store.count()
+    corpus_count = len(load_reviews(reviews_path)) if reviews_path.exists() else 0
 
     if count > 0:
         if not reviews_path.exists():
             logger.info("Vector store ready (%s vectors)", count)
-            return {"action": "ready", "count": count, "persist_dir": str(persist_dir)}
+            return {
+                "action": "ready",
+                "count": count,
+                "corpus_count": corpus_count,
+                "persist_dir": str(persist_dir),
+            }
         pending = _count_pending(reviews_path, store)
         if pending == 0:
             logger.info("Vector store ready (%s vectors, no new reviews)", count)
-            return {"action": "ready", "count": count, "persist_dir": str(persist_dir)}
+            return {
+                "action": "ready",
+                "count": count,
+                "corpus_count": corpus_count,
+                "persist_dir": str(persist_dir),
+            }
         logger.info("Vector store has %s new/changed reviews — embedding them", pending)
         try:
             stats = run_embed_all(reviews_path, batch_size, persist_dir)
@@ -79,6 +90,7 @@ def ensure_vector_store(
             return {
                 "action": "ready_degraded",
                 "count": count,
+                "corpus_count": corpus_count,
                 "pending_skipped": pending,
                 "warning": (
                     "Could not update the search index on this host; chat uses the "
@@ -90,6 +102,7 @@ def ensure_vector_store(
         return {
             "action": "updated",
             "count": ReviewVectorStore(persist_dir).count(),
+            "corpus_count": corpus_count,
             "newly_embedded": stats.get("newly_embedded", 0),
             "duration_seconds": stats.get("duration_seconds"),
             "persist_dir": str(persist_dir),
@@ -113,6 +126,7 @@ def ensure_vector_store(
     return {
         "action": "rebuilt",
         "count": new_count,
+        "corpus_count": corpus_count,
         "newly_embedded": stats.get("newly_embedded", 0),
         "duration_seconds": stats.get("duration_seconds"),
         "persist_dir": str(persist_dir),

@@ -107,9 +107,22 @@ def render_chat_panel() -> None:
     status = _ensure_store_once()
     if status.get("warning"):
         st.caption(f"ℹ️ {status['warning']}")
+        if status.get("error"):
+            with st.expander("Search index details"):
+                st.code(status["error"])
     elif status.get("action") == "updated" and status.get("newly_embedded"):
         st.caption(
             f"Search index updated — {status['newly_embedded']:,} new reviews embedded locally."
+        )
+    elif status.get("action") == "ready" and status.get("corpus_count") == status.get("count"):
+        st.caption(
+            f"Search index in sync — {status['count']:,} reviews indexed for chat."
+        )
+    elif status.get("corpus_count") and status.get("count") and status["corpus_count"] != status["count"]:
+        gap = status["corpus_count"] - status["count"]
+        st.caption(
+            f"Search index slightly behind corpus ({status['count']:,} indexed · "
+            f"{gap:,} newer reviews pending). A weekly refresh commit will catch up."
         )
 
     retriever = _get_retriever()
