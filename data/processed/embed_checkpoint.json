@@ -1,12 +1,12 @@
 {
-  "skipped_unchanged": 25665,
-  "total_input": 29037,
-  "pending_embed": 3372,
+  "skipped_unchanged": 25645,
+  "total_input": 30129,
+  "pending_embed": 4484,
   "embedding_backend": "local",
   "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
   "collection_count_before": 27222,
-  "newly_embedded": 3372,
-  "embed_batches": 27,
-  "collection_count_after": 30524,
-  "duration_seconds": 23.1
+  "newly_embedded": 4484,
+  "embed_batches": 36,
+  "collection_count_after": 31616,
+  "duration_seconds": 42.2
 }
