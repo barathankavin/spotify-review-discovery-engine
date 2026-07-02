@@ -1208,10 +1208,10 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "281cfd67-8ea0-4a23-a7e4-ab5a883193b2",
+    "review_id": "ca6f7754-fdf6-4585-94ed-d15b7aa767f1",
     "rating_tier": "positive",
     "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_positive",
+    "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
