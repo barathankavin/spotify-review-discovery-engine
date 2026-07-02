@@ -110,6 +110,11 @@ def render_chat_panel() -> None:
         if status.get("error"):
             with st.expander("Search index details"):
                 st.code(status["error"])
+    elif status.get("source") == "committed_ci_index" and status.get("action") == "ready":
+        st.caption(
+            f"Search index in sync — {status.get('count', 0):,} reviews indexed "
+            f"(from weekly CI refresh)."
+        )
     elif status.get("action") == "updated" and status.get("newly_embedded"):
         st.caption(
             f"Search index updated — {status['newly_embedded']:,} new reviews embedded locally."
