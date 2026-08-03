@@ -1,94 +1,30 @@
 [
   {
-    "review_id": "85cbafc6-e4f8-49a8-ba8d-7cd94181e157",
-    "rating_tier": "positive",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "5899dd9b-5d23-4489-86de-b1f2a624b2f1",
+    "review_id": "0f44fcc3-1932-4e9b-8903-86d7ac171ea8",
     "rating_tier": "neutral",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "7e1ab28e-c85d-4720-8da0-b8b46185d7a5",
-    "rating_tier": "positive",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "34342036-150e-4d34-8748-17f2a2b9ea70",
-    "rating_tier": "negative",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "49de5b43-7823-4993-a7d1-5509cefb6a6a",
-    "rating_tier": "positive",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "5688b116-b132-4331-9d11-690a28d7ce86",
-    "rating_tier": "negative",
     "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "4b35e97c-8acb-4478-9775-dceacee74f96",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
     "inferred_segment": "rating_negative",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "6ce56d3b-0c70-4b90-b59f-6295739661d3",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "500a8d3c-01c1-4736-8c49-01f4057b6721",
-    "rating_tier": "negative",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "86dc48af-62db-42c7-b4f4-b8c9fb3184fb",
-    "rating_tier": "negative",
-    "app_version": "9.1.34.2060",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "8bf7c419-4c1e-4aa9-83f4-eb57832a1729",
-    "rating_tier": "negative",
-    "app_version": "9.1.48.1663",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "69c09ce4-24b2-479a-841e-a98b8422ca6b",
+    "review_id": "54835031-1d66-4d21-b0fe-6ea2f23c59fa",
     "rating_tier": "positive",
-    "app_version": "9.1.62.1601",
+    "app_version": "9.1.42.2058",
     "inferred_segment": "rating_positive",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "7c861008-9de0-4733-8721-4745b75ec5f1",
+    "review_id": "131d0f4c-52f0-48c5-bd70-d7504645be43",
     "rating_tier": "negative",
     "app_version": "9.1.50.1906",
     "inferred_segment": "mentions_premium",
@@ -96,7 +32,151 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "276594f6-1191-407c-bcc3-b0cba8f2268e",
+    "review_id": "fdeee7b9-2fb4-4664-a8c3-1500bacd8de8",
+    "rating_tier": "neutral",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "36734b8a-c1d3-4f19-bfa2-5ae7896a8e8a",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "74e5d6ab-1b50-4e7b-a157-ecaa9e4886dd",
+    "rating_tier": "neutral",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b599775c-c344-4446-9e98-9de68f404861",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a4a0dff7-0cf6-4a49-ba44-24e4c5898ae8",
+    "rating_tier": "negative",
+    "app_version": "9.1.48.1662",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3b3a5233-cc3c-4266-b81a-a1a12b2858d7",
+    "rating_tier": "neutral",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d0e423a6-e341-4bb4-a051-c66f1a59c59f",
+    "rating_tier": "neutral",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "40be2c9e-7a11-4661-ad1d-b6ab97e8436e",
+    "rating_tier": "negative",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "9595131b-facf-491f-8c8c-9849fed8014f",
+    "rating_tier": "negative",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "85d9f4c0-83f6-4590-9c50-568a2aa7ecc8",
+    "rating_tier": "negative",
+    "app_version": "9.0.74.1121",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "9e6de46c-6ad4-44b0-85bb-4952917c6749",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c0878bfe-eaa2-4940-9034-01fef8ba35d2",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c1ad5f57-7f6c-4469-a0fb-2f21410058da",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f323f496-ee72-4b3c-ac30-38f0e57838d3",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0579c83a-eb14-4b46-8f4c-198d3c479acd",
+    "rating_tier": "positive",
+    "app_version": "9.1.48.1656",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7059cf3c-416b-4533-8b7b-f535fbfae267",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "13f6fa20-e6dc-4d4a-844f-9ca83b9e37fe",
+    "rating_tier": "neutral",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a3960713-c1f9-4577-81d0-ef45facd7112",
+    "rating_tier": "positive",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8561e96a-b8ac-46ee-8aa7-0d84d5c8fe0a",
     "rating_tier": "negative",
     "app_version": "9.1.52.1394",
     "inferred_segment": "mentions_premium",
@@ -112,282 +192,18 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "fde4e680-67b5-4fa4-84e9-17d868f1a805",
-    "rating_tier": "negative",
-    "app_version": "9.1.36.1948",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "30502705-ac02-4590-b689-08088c4e451f",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "6a2e722a-15b0-4638-94ab-addbb085e172",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "af8d437f-b6f6-4f0d-86e4-21adbee78fa1",
-    "rating_tier": "neutral",
-    "app_version": "9.0.90.1229",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "2a39eeb9-a18e-47dd-9cfd-f6ab96efaf7f",
-    "rating_tier": "neutral",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "2546f11f-0091-4ef7-83af-008b994f6152",
-    "rating_tier": "positive",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "9040af23-4e65-4ff5-b5f5-d73458af7f3b",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0f44fcc3-1932-4e9b-8903-86d7ac171ea8",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0ccb2428-2091-4a75-9f9d-f4bc4e28b9ed",
-    "rating_tier": "neutral",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1f66518a-5bbd-460f-9f97-c73c3c2b9852",
-    "rating_tier": "positive",
-    "app_version": "",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "5c88c8b2-8f13-480c-9700-e420b2e8b106",
-    "rating_tier": "positive",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c9ae7210-5a7e-4415-ae6f-d5c9e598d1fa",
-    "rating_tier": "negative",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "05cf46e7-bce1-41f8-b541-a1e8920d957f",
-    "rating_tier": "negative",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d0e423a6-e341-4bb4-a051-c66f1a59c59f",
-    "rating_tier": "neutral",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f040c68d-b1ba-432c-b2cc-4712a1635792",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b554efdc-758b-4ec7-85a1-e8970d9d4f28",
+    "review_id": "5b07eddf-36f0-4423-b74a-e5fe31b8d42b",
     "rating_tier": "negative",
     "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "72195e0d-6789-4da9-8e03-319ef02f3ef3",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "35a3d80d-954f-408f-bbfe-7f3905603131",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "85d9f4c0-83f6-4590-9c50-568a2aa7ecc8",
-    "rating_tier": "negative",
-    "app_version": "9.0.74.1121",
     "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "7c45a4cc-ddbb-4279-9058-3530699924e3",
+    "review_id": "796f87f8-f5b8-4523-b32a-2acb47f2f7c2",
     "rating_tier": "neutral",
-    "app_version": "9.1.48.1663",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "eb0215d0-85b5-4a3d-aea4-8eda5b725386",
-    "rating_tier": "positive",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "355d1244-5487-4da2-9445-f0c51612bc5e",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "28ce0d8b-747c-4969-be82-0e075f62802b",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "9ea599c6-cacb-4360-9837-ac0bfb3bbfec",
-    "rating_tier": "positive",
-    "app_version": "9.1.48.1663",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1c85bd97-a68a-4e94-9d20-5b54525088ac",
-    "rating_tier": "positive",
     "app_version": "9.1.64.1676",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "494fd765-5377-4877-b4f1-8ff7f41cf8b4",
-    "rating_tier": "negative",
-    "app_version": "9.1.58.1567",
     "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "fe7f8409-7793-4ac4-b16f-f16858b5df11",
-    "rating_tier": "neutral",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f1f210de-5216-4390-aa09-acb95560dfd9",
-    "rating_tier": "positive",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0b76bcdc-13c0-4e2b-b8be-16b6aada7cb2",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "39a519ae-5d2c-48a2-8772-51d4d9cfc823",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "723c7221-7bca-45ff-9b15-57d7f9be783f",
-    "rating_tier": "negative",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "ec851c32-5915-41f0-994b-0df4efaef431",
-    "rating_tier": "negative",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f44ffd63-2dcd-4706-889f-923250f5b906",
-    "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "563d80e4-57e9-4319-9754-382504538e79",
-    "rating_tier": "positive",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f3c6a63f-387a-43a7-9bf4-88a9b7e4f501",
-    "rating_tier": "neutral",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "rating_neutral",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -400,119 +216,15 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "f1ddb4c4-7860-4bae-a7d6-3467303c9c92",
-    "rating_tier": "neutral",
-    "app_version": "9.1.30.1993",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0f0b7216-435c-4049-aa68-4e8bcb870142",
-    "rating_tier": "negative",
+    "review_id": "75b2ab2e-d784-48e2-ba56-706e03ec9265",
+    "rating_tier": "positive",
     "app_version": "9.1.58.1567",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f6faf285-4612-46c5-b7a3-f746e0e27199",
-    "rating_tier": "negative",
-    "app_version": "9.1.46.1922",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a7c7d2d9-2a85-445f-ab8e-ae08d4fdae3e",
-    "rating_tier": "positive",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "7506eb9a-a3db-4996-91f3-1a916a91d69c",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "44aefb2a-28b4-4d02-8548-81db2a571947",
-    "rating_tier": "positive",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "79e5d0f0-cb20-4755-b21f-720b24ba7919",
-    "rating_tier": "positive",
-    "app_version": "9.1.42.2058",
     "inferred_segment": "rating_positive",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "19cb9c1f-895b-4c05-b78b-197d5fc2d96c",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "6da99125-f33e-4f5d-a3ae-301829b205e5",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "2002c638-4b5e-4584-a26b-9ffc33ae47a1",
-    "rating_tier": "positive",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "5e091cd7-6f98-4724-8213-ee21a2a2658a",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "ba118afa-df0b-4329-8da4-bf0fda02b221",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "52766144-51b4-4490-9389-fb49fd5cddd4",
-    "rating_tier": "neutral",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "92e901b2-c228-483c-9298-7bc7562be98e",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "01d0a72b-1017-44c5-8051-85aab9bbdbc5",
+    "review_id": "00d1f5c3-f8a7-4058-abfa-e8b94bacef90",
     "rating_tier": "negative",
     "app_version": "9.1.44.2120",
     "inferred_segment": "rating_negative",
@@ -520,489 +232,25 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "8a29ff07-e30f-4f8e-8de2-f83df66533c9",
-    "rating_tier": "positive",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a1ad429d-58d8-4045-b95c-0a185b197e95",
-    "rating_tier": "negative",
-    "app_version": "9.1.36.1948",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b599775c-c344-4446-9e98-9de68f404861",
+    "review_id": "c3b21da7-a9a4-4933-abd9-1ce87bcec08e",
     "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1ebab0d2-46e1-456d-8ab6-76b599d581a2",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f1fcd9df-6028-45cc-9956-d6c22ddac78a",
-    "rating_tier": "negative",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c72b8342-2584-4a8c-921a-94c6e2cd2b4c",
-    "rating_tier": "positive",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "706b02c4-437d-40db-820b-38558d0e66e0",
-    "rating_tier": "negative",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "e46d6503-367a-48c8-99f0-fa15e68a6f38",
-    "rating_tier": "negative",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "52a92469-54ef-4282-b0bd-ae61da05dd47",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f8f0347f-2135-4024-84be-a8d9610a0a04",
-    "rating_tier": "neutral",
-    "app_version": "9.1.0.1147",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "97cfe17d-16cb-4de6-877b-c9148cc34fd0",
-    "rating_tier": "neutral",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3b3b9acb-18b7-43c8-9eb4-23076c7f7568",
-    "rating_tier": "negative",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "4979ed8b-62e7-47c9-972e-825f00b1a595",
-    "rating_tier": "positive",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "ff5c62c5-8255-48a5-a690-7995e4930788",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "e71caa42-09a3-4e73-97b1-31a7c71c3487",
-    "rating_tier": "neutral",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "2839aaa4-5011-4282-ae95-1cf4d63909ee",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "81047392-986f-4282-a379-1d5479446836",
-    "rating_tier": "negative",
     "app_version": "9.1.58.1567",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "7c4a2855-3c83-4c8a-8ad4-fddb12aa732e",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
     "inferred_segment": "rating_neutral",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "e510a76b-83e8-462d-b0c4-86c9704b11a5",
+    "review_id": "65abec59-fe35-4159-80a3-88a51f4e5416",
     "rating_tier": "negative",
     "app_version": "9.1.42.2058",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "dcb43548-3c5e-46f6-993d-bb7fe4faf1c9",
-    "rating_tier": "positive",
-    "app_version": "9.1.62.1601",
     "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "31e66459-8521-45e4-9e7c-eca765df57e7",
-    "rating_tier": "neutral",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "fc3df93a-cbad-4a7a-8b90-ee9f3d5b6325",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a87b3bfa-89f4-4584-b8bf-d23d2aaa25a1",
-    "rating_tier": "negative",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0dc5a5b1-842b-48e7-96b2-42ca261e993c",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f90ba5ec-953b-49b1-a9e2-66ca660bdc96",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "293e8f27-77b4-480c-8101-84b9d882882c",
-    "rating_tier": "neutral",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "57f593ad-da02-48f0-ad3e-1449c6e717c4",
-    "rating_tier": "negative",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "faf5b149-33e2-48a7-803e-fbfcda3075dc",
-    "rating_tier": "negative",
-    "app_version": "9.1.22.1630",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "5b07eddf-36f0-4423-b74a-e5fe31b8d42b",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "77d49cf6-09db-4677-b465-1779c64d9681",
-    "rating_tier": "negative",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3b3a5233-cc3c-4266-b81a-a1a12b2858d7",
-    "rating_tier": "neutral",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "7d0ca0f7-0646-4717-80b2-2c160d18be4e",
-    "rating_tier": "negative",
-    "app_version": "8.9.30.433",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b8e96673-a54d-4d61-9e78-885569de4fa1",
+    "review_id": "59fac31e-a081-4aff-9d54-9d8b4b5dadcf",
     "rating_tier": "negative",
     "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "996ae2e5-9eb9-46d4-8197-e71c16fd4f8c",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "84d450c5-971d-42ec-ab16-07c4a677b7f8",
-    "rating_tier": "positive",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "67011a9d-4a44-4898-b723-673c2df4cee8",
-    "rating_tier": "negative",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f1638c4b-704a-44bf-90f7-ce1fba5d1fc5",
-    "rating_tier": "neutral",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "af57eff5-d666-4000-8cf9-25210dabd597",
-    "rating_tier": "positive",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f33b466c-386e-4857-91f5-2855f210396c",
-    "rating_tier": "negative",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b6659caa-d07b-47f4-9e86-f642addf1368",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "93af1f0d-550b-4907-93bb-60820db1a695",
-    "rating_tier": "positive",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b949088f-6ef1-49ba-b13a-89d6092232a9",
-    "rating_tier": "negative",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "6861cc0d-0962-4f09-a8c6-bceb8d0081f6",
-    "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a695ad5b-4413-4f9e-bbe1-c01379643cb3",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "bd87a908-f51c-40c5-8cc4-f8e78a750eb1",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "37d7f742-afa9-4709-a60a-1058f350299d",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "78e4d541-5479-40ae-bb44-05f3fe82e96f",
-    "rating_tier": "negative",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "2012c08f-2fac-47df-a3f5-add1b99f47d8",
-    "rating_tier": "neutral",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c7c112cc-6e4e-49e0-9306-205afdb64cec",
-    "rating_tier": "negative",
-    "app_version": "9.1.0.1147",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "e428a269-105b-464a-a528-993c55681722",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "e5c3e685-3126-4385-99ce-20297bf72745",
-    "rating_tier": "negative",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "096c4b2c-9014-48c0-b6e9-93c8d77843ac",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "11a5773c-f996-4272-8d8f-a9784a6610be",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "89afc462-173c-44ee-bb1d-a9c123dac73e",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "5e471158-e83c-401d-81aa-a6cf07dd5a74",
-    "rating_tier": "negative",
-    "app_version": "9.1.36.1948",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0472472b-4211-4022-b2fb-962381f009d1",
-    "rating_tier": "neutral",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f51f5d0a-6d84-4767-bfb3-181a3a3ccbd1",
-    "rating_tier": "negative",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "13f6fa20-e6dc-4d4a-844f-9ca83b9e37fe",
-    "rating_tier": "neutral",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "5db60131-c6ad-4d95-a691-1f5513de3725",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a431056a-f51c-49f5-b6ab-0060f74036ba",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "6a8c8cb2-eb78-4eb0-ab17-8dfb50d516e3",
-    "rating_tier": "negative",
-    "app_version": "9.1.62.1601",
     "inferred_segment": "rating_negative",
     "inferred": true,
     "confidence": "heuristic"
@@ -1016,193 +264,49 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "eaf35b8b-6627-47b4-9bc6-b9a5b190f31b",
+    "review_id": "86fd4a13-4df1-4a92-8769-2c6d2b6f25ca",
     "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a77df7cf-14d4-43de-8419-75a1ee38de89",
-    "rating_tier": "neutral",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "40c1f066-06f5-4459-b9a9-0dfd017fb5b1",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "acb78c7f-dada-4997-a598-9c1078cc8e1e",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d1cff250-7a8c-46cc-be87-939afb67edfa",
-    "rating_tier": "neutral",
-    "app_version": "9.1.48.1663",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "8fbabd74-ebaa-4e8b-ae3f-ac025a8e5410",
-    "rating_tier": "negative",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "52fb5ed3-c67d-4fb2-ab56-b9d38aebd393",
-    "rating_tier": "negative",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a15a9dad-fc74-423a-80f7-6ad407de6ebd",
-    "rating_tier": "neutral",
-    "app_version": "9.1.56.574",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b6c10768-b9ca-4e9c-a43d-43255e5dfb60",
-    "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0027fd80-c288-4d6c-a4a8-986611ccdeb9",
-    "rating_tier": "negative",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "e738a9b5-a6b5-4e93-bfcf-4e881f042e81",
-    "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d04a4e91-2508-4432-a37e-c1c71f8bb545",
-    "rating_tier": "negative",
-    "app_version": "9.1.36.1948",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0c08af02-7937-45ea-a7b6-7563eb2671c7",
-    "rating_tier": "neutral",
     "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_neutral",
+    "inferred_segment": "rating_negative",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "3ebe2c2e-536f-452e-9c97-bf806290e8e1",
-    "rating_tier": "neutral",
-    "app_version": "8.5.0.735",
+    "review_id": "fa79499d-12cd-4302-b7b9-0e2251350948",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
     "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "c1ad5f57-7f6c-4469-a0fb-2f21410058da",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "54835031-1d66-4d21-b0fe-6ea2f23c59fa",
+    "review_id": "84d450c5-971d-42ec-ab16-07c4a677b7f8",
     "rating_tier": "positive",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_positive",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "2272dfce-03c4-4ad7-a3a6-2d1d9f82d9a9",
-    "rating_tier": "negative",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "360f7668-e31a-413f-8809-6633bcaf8554",
-    "rating_tier": "negative",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "98bd4338-3e2d-467c-b22f-60c4086ab070",
-    "rating_tier": "negative",
-    "app_version": "9.1.46.1936",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "59fac31e-a081-4aff-9d54-9d8b4b5dadcf",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1106ba02-ab22-46f0-99fd-e85f11334895",
+    "review_id": "f3c6a63f-387a-43a7-9bf4-88a9b7e4f501",
     "rating_tier": "neutral",
-    "app_version": "9.1.58.1567",
+    "app_version": "9.1.40.1486",
     "inferred_segment": "rating_neutral",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "4efebb85-7fff-4ff3-9c9a-4f55ff79c713",
+    "review_id": "b8e96673-a54d-4d61-9e78-885569de4fa1",
     "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
+    "app_version": "9.1.42.2058",
     "inferred_segment": "rating_negative",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "9353987e-35fb-4b42-8202-ce74edaa99cb",
-    "rating_tier": "positive",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "2637a797-aac3-4c9e-ac9f-d05b70ef95c9",
+    "review_id": "fe306b56-89a9-4e3a-a30c-c4cde971a0ee",
     "rating_tier": "negative",
-    "app_version": "",
+    "app_version": "9.1.42.2058",
     "inferred_segment": "rating_negative",
     "inferred": true,
     "confidence": "heuristic"
@@ -1216,321 +320,17 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "0ff5e774-ff87-4675-aae5-252e9369bb94",
-    "rating_tier": "positive",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "47254204-a77d-48b5-9134-8c3ce699540f",
+    "review_id": "c0cef637-753c-4c3a-b094-906e547e4a28",
     "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "7c21df3d-eab9-44e7-9622-b675914ab116",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "8994968a-0ca0-4094-b2e0-292f023a013c",
-    "rating_tier": "neutral",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "51edc6de-64a4-44b0-b9e9-59fca01bd916",
-    "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "156e2b8d-48d7-4bb2-9cd5-8fa7c831879d",
-    "rating_tier": "positive",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "499d12e2-6c43-4a5f-9be3-0cb41584fc4e",
-    "rating_tier": "negative",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "aefa075b-85c6-4bb1-aad7-c968a587e73e",
-    "rating_tier": "neutral",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "796ca9de-a09d-4628-b821-8fbed0e27168",
-    "rating_tier": "negative",
     "app_version": "9.1.62.1601",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "ce0ddf1e-8dc6-436d-a2e0-68b9e50a308c",
-    "rating_tier": "positive",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "da7df0a7-d305-49d9-a225-9104c08f86fc",
-    "rating_tier": "positive",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d046e698-9702-4b86-b468-bfa0d7fa26f7",
-    "rating_tier": "neutral",
-    "app_version": "9.1.58.1567",
     "inferred_segment": "rating_neutral",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "6680a8ae-d819-473d-a780-5b3a1d780c94",
-    "rating_tier": "negative",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "2fb06e88-e578-4fc5-a18b-39924c6b4a30",
-    "rating_tier": "positive",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "613483e7-a04d-4bc0-b430-f2b11e5804b3",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d48cd4a6-b79a-4248-8af2-da21a719a249",
-    "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "48d06edd-f3e6-43cd-ba50-e8a72b721168",
+    "review_id": "706b02c4-437d-40db-820b-38558d0e66e0",
     "rating_tier": "negative",
     "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3411e753-ebd0-4a7c-8a26-cee528abd57a",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a3f27bc3-9755-42de-9708-5443c24f4201",
-    "rating_tier": "negative",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "23d36ad8-f3bc-49b8-be62-2f6fd27792be",
-    "rating_tier": "negative",
-    "app_version": "8.8.36.522",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0602c9d3-afea-47ea-a135-4cfcd55adf8e",
-    "rating_tier": "positive",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "5d53f832-fa53-4161-ae17-e28214d49ed7",
-    "rating_tier": "negative",
-    "app_version": "9.1.56.574",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "e098635d-d417-4b6c-9381-d5c606a124df",
-    "rating_tier": "positive",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "658a1033-97c4-4b47-b59e-f97f10c687ba",
-    "rating_tier": "positive",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "dc3b153f-47cc-4768-8be0-55013422a35d",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f285a3e0-3bb2-4f5e-bb9b-962aedf0d89e",
-    "rating_tier": "positive",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b9c43c13-d5ec-4eb3-8bd3-deb52e60421d",
-    "rating_tier": "negative",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "45efb1b5-3884-465b-9332-85519869e042",
-    "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "285d9e13-2dbf-4e10-876a-1605ec6eb9de",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "00eb9a4e-4516-4f40-b44e-8329bbb7b95a",
-    "rating_tier": "positive",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "92408676-23d0-44f8-b5ba-ff576ac90507",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1baee234-a036-4c2e-bbda-73f6d0a5a17e",
-    "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "8e3515d3-403c-47d2-a38b-03f3bd1c7d2a",
-    "rating_tier": "negative",
-    "app_version": "8.9.20.574",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "078b3c3d-3bd6-4128-be0d-91eade69a4d2",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d6ab21b3-59bc-47d3-b7d5-315c84b88712",
-    "rating_tier": "neutral",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3d287183-06b5-4d1c-a455-9d03d3caf961",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0afaa4c4-8819-4afc-a4b6-fbe8f77cd555",
-    "rating_tier": "negative",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3f41272a-cd0e-4edf-a5e6-558b22739e61",
-    "rating_tier": "negative",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "7c876204-72e0-4da0-97da-700efe0ee383",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c8a82156-a4eb-48ca-b41f-e6ba9738efbf",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
     "inferred_segment": "rating_negative",
     "inferred": true,
     "confidence": "heuristic"
@@ -1544,7 +344,207 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "ef906507-31a4-4817-a4c5-8314fd9c2d50",
+    "review_id": "f6faf285-4612-46c5-b7a3-f746e0e27199",
+    "rating_tier": "negative",
+    "app_version": "9.1.46.1922",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c62413d1-4b8f-44cc-b4ca-a2e697e1440d",
+    "rating_tier": "negative",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a89ae3d4-7c37-48a8-89ae-507bf5a4cb9c",
+    "rating_tier": "positive",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "38275b00-fb2b-4dd1-8ec1-5d2da10236e5",
+    "rating_tier": "neutral",
+    "app_version": "9.0.30.642",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "ed91e801-1358-4d6f-93f3-a9cee3f6c815",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "633f9f8c-a291-43b0-a44a-d6c89741e334",
+    "rating_tier": "neutral",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "e5c3e685-3126-4385-99ce-20297bf72745",
+    "rating_tier": "negative",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "39a519ae-5d2c-48a2-8772-51d4d9cfc823",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0ccb2428-2091-4a75-9f9d-f4bc4e28b9ed",
+    "rating_tier": "neutral",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c1c5d111-f4ff-4e83-bb0b-3e6acfeff495",
+    "rating_tier": "neutral",
+    "app_version": "9.1.40.1482",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "bc9cc9eb-ea43-4ecd-b723-dac6306a6593",
+    "rating_tier": "positive",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "20507753-8217-4fba-b935-4e1355c05f64",
+    "rating_tier": "negative",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "5688b116-b132-4331-9d11-690a28d7ce86",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3ac0725d-3d71-4360-baa3-b4828401f078",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b44b749c-98d3-4c9d-9d53-a441f5b90eb1",
+    "rating_tier": "neutral",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "250ee5b2-878b-49d8-9f43-5b0ce86271b6",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "05304814-e4f6-43e5-b360-1226c92256e7",
+    "rating_tier": "neutral",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "360f7668-e31a-413f-8809-6633bcaf8554",
+    "rating_tier": "negative",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8bf7c419-4c1e-4aa9-83f4-eb57832a1729",
+    "rating_tier": "negative",
+    "app_version": "9.1.48.1663",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "1d042cac-c422-4752-8cc5-18db24036405",
+    "rating_tier": "positive",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "59500b38-6103-4075-9d23-232c705ba065",
+    "rating_tier": "neutral",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "2002c638-4b5e-4584-a26b-9ffc33ae47a1",
+    "rating_tier": "positive",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "423507b1-5399-4c96-bb4b-71730c169517",
+    "rating_tier": "neutral",
+    "app_version": "8.9.82.607",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "285d9e13-2dbf-4e10-876a-1605ec6eb9de",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "ff5c62c5-8255-48a5-a690-7995e4930788",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "64aa958b-9c58-4b50-9973-e08f407b8fbb",
     "rating_tier": "negative",
     "app_version": "9.1.42.2058",
     "inferred_segment": "rating_negative",
@@ -1552,7 +552,151 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "f86abcec-b8bc-4880-8fb5-71f2ae6652b7",
+    "review_id": "288e6da1-6434-40a8-afba-cb905f07a3aa",
+    "rating_tier": "positive",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "abb32e19-76a0-4753-8a96-5f293fcd6b7d",
+    "rating_tier": "positive",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7f32a5b7-b296-4b56-8789-158a4a1efa52",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3d76d6e1-97f4-40bb-9dcd-ac16a47d9369",
+    "rating_tier": "neutral",
+    "app_version": "8.9.34.590",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8a8a8c24-25cc-4876-8930-579547e67d61",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3b42963a-9ffd-49f2-be08-087d62bd1d41",
+    "rating_tier": "negative",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "fde4e680-67b5-4fa4-84e9-17d868f1a805",
+    "rating_tier": "negative",
+    "app_version": "9.1.36.1948",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0cd7e79a-775d-4ff5-a60d-041cc50c9eb3",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a6d85263-56ab-4c6d-bfbb-58638ad5bb3b",
+    "rating_tier": "negative",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "ce0ddf1e-8dc6-436d-a2e0-68b9e50a308c",
+    "rating_tier": "positive",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "cd744070-bfe7-4ea0-9f46-089c6de2f888",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "dfc59013-6a5d-4a0b-a946-95d86e23dba6",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "e34eeae9-6ca0-40f5-894a-4d02f1184ec2",
+    "rating_tier": "neutral",
+    "app_version": "9.1.40.1482",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f9a77c71-6524-4ba9-ad59-f19e97facfa4",
+    "rating_tier": "positive",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "da7df0a7-d305-49d9-a225-9104c08f86fc",
+    "rating_tier": "positive",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c0cadefa-dcc5-4460-b7a6-a82d7da27b19",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8fbabd74-ebaa-4e8b-ae3f-ac025a8e5410",
+    "rating_tier": "negative",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a8b375d2-4413-4613-817a-120606811418",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8ca067f7-d0d4-4626-821b-a04b92a17e9f",
     "rating_tier": "positive",
     "app_version": "",
     "inferred_segment": "rating_positive",
@@ -1560,7 +704,1359 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "8a48bf86-1174-4a55-b453-17a8d08a72e0",
+    "review_id": "cd8301e4-2678-463c-8acd-663f3c558655",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "acb78c7f-dada-4997-a598-9c1078cc8e1e",
+    "rating_tier": "neutral",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "40c1f066-06f5-4459-b9a9-0dfd017fb5b1",
+    "rating_tier": "negative",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a94ba237-a635-4d39-a20d-279883f3d140",
+    "rating_tier": "negative",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "9353987e-35fb-4b42-8202-ce74edaa99cb",
+    "rating_tier": "positive",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "35a3d80d-954f-408f-bbfe-7f3905603131",
+    "rating_tier": "negative",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "4ebac600-068f-44cb-a23d-751938e22960",
+    "rating_tier": "negative",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f4acf348-5946-4b58-a7f5-a0e2e8bd2600",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "eaf35b8b-6627-47b4-9bc6-b9a5b190f31b",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "cc265996-67d2-461a-80a2-3fdec03ef74c",
+    "rating_tier": "neutral",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f1f210de-5216-4390-aa09-acb95560dfd9",
+    "rating_tier": "positive",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "425cbeb2-3287-4ec0-a973-503799fc93ce",
+    "rating_tier": "negative",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "71acc0c4-13e4-4626-9cd7-1a24968e6a9d",
+    "rating_tier": "negative",
+    "app_version": "9.1.6.1145",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f3d44d1d-7e12-4bfa-8b7b-22c55cb17114",
+    "rating_tier": "positive",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "52766144-51b4-4490-9389-fb49fd5cddd4",
+    "rating_tier": "neutral",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c7ce0d42-c2e7-4932-b1a4-e9d65ce488ac",
+    "rating_tier": "neutral",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "4931c11b-b834-4fdd-ade0-2928621543ff",
+    "rating_tier": "neutral",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "2a023e15-ce29-4673-b6e8-01426ec1dbca",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "ab7b9606-436a-4f32-b4ba-9387235fee93",
+    "rating_tier": "neutral",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7506eb9a-a3db-4996-91f3-1a916a91d69c",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "16c0d835-96da-4ca0-a1e2-7bdfa82cbc75",
+    "rating_tier": "neutral",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "de8dd4bb-bf22-4874-92a8-3cc9c7c6ab2d",
+    "rating_tier": "negative",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "de8f3af2-2832-49da-98a0-839b2db9b937",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "e510a76b-83e8-462d-b0c4-86c9704b11a5",
+    "rating_tier": "negative",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b1e56aab-a4bc-405a-b770-a9038ccf3db4",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a1ad429d-58d8-4045-b95c-0a185b197e95",
+    "rating_tier": "negative",
+    "app_version": "9.1.36.1948",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b86cb1bc-3b3f-4918-8619-d73a36f0da47",
+    "rating_tier": "negative",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "494fd765-5377-4877-b4f1-8ff7f41cf8b4",
+    "rating_tier": "negative",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "bb0679bf-4db6-4365-bc50-bea3419ec925",
+    "rating_tier": "negative",
+    "app_version": "8.4.81.558",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "658a1033-97c4-4b47-b59e-f97f10c687ba",
+    "rating_tier": "positive",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "033cbaf3-606d-4b23-bb59-74441c0fba36",
+    "rating_tier": "neutral",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7c4a2855-3c83-4c8a-8ad4-fddb12aa732e",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "5e471158-e83c-401d-81aa-a6cf07dd5a74",
+    "rating_tier": "negative",
+    "app_version": "9.1.36.1948",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b949088f-6ef1-49ba-b13a-89d6092232a9",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "4edab58a-b350-44d0-96bc-c65695dcb763",
+    "rating_tier": "negative",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "825f68be-3ec0-4ecb-89b6-b721b11e2f47",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7e1ab28e-c85d-4720-8da0-b8b46185d7a5",
+    "rating_tier": "positive",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0255336d-f820-4b26-a080-a3f55d914c30",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7b43ff93-8d1e-41fb-ab8a-bdc46a6960fd",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "e575bbe8-b48d-4721-ab8c-70fd029bd46c",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "78a0fb1e-91f2-42a7-bfa8-abc8877f7868",
+    "rating_tier": "positive",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f51f5d0a-6d84-4767-bfb3-181a3a3ccbd1",
+    "rating_tier": "negative",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "ae69b979-89c8-4dc9-8c5f-6acde0289bcb",
+    "rating_tier": "negative",
+    "app_version": "8.8.40.470",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a7eee95b-8d30-44be-a408-6abfe16b1e5c",
+    "rating_tier": "positive",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "603dbb2d-7015-49a3-9972-92415d0b2ec4",
+    "rating_tier": "positive",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c5b6d8a7-8b5e-42bd-be3c-e1543660229f",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d89b11f7-0b6f-4bea-bad0-e609b44896ae",
+    "rating_tier": "neutral",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f040c68d-b1ba-432c-b2cc-4712a1635792",
+    "rating_tier": "negative",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "2fbfde69-8f2f-4cc2-9322-db1ea05feee0",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3f41272a-cd0e-4edf-a5e6-558b22739e61",
+    "rating_tier": "negative",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "9ab64890-57b9-437a-a1d7-f81823798981",
+    "rating_tier": "positive",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8189edf7-2929-4829-887a-bc34cf6e0119",
+    "rating_tier": "neutral",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "79fe4daf-d389-4d67-a1bd-cf294f48d660",
+    "rating_tier": "positive",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "dbac7a94-c550-4182-bde8-fd290295e8ea",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "1c9c5a57-0981-45f3-8f35-386f3cfc25a6",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "1ba50a5c-4ba7-42e0-8e86-bede31e37d63",
+    "rating_tier": "positive",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b554efdc-758b-4ec7-85a1-e8970d9d4f28",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c944e910-034c-4643-8e5c-9b36503ecdb6",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a87b3bfa-89f4-4584-b8bf-d23d2aaa25a1",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3ebe2c2e-536f-452e-9c97-bf806290e8e1",
+    "rating_tier": "neutral",
+    "app_version": "8.5.0.735",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c58a232a-489d-4f10-9d3b-be8339e59b68",
+    "rating_tier": "positive",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0504270d-fe7a-41da-85d3-37590ee1af73",
+    "rating_tier": "negative",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "30502705-ac02-4590-b689-08088c4e451f",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "2546f11f-0091-4ef7-83af-008b994f6152",
+    "rating_tier": "positive",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b79d8b62-f38c-4e4a-854a-24888d8b066d",
+    "rating_tier": "negative",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d7e12c79-06d4-418b-830d-e5051a1be76d",
+    "rating_tier": "neutral",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "fd0d2d92-6fbf-41e4-a02c-a83893ffc899",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "1569fe1e-1b02-49e9-8274-5fe7d160ab2c",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f8f0347f-2135-4024-84be-a8d9610a0a04",
+    "rating_tier": "neutral",
+    "app_version": "9.1.0.1147",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "54331472-54da-45f2-b004-9dabafddf8ab",
+    "rating_tier": "neutral",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "dfffd4c9-064c-415b-80f1-866af71447f5",
+    "rating_tier": "positive",
+    "app_version": "9.1.36.1948",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8976d72f-cc00-45ae-9bdd-0fa0d184e573",
+    "rating_tier": "positive",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b6659caa-d07b-47f4-9e86-f642addf1368",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "156e2b8d-48d7-4bb2-9cd5-8fa7c831879d",
+    "rating_tier": "positive",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "349509e5-a886-4865-833b-c8d67a4bed87",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7c35d693-f784-4280-9f27-5cf9c88c79bb",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "6526b357-5523-4011-b75c-db9f84d5316b",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "613483e7-a04d-4bc0-b430-f2b11e5804b3",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "50159c86-a9da-4b58-a883-abd83bbfb713",
+    "rating_tier": "negative",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "5584281f-da26-4d46-ab6e-84f8f6f39f5f",
+    "rating_tier": "neutral",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d959766d-7921-4502-b479-c1f4bb480849",
+    "rating_tier": "positive",
+    "app_version": "",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "4637e0c6-a04e-4d7c-82f0-6097a06976c0",
+    "rating_tier": "negative",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b92c33a6-3184-4754-9e7f-fc4ee2285f9d",
+    "rating_tier": "neutral",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3411e753-ebd0-4a7c-8a26-cee528abd57a",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "1c85bd97-a68a-4e94-9d20-5b54525088ac",
+    "rating_tier": "positive",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3d287183-06b5-4d1c-a455-9d03d3caf961",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f7b528ad-e904-4c01-bf6f-c406030f3e05",
+    "rating_tier": "neutral",
+    "app_version": "9.1.48.1661",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "06faf4c2-fc45-432c-a674-ea574722645a",
+    "rating_tier": "neutral",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "5a80940b-b42f-4676-85cc-dace4d684d13",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "670ddac8-504a-4b2a-837b-74e3e839c5fc",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f19b245a-723b-4b1a-abee-19f3d4c7ecd7",
+    "rating_tier": "positive",
+    "app_version": "",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d046e698-9702-4b86-b468-bfa0d7fa26f7",
+    "rating_tier": "neutral",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "ec851c32-5915-41f0-994b-0df4efaef431",
+    "rating_tier": "negative",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "e8fbdb46-7dd3-4412-af56-c49a91ae73b8",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d49cc012-0d09-41dd-98f4-c75878d89904",
+    "rating_tier": "negative",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "fcdcf690-b329-46fb-b653-880f9d038744",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "72195e0d-6789-4da9-8e03-319ef02f3ef3",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0c161b50-5277-4254-bf5f-6f9ed30aaff4",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "2e66e366-aafa-4ab8-b18f-77279fc00a79",
+    "rating_tier": "neutral",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "81c85174-d265-46cf-be4f-e8e2c1782981",
+    "rating_tier": "positive",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c8a82156-a4eb-48ca-b41f-e6ba9738efbf",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "52a92469-54ef-4282-b0bd-ae61da05dd47",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "996ae2e5-9eb9-46d4-8197-e71c16fd4f8c",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "fcd6c257-31dc-4d12-aa17-a28cbc323507",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "51edc6de-64a4-44b0-b9e9-59fca01bd916",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "358c6bfc-fc34-4d1f-8d0f-cd5f9d5bfe09",
+    "rating_tier": "positive",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "bd8a399f-79cb-4820-9cf0-6399432e4500",
+    "rating_tier": "negative",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "77d49cf6-09db-4677-b465-1779c64d9681",
+    "rating_tier": "negative",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "65f96e2b-ea72-4db2-8c73-f4ea8a7806ac",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "faf5b149-33e2-48a7-803e-fbfcda3075dc",
+    "rating_tier": "negative",
+    "app_version": "9.1.22.1630",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "31f5dcb0-6204-407b-9e8b-10fd3c11acac",
+    "rating_tier": "neutral",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "9725eaf3-0152-4089-b7a6-195ebe62d0d2",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "aefa075b-85c6-4bb1-aad7-c968a587e73e",
+    "rating_tier": "neutral",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c7c112cc-6e4e-49e0-9306-205afdb64cec",
+    "rating_tier": "negative",
+    "app_version": "9.1.0.1147",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a2fe219d-8559-48df-93ea-d3bbbc26df87",
+    "rating_tier": "positive",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8b91234f-669f-4bcc-907e-379759f236e8",
+    "rating_tier": "negative",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c9ae7210-5a7e-4415-ae6f-d5c9e598d1fa",
+    "rating_tier": "negative",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d093bd08-49b1-46df-b518-993888e24c21",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "e098635d-d417-4b6c-9381-d5c606a124df",
+    "rating_tier": "positive",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "1d3430c1-5279-4f2b-9120-6beed04b1773",
+    "rating_tier": "positive",
+    "app_version": "",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "28ce0d8b-747c-4969-be82-0e075f62802b",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "34a31512-3a18-4f46-ad0e-4b2f0341dd06",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "47254204-a77d-48b5-9134-8c3ce699540f",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "078b3c3d-3bd6-4128-be0d-91eade69a4d2",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "1699cca5-f8d9-4068-9236-5a646b8bdc04",
+    "rating_tier": "negative",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "23d36ad8-f3bc-49b8-be62-2f6fd27792be",
+    "rating_tier": "negative",
+    "app_version": "8.8.36.522",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "e4a7ea40-27be-4f7d-b8c2-7f6c5b61076d",
+    "rating_tier": "negative",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b0b46d2e-037a-4896-9679-1f437da51ad4",
+    "rating_tier": "neutral",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "35c51815-f3d5-43ab-a1fe-fe771501cf3f",
+    "rating_tier": "positive",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "5c88c8b2-8f13-480c-9700-e420b2e8b106",
+    "rating_tier": "positive",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7bd661cb-a875-473b-98bd-159f4fd77072",
+    "rating_tier": "neutral",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f1638c4b-704a-44bf-90f7-ce1fba5d1fc5",
+    "rating_tier": "neutral",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "608227a6-9b28-4bc4-a80a-405908fbf7ae",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "92e901b2-c228-483c-9298-7bc7562be98e",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "e4d8c792-9d16-4c38-9e23-5092fb1da958",
+    "rating_tier": "negative",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "499d12e2-6c43-4a5f-9be3-0cb41584fc4e",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a77df7cf-14d4-43de-8419-75a1ee38de89",
+    "rating_tier": "neutral",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7d486233-7f94-4eba-be9f-fecff69082d4",
+    "rating_tier": "neutral",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "2637a797-aac3-4c9e-ac9f-d05b70ef95c9",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "92408676-23d0-44f8-b5ba-ff576ac90507",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7acf20c2-d7c9-43f2-99d2-4c719b3b8557",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "4f5603d6-2acd-4128-bbea-0998943bf892",
+    "rating_tier": "negative",
+    "app_version": "9.1.48.1661",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8994968a-0ca0-4094-b2e0-292f023a013c",
+    "rating_tier": "neutral",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "5db60131-c6ad-4d95-a691-1f5513de3725",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "04d33692-800e-4f67-9808-8e28e2fd92a2",
+    "rating_tier": "positive",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "dc3b153f-47cc-4768-8be0-55013422a35d",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0f6354e2-1113-4676-8da6-21b4d53c45a8",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7c45a4cc-ddbb-4279-9058-3530699924e3",
+    "rating_tier": "neutral",
+    "app_version": "9.1.48.1663",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "85cbafc6-e4f8-49a8-ba8d-7cd94181e157",
+    "rating_tier": "positive",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a3f27bc3-9755-42de-9708-5443c24f4201",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3250271e-f467-41c9-a8f3-38c656597aa7",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a695ad5b-4413-4f9e-bbe1-c01379643cb3",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "cf95f0d3-081f-4ed6-9269-59b1feb58c20",
+    "rating_tier": "neutral",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "38b62a18-1510-4973-9233-cd209ab71de2",
+    "rating_tier": "neutral",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "032ca2b2-673b-442f-a540-5f59e34168ed",
+    "rating_tier": "negative",
+    "app_version": "9.1.22.1630",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0ff5e774-ff87-4675-aae5-252e9369bb94",
+    "rating_tier": "positive",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b6c10768-b9ca-4e9c-a43d-43255e5dfb60",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "1ebab0d2-46e1-456d-8ab6-76b599d581a2",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "66946960-a0d3-4e3d-ad0c-75375ccece65",
+    "rating_tier": "positive",
+    "app_version": "9.1.56.574",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "602bdab0-ef18-4b04-b415-afbcc2526b40",
+    "rating_tier": "negative",
+    "app_version": "9.1.36.1948",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b322aeb5-6360-48e4-af54-2f13d3555071",
+    "rating_tier": "neutral",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "5899dd9b-5d23-4489-86de-b1f2a624b2f1",
+    "rating_tier": "neutral",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "469b9372-5c6c-4edb-b1dc-d25db63f9ef5",
+    "rating_tier": "positive",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "81047392-986f-4282-a379-1d5479446836",
+    "rating_tier": "negative",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d48cd4a6-b79a-4248-8af2-da21a719a249",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "dec3c53f-fec3-4fbe-9496-c60f8d602998",
+    "rating_tier": "negative",
+    "app_version": "9.0.44.478",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "01d0a72b-1017-44c5-8051-85aab9bbdbc5",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "1cc26467-1b6c-478a-9f72-75dfeedb918a",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "73f4eb60-eee7-4e33-bda2-d2402c58ef8c",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "bbd10b30-04c0-42bd-ae26-8ea54160fb93",
     "rating_tier": "negative",
     "app_version": "",
     "inferred_segment": "mentions_ads",
@@ -1576,23 +2072,47 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "50159c86-a9da-4b58-a883-abd83bbfb713",
+    "review_id": "ef906507-31a4-4817-a4c5-8314fd9c2d50",
     "rating_tier": "negative",
     "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b6d1766f-465b-43d6-8634-fb05c1f97c69",
+    "rating_tier": "neutral",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d6054190-ef1c-4c26-93fa-c2c620f0d949",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "381de611-43a9-4d63-862d-970610b265de",
+    "rating_tier": "negative",
+    "app_version": "9.1.58.1550",
     "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "f316a939-8d8d-4dbe-8a51-75bd3e3c16bb",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
+    "review_id": "37c3ade6-79ec-4bc7-8413-9cac34aeaa24",
+    "rating_tier": "neutral",
+    "app_version": "9.0.80.1343",
     "inferred_segment": "mentions_ads",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "e8fbdb46-7dd3-4412-af56-c49a91ae73b8",
+    "review_id": "6861cc0d-0962-4f09-a8c6-bceb8d0081f6",
     "rating_tier": "neutral",
     "app_version": "",
     "inferred_segment": "rating_neutral",
@@ -1608,367 +2128,23 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "2802bcfe-2bfa-475b-b244-79a054234b5f",
-    "rating_tier": "positive",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "603dbb2d-7015-49a3-9972-92415d0b2ec4",
-    "rating_tier": "positive",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0ad865b6-db32-4b8b-a651-d0ce749c0199",
-    "rating_tier": "neutral",
-    "app_version": "9.1.46.1922",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b44b749c-98d3-4c9d-9d53-a441f5b90eb1",
-    "rating_tier": "neutral",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "6205add1-c20c-41c7-a451-40beb47f89ce",
+    "review_id": "f316a939-8d8d-4dbe-8a51-75bd3e3c16bb",
     "rating_tier": "negative",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c20d8926-254d-4607-889b-86f6e0265d6b",
-    "rating_tier": "neutral",
-    "app_version": "9.1.56.574",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "5f2c1f54-b8d6-408b-8be3-c9fca056fb53",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "fefba502-3be4-4af2-a38f-8f44f7b86bdb",
-    "rating_tier": "neutral",
     "app_version": "9.1.44.2120",
     "inferred_segment": "mentions_ads",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "423507b1-5399-4c96-bb4b-71730c169517",
-    "rating_tier": "neutral",
-    "app_version": "8.9.82.607",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "bdb3570a-cb89-4a9d-a479-05c99d773014",
+    "review_id": "3b3b9acb-18b7-43c8-9eb4-23076c7f7568",
     "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b92c33a6-3184-4754-9e7f-fc4ee2285f9d",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "40be2c9e-7a11-4661-ad1d-b6ab97e8436e",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "8189edf7-2929-4829-887a-bc34cf6e0119",
-    "rating_tier": "neutral",
     "app_version": "9.1.50.1906",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c0cadefa-dcc5-4460-b7a6-a82d7da27b19",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "7a820012-fb74-4fd8-8166-046a16b8d42b",
-    "rating_tier": "positive",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "4ebac600-068f-44cb-a23d-751938e22960",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
     "inferred_segment": "rating_negative",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "34a31512-3a18-4f46-ad0e-4b2f0341dd06",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "9725eaf3-0152-4089-b7a6-195ebe62d0d2",
-    "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "190e6b6b-4cfb-47d6-9874-61b73d563d0a",
-    "rating_tier": "positive",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0b5132e5-9451-46a6-8e13-a1adc5ed91cb",
-    "rating_tier": "negative",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "66946960-a0d3-4e3d-ad0c-75375ccece65",
-    "rating_tier": "positive",
-    "app_version": "9.1.56.574",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0255336d-f820-4b26-a080-a3f55d914c30",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "7c35d693-f784-4280-9f27-5cf9c88c79bb",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "71acc0c4-13e4-4626-9cd7-1a24968e6a9d",
-    "rating_tier": "negative",
-    "app_version": "9.1.6.1145",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "4b35e97c-8acb-4478-9775-dceacee74f96",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "af4eaf00-afcc-431f-af8e-b6ec0fe41631",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "2fedc277-782a-4b71-a9a9-8affd665f299",
-    "rating_tier": "negative",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "01e158b8-3ef8-4637-8813-dd3fc30e209f",
-    "rating_tier": "positive",
-    "app_version": "9.1.56.574",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0f05a244-8ce0-479e-aeb0-b2be3e6974fc",
-    "rating_tier": "positive",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0f6354e2-1113-4676-8da6-21b4d53c45a8",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "25aefacd-c84e-4496-8acd-e80c89867276",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a4a0dff7-0cf6-4a49-ba44-24e4c5898ae8",
-    "rating_tier": "negative",
-    "app_version": "9.1.48.1662",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b42b205f-a5b9-4aba-91ef-7afba6e31485",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c0cef637-753c-4c3a-b094-906e547e4a28",
-    "rating_tier": "neutral",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "25c3f536-63e0-4437-85ff-ac33c7ce5c47",
-    "rating_tier": "neutral",
-    "app_version": "9.1.70.1896",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a1990955-4ae1-43b2-96d8-58a0de6f9a10",
-    "rating_tier": "negative",
-    "app_version": "9.0.54.518",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "381de611-43a9-4d63-862d-970610b265de",
-    "rating_tier": "negative",
-    "app_version": "9.1.58.1550",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a510b27a-b173-48f4-a22f-874eea9efda4",
-    "rating_tier": "neutral",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "08305a0a-9bf5-4720-b7f6-0b541c9d790a",
-    "rating_tier": "negative",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b12dd3aa-b1d3-4d0c-86da-bed9c9848bfb",
-    "rating_tier": "negative",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "4edab58a-b350-44d0-96bc-c65695dcb763",
-    "rating_tier": "negative",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "fe306b56-89a9-4e3a-a30c-c4cde971a0ee",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "cd8301e4-2678-463c-8acd-663f3c558655",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "38b62a18-1510-4973-9233-cd209ab71de2",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0cd7e79a-775d-4ff5-a60d-041cc50c9eb3",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d093bd08-49b1-46df-b518-993888e24c21",
+    "review_id": "276594f6-1191-407c-bcc3-b0cba8f2268e",
     "rating_tier": "negative",
     "app_version": "9.1.52.1394",
     "inferred_segment": "mentions_premium",
@@ -1984,18 +2160,162 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "75b2ab2e-d784-48e2-ba56-706e03ec9265",
-    "rating_tier": "positive",
+    "review_id": "096c4b2c-9014-48c0-b6e9-93c8d77843ac",
+    "rating_tier": "neutral",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "2272dfce-03c4-4ad7-a3a6-2d1d9f82d9a9",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "e428a269-105b-464a-a528-993c55681722",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "1a8bee91-5d8f-4dee-9572-60c28513e1cf",
+    "rating_tier": "neutral",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0027fd80-c288-4d6c-a4a8-986611ccdeb9",
+    "rating_tier": "negative",
     "app_version": "9.1.58.1567",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8ec95632-9e9e-4e85-8b16-8d296558af2f",
+    "rating_tier": "negative",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "190e6b6b-4cfb-47d6-9874-61b73d563d0a",
+    "rating_tier": "positive",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a2d1c9de-778f-4029-bd70-144fb1ee4da3",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "83ff77e8-4b12-4d9c-97c7-1e483eb2882f",
+    "rating_tier": "negative",
+    "app_version": "9.1.48.1663",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "723c7221-7bca-45ff-9b15-57d7f9be783f",
+    "rating_tier": "negative",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f44ffd63-2dcd-4706-889f-923250f5b906",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "31e66459-8521-45e4-9e7c-eca765df57e7",
+    "rating_tier": "neutral",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "355d1244-5487-4da2-9445-f0c51612bc5e",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3d0f5951-a093-4bf6-b557-a82b768d66cb",
+    "rating_tier": "neutral",
+    "app_version": "9.1.46.1922",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "38627491-8a82-4cfe-b03a-0ef6b2c2733a",
+    "rating_tier": "positive",
+    "app_version": "9.1.52.1394",
     "inferred_segment": "rating_positive",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "4f5603d6-2acd-4128-bbea-0998943bf892",
+    "review_id": "3abacd50-8448-4c18-86d6-6fed55f2e913",
     "rating_tier": "negative",
-    "app_version": "9.1.48.1661",
+    "app_version": "9.1.64.1676",
     "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0c93f3cf-2a15-4d51-8088-8b811b1f5e37",
+    "rating_tier": "negative",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "fe7f8409-7793-4ac4-b16f-f16858b5df11",
+    "rating_tier": "neutral",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0bf30d8a-29f4-45dc-ba9a-16eb05177bfa",
+    "rating_tier": "neutral",
+    "app_version": "9.1.48.1656",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "5e091cd7-6f98-4724-8213-ee21a2a2658a",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2008,6 +2328,102 @@
     "confidence": "heuristic"
   },
   {
+    "review_id": "0fc2e807-8280-4180-a5ee-6701f4ca8996",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c09becf5-9e78-49eb-9f90-f9041022b4ec",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "ca099d56-105b-4ad9-8370-edbe06b3de18",
+    "rating_tier": "positive",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7093a8d3-89d4-4e1b-ba59-988a45f31b37",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "31c02186-99fd-4083-9dba-9c5b11b6352a",
+    "rating_tier": "positive",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "bf6af7e8-8e46-46e1-8fdc-1398e60a2f6f",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "00eb9a4e-4516-4f40-b44e-8329bbb7b95a",
+    "rating_tier": "positive",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d437ad6e-291a-43b1-b0ff-7a1959540c6d",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f33b466c-386e-4857-91f5-2855f210396c",
+    "rating_tier": "negative",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "5f2c1f54-b8d6-408b-8be3-c9fca056fb53",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0ad865b6-db32-4b8b-a651-d0ce749c0199",
+    "rating_tier": "neutral",
+    "app_version": "9.1.46.1922",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "ecec4c62-67e3-4387-952c-ce0caa9d34d9",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
     "review_id": "999cd0ba-7a16-4e37-8a55-4f6cdd6b603d",
     "rating_tier": "negative",
     "app_version": "9.1.42.2058",
@@ -2016,7 +2432,295 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "8b91234f-669f-4bcc-907e-379759f236e8",
+    "review_id": "dadd730c-28c1-41e8-83e9-4545d7723200",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f047381b-7699-4f44-95da-06ce7e2fd565",
+    "rating_tier": "neutral",
+    "app_version": "9.0.94.274",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a7c7d2d9-2a85-445f-ab8e-ae08d4fdae3e",
+    "rating_tier": "positive",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d1adf43f-df3c-4f22-ae99-f0df35a76c97",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c20d8926-254d-4607-889b-86f6e0265d6b",
+    "rating_tier": "neutral",
+    "app_version": "9.1.56.574",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b12dd3aa-b1d3-4d0c-86da-bed9c9848bfb",
+    "rating_tier": "negative",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "e7e042e1-40b7-49e2-a8de-923ca466dc2b",
+    "rating_tier": "positive",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "9777201e-2e3e-45c2-91d9-66a34403347c",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "6a2e722a-15b0-4638-94ab-addbb085e172",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "2371ecee-a153-4199-82fb-f71313f8ffda",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a6145719-67bf-4e57-8583-0e5c81bdd2a4",
+    "rating_tier": "positive",
+    "app_version": "",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f1ddb4c4-7860-4bae-a7d6-3467303c9c92",
+    "rating_tier": "neutral",
+    "app_version": "9.1.30.1993",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "79e5d0f0-cb20-4755-b21f-720b24ba7919",
+    "rating_tier": "positive",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7c21df3d-eab9-44e7-9622-b675914ab116",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "6680a8ae-d819-473d-a780-5b3a1d780c94",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8bbf5732-efb8-45b2-97f6-53ee15172c57",
+    "rating_tier": "neutral",
+    "app_version": "9.1.56.574",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "39a22c49-782c-4692-8bb4-a3bdc5acaa47",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "bdb3570a-cb89-4a9d-a479-05c99d773014",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "cbf03d84-9bfa-4741-8cb6-4b9b0eea32be",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "5d53f832-fa53-4161-ae17-e28214d49ed7",
+    "rating_tier": "negative",
+    "app_version": "9.1.56.574",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a1990955-4ae1-43b2-96d8-58a0de6f9a10",
+    "rating_tier": "negative",
+    "app_version": "9.0.54.518",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "41d2ccb4-e362-4b40-878e-0836c6113e26",
+    "rating_tier": "positive",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b42b205f-a5b9-4aba-91ef-7afba6e31485",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "05cf46e7-bce1-41f8-b541-a1e8920d957f",
+    "rating_tier": "negative",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a510b27a-b173-48f4-a22f-874eea9efda4",
+    "rating_tier": "neutral",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "fc3df93a-cbad-4a7a-8b90-ee9f3d5b6325",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f90ba5ec-953b-49b1-a9e2-66ca660bdc96",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "84abf13d-daeb-443a-ad87-ceeffc9e50a8",
+    "rating_tier": "neutral",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3c2aa376-e9df-4f9c-b004-5c5885f59273",
+    "rating_tier": "positive",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "ccbd022e-7349-4561-be6e-788e073eba33",
+    "rating_tier": "negative",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3d9f2431-6eea-4628-994a-31ab742f3638",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "5a6142a7-b3c4-4fca-a9f1-abb6c61d3405",
+    "rating_tier": "neutral",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "53389457-8a5a-4a82-a451-164f82035b97",
+    "rating_tier": "neutral",
+    "app_version": "9.1.18.1504",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3e3bcb6c-fff3-4793-b4a8-600d73718c8a",
+    "rating_tier": "negative",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "bd87a908-f51c-40c5-8cc4-f8e78a750eb1",
+    "rating_tier": "negative",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "58a94bb4-07d3-471d-bc78-718ec79c39e9",
+    "rating_tier": "positive",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "500a8d3c-01c1-4736-8c49-01f4057b6721",
     "rating_tier": "negative",
     "app_version": "9.1.40.1486",
     "inferred_segment": "rating_negative",
@@ -2024,10 +2728,122 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "7685ad0d-71fd-4841-b224-f497bedeef35",
+    "review_id": "adf69013-feab-4320-abf7-0b80d583ded3",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "912d9806-a718-41a1-a3aa-81222cdc466e",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7b29fc8c-f5c3-4ddb-87cb-6327e103a5e1",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "3c53fa25-2d4d-4d4e-9d3c-38b90ac5cfb7",
+    "rating_tier": "positive",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "293e8f27-77b4-480c-8101-84b9d882882c",
+    "rating_tier": "neutral",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "957eb215-71de-4a6b-9657-087866666b40",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "60ccb13e-880b-4200-afc7-9380f89e4ac6",
+    "rating_tier": "negative",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "98bd4338-3e2d-467c-b22f-60c4086ab070",
+    "rating_tier": "negative",
+    "app_version": "9.1.46.1936",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "eb0215d0-85b5-4a3d-aea4-8eda5b725386",
+    "rating_tier": "positive",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8c44b2d2-21e5-4e2e-9d25-58a0697afc43",
     "rating_tier": "negative",
     "app_version": "9.1.68.1888",
     "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "2fb06e88-e578-4fc5-a18b-39924c6b4a30",
+    "rating_tier": "positive",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "b9c43c13-d5ec-4eb3-8bd3-deb52e60421d",
+    "rating_tier": "negative",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7a820012-fb74-4fd8-8166-046a16b8d42b",
+    "rating_tier": "positive",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0dc5a5b1-842b-48e7-96b2-42ca261e993c",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "9ea599c6-cacb-4360-9837-ac0bfb3bbfec",
+    "rating_tier": "positive",
+    "app_version": "9.1.48.1663",
+    "inferred_segment": "rating_positive",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2040,10 +2856,130 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "70254ac2-e147-4d11-9d67-7d2223356f4b",
+    "review_id": "a82c9877-a97d-4a71-b51b-4fc7126a4924",
+    "rating_tier": "neutral",
+    "app_version": "9.1.56.574",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "f26a6aa5-2ee5-4830-a1a0-8a2e0fb4443b",
     "rating_tier": "negative",
     "app_version": "9.1.42.2058",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "adc8daea-05d6-4890-b8fe-b9fbd39e99ce",
+    "rating_tier": "positive",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "5685156c-5a41-44c6-a30e-6cd75fad2426",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
     "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d7eb8378-ff11-411e-b663-56c43a0b8b36",
+    "rating_tier": "positive",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "1e9e2e2f-92ce-4a00-8bd6-eb1523d4f8f5",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c997b2f5-9e3b-4354-8cf4-24e49a8b084c",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "c10baaec-9318-4747-8dfc-caad314ac93d",
+    "rating_tier": "positive",
+    "app_version": "",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "97cfe17d-16cb-4de6-877b-c9148cc34fd0",
+    "rating_tier": "neutral",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "ba118afa-df0b-4329-8da4-bf0fda02b221",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a0dbbdca-a81b-4d95-82e9-45c407635530",
+    "rating_tier": "neutral",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "4a15d6c1-f796-44ca-ba01-5750521f9545",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "86dc48af-62db-42c7-b4f4-b8c9fb3184fb",
+    "rating_tier": "negative",
+    "app_version": "9.1.34.2060",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7c861008-9de0-4733-8721-4745b75ec5f1",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a1ea7690-78c5-426b-aad3-e16877ce8317",
+    "rating_tier": "negative",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "2db68312-246d-4550-87f6-3fc71a338128",
+    "rating_tier": "positive",
+    "app_version": "9.0.74.1121",
+    "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2056,10 +2992,10 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "c1c5d111-f4ff-4e83-bb0b-3e6acfeff495",
-    "rating_tier": "neutral",
-    "app_version": "9.1.40.1482",
-    "inferred_segment": "rating_neutral",
+    "review_id": "37d7f742-afa9-4709-a60a-1058f350299d",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2072,18 +3008,58 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "f9a77c71-6524-4ba9-ad59-f19e97facfa4",
+    "review_id": "9446b082-a43e-45ca-bfb3-e17a6cc34f15",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "9eae282b-7ff9-4524-acf6-2c2f54a2c5be",
+    "rating_tier": "negative",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "44aefb2a-28b4-4d02-8548-81db2a571947",
     "rating_tier": "positive",
-    "app_version": "9.1.64.1676",
+    "app_version": "9.1.60.1970",
     "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "bd7131cd-5793-491a-a99b-29f4c0973a4f",
+    "review_id": "29591686-1a95-4b5c-a0ae-19727d4a2177",
     "rating_tier": "negative",
+    "app_version": "9.0.86.1358",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "623d4cb7-9032-434c-be7f-ba20fea8a9ad",
+    "rating_tier": "neutral",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7393a839-d1ed-4526-8575-11b0c33e82ff",
+    "rating_tier": "positive",
     "app_version": "",
-    "inferred_segment": "mentions_ads",
+    "inferred_segment": "rating_positive",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "11a5773c-f996-4272-8d8f-a9784a6610be",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2092,6 +3068,22 @@
     "rating_tier": "negative",
     "app_version": "9.1.50.1906",
     "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "7215278f-ce53-401a-9f55-abff02d99ea5",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d1cff250-7a8c-46cc-be87-939afb67edfa",
+    "rating_tier": "neutral",
+    "app_version": "9.1.48.1663",
+    "inferred_segment": "rating_neutral",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2112,10 +3104,10 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "31f5dcb0-6204-407b-9e8b-10fd3c11acac",
-    "rating_tier": "neutral",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "mentions_ads",
+    "review_id": "fd67ae35-1bc5-4010-ba59-459571a671f7",
+    "rating_tier": "negative",
+    "app_version": "9.1.56.574",
+    "inferred_segment": "rating_negative",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2152,18 +3144,18 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "c997b2f5-9e3b-4354-8cf4-24e49a8b084c",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_neutral",
+    "review_id": "70254ac2-e147-4d11-9d67-7d2223356f4b",
+    "rating_tier": "negative",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_negative",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "0579c83a-eb14-4b46-8f4c-198d3c479acd",
-    "rating_tier": "positive",
-    "app_version": "9.1.48.1656",
-    "inferred_segment": "rating_positive",
+    "review_id": "1603cf30-4297-437f-9278-fa21b49a8bdc",
+    "rating_tier": "neutral",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_neutral",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2176,17 +3168,25 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "1c3f82b1-a93c-4a1f-989d-2290caac2438",
-    "rating_tier": "neutral",
+    "review_id": "7b8f715a-15d1-431f-bebb-0abbb722de27",
+    "rating_tier": "positive",
     "app_version": "",
-    "inferred_segment": "mentions_ads",
+    "inferred_segment": "rating_positive",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "a0dbbdca-a81b-4d95-82e9-45c407635530",
+    "review_id": "bbf8fde8-bdcb-426c-88eb-5ec252f3ea95",
     "rating_tier": "neutral",
-    "app_version": "9.1.64.1676",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "e870adb0-1f06-4be3-894e-4b650d9f682f",
+    "rating_tier": "neutral",
+    "app_version": "9.1.44.2120",
     "inferred_segment": "rating_neutral",
     "inferred": true,
     "confidence": "heuristic"
@@ -2200,18 +3200,34 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "033cbaf3-606d-4b23-bb59-74441c0fba36",
+    "review_id": "2012c08f-2fac-47df-a3f5-add1b99f47d8",
     "rating_tier": "neutral",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "mentions_premium",
+    "app_version": "9.1.64.1676",
+    "inferred_segment": "rating_neutral",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "5584281f-da26-4d46-ab6e-84f8f6f39f5f",
+    "review_id": "8bc9dee5-e7e0-46e5-96d3-bd360868090f",
     "rating_tier": "neutral",
-    "app_version": "9.1.50.1906",
+    "app_version": "",
     "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "50aaa3af-5847-4220-9f9c-27241799293b",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "dc660995-979e-4ef1-9734-b48db3372c22",
+    "rating_tier": "negative",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2224,10 +3240,10 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "81c85174-d265-46cf-be4f-e8e2c1782981",
-    "rating_tier": "positive",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_positive",
+    "review_id": "fae7ad23-68fe-4e0d-ab81-e33effe01aa7",
+    "rating_tier": "neutral",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "rating_neutral",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2236,6 +3252,22 @@
     "rating_tier": "negative",
     "app_version": "9.1.40.1486",
     "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "8da644f6-6e77-4e15-a5e0-28533dffc95c",
+    "rating_tier": "positive",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "2839aaa4-5011-4282-ae95-1cf4d63909ee",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_neutral",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2256,10 +3288,10 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "cd27ff85-6083-4d98-ba3f-c7c10604e839",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "mentions_premium",
+    "review_id": "fdc1a27c-7436-4a34-bc80-0bb0b8817074",
+    "rating_tier": "neutral",
+    "app_version": "9.1.40.1486",
+    "inferred_segment": "rating_neutral",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2272,10 +3304,18 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "cf95f0d3-081f-4ed6-9269-59b1feb58c20",
+    "review_id": "6198ed29-44d8-45b5-8e2f-42a4de706e68",
     "rating_tier": "neutral",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_neutral",
+    "app_version": "9.1.44.2120",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "24828c62-3c6e-4e8c-b878-8a05dd66bc94",
+    "rating_tier": "positive",
+    "app_version": "9.1.42.2058",
+    "inferred_segment": "rating_positive",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2288,10 +3328,26 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "358c6bfc-fc34-4d1f-8d0f-cd5f9d5bfe09",
-    "rating_tier": "positive",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_positive",
+    "review_id": "469b733e-8f63-4217-b35b-96104f871bf3",
+    "rating_tier": "negative",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "72147df9-64f4-4cf2-9a98-ac82039b3947",
+    "rating_tier": "neutral",
+    "app_version": "9.1.68.1888",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "a431056a-f51c-49f5-b6ab-0060f74036ba",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2312,6 +3368,30 @@
     "confidence": "heuristic"
   },
   {
+    "review_id": "0c08af02-7937-45ea-a7b6-7563eb2671c7",
+    "rating_tier": "neutral",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "9e346367-3d54-4463-9267-6887ff7ec59e",
+    "rating_tier": "positive",
+    "app_version": "",
+    "inferred_segment": "mentions_free",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "45efb1b5-3884-465b-9332-85519869e042",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
     "review_id": "cee1b991-3e20-4398-ac47-8e69c006a832",
     "rating_tier": "negative",
     "app_version": "9.1.42.2058",
@@ -2328,10 +3408,10 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "bbd10b30-04c0-42bd-ae26-8ea54160fb93",
+    "review_id": "6205add1-c20c-41c7-a451-40beb47f89ce",
     "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "mentions_ads",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2360,10 +3440,42 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "06bc8e43-bc86-4e3d-82d8-7b1ed133add7",
+    "review_id": "e738a9b5-a6b5-4e93-bfcf-4e881f042e81",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "rating_neutral",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d4e63101-29e7-40f2-910c-cb09d85e29e3",
     "rating_tier": "negative",
-    "app_version": "9.1.68.1888",
+    "app_version": "9.1.62.1601",
     "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "1c3f82b1-a93c-4a1f-989d-2290caac2438",
+    "rating_tier": "neutral",
+    "app_version": "",
+    "inferred_segment": "mentions_ads",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "d04a4e91-2508-4432-a37e-c1c71f8bb545",
+    "rating_tier": "negative",
+    "app_version": "9.1.36.1948",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "0602c9d3-afea-47ea-a135-4cfcd55adf8e",
+    "rating_tier": "positive",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_positive",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2376,10 +3488,18 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "45e49fc0-ea81-4e00-a37b-5250b822ef36",
+    "review_id": "7c42e265-6ad8-437f-907d-ef0fe96585db",
+    "rating_tier": "negative",
+    "app_version": "9.1.50.1906",
+    "inferred_segment": "mentions_premium",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "2a39eeb9-a18e-47dd-9cfd-f6ab96efaf7f",
     "rating_tier": "neutral",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_neutral",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "mentions_premium",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2392,10 +3512,10 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "3c2aa376-e9df-4f9c-b004-5c5885f59273",
-    "rating_tier": "positive",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_positive",
+    "review_id": "1a46cc0a-d05c-478d-bc87-0dbbeb597b5b",
+    "rating_tier": "negative",
+    "app_version": "",
+    "inferred_segment": "rating_negative",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2408,18 +3528,26 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "9b644f98-6709-41fb-b3e2-a2ad79a65452",
+    "review_id": "af57eff5-d666-4000-8cf9-25210dabd597",
     "rating_tier": "positive",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "mentions_premium",
+    "app_version": "9.1.52.1394",
+    "inferred_segment": "rating_positive",
     "inferred": true,
     "confidence": "heuristic"
   },
   {
-    "review_id": "7d486233-7f94-4eba-be9f-fecff69082d4",
-    "rating_tier": "neutral",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_neutral",
+    "review_id": "8ce7df53-9165-473c-8aae-1521b6f04b41",
+    "rating_tier": "negative",
+    "app_version": "9.1.60.1970",
+    "inferred_segment": "rating_negative",
+    "inferred": true,
+    "confidence": "heuristic"
+  },
+  {
+    "review_id": "43ab82e8-7bf5-49a9-abbe-66049e3859a9",
+    "rating_tier": "negative",
+    "app_version": "9.1.62.1601",
+    "inferred_segment": "mentions_ads",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2456,10 +3584,10 @@
     "confidence": "heuristic"
   },
   {
-    "review_id": "b9672cc7-038b-4173-a5ec-e93a299bdea8",
+    "review_id": "78e2aec7-e2e1-4131-b837-7002ff802ce3",
     "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "mentions_premium",
+    "app_version": "9.1.58.1567",
+    "inferred_segment": "rating_negative",
     "inferred": true,
     "confidence": "heuristic"
   },
@@ -2468,1134 +3596,6 @@
     "rating_tier": "negative",
     "app_version": "9.1.40.1486",
     "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "bbf8fde8-bdcb-426c-88eb-5ec252f3ea95",
-    "rating_tier": "neutral",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "7a7bfcf3-633f-4196-8da2-a15a6ba1dfb4",
-    "rating_tier": "positive",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "623d4cb7-9032-434c-be7f-ba20fea8a9ad",
-    "rating_tier": "neutral",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3721bb6e-ca5d-4fed-bd27-fcf773808c3b",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "ea5cc4a9-3ed4-47cc-b89d-2b87ebb4eaec",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "bc9cc9eb-ea43-4ecd-b723-dac6306a6593",
-    "rating_tier": "positive",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b59719d7-8a2a-4fee-aa81-8dae50e7e164",
-    "rating_tier": "negative",
-    "app_version": "9.1.36.1948",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3d9f2431-6eea-4628-994a-31ab742f3638",
-    "rating_tier": "negative",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d9db13d4-1cb6-42c4-ace6-9d7bffe40db0",
-    "rating_tier": "positive",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "65008725-d253-4797-82c9-03c1785690ed",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1a8cd197-6ebe-46fb-8fa7-4abc4d935192",
-    "rating_tier": "negative",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b86cb1bc-3b3f-4918-8619-d73a36f0da47",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d959766d-7921-4502-b479-c1f4bb480849",
-    "rating_tier": "positive",
-    "app_version": "",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0d3f6357-c02e-4c62-a7ed-a7ddb45ab9f3",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d1adf43f-df3c-4f22-ae99-f0df35a76c97",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "cc265996-67d2-461a-80a2-3fdec03ef74c",
-    "rating_tier": "neutral",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "84d04da0-844f-4611-b0b5-8a77eb9629cd",
-    "rating_tier": "negative",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "5a786006-4841-4f4a-be49-e0aaedeb3f40",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "8c82702f-eeac-4514-96dc-538791b2126e",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "83b24efd-e3f1-4cea-9ad5-f2f0358bc367",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d88480ce-722e-4490-8eb6-b31cd0bd9ba1",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c8e025cf-8f51-4e95-9725-cf4ba1b2195e",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "84451b15-59f4-4e43-819d-7bb9b9a48f82",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "37c3ade6-79ec-4bc7-8413-9cac34aeaa24",
-    "rating_tier": "neutral",
-    "app_version": "9.0.80.1343",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "4a15d6c1-f796-44ca-ba01-5750521f9545",
-    "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "751a6121-9bdc-4611-8c83-87e1886a9580",
-    "rating_tier": "positive",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "825fe23d-f068-4821-ab38-5b0b4c469774",
-    "rating_tier": "negative",
-    "app_version": "9.1.22.1630",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "670ddac8-504a-4b2a-837b-74e3e839c5fc",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "7b43ff93-8d1e-41fb-ab8a-bdc46a6960fd",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "07eff698-2099-434c-a88d-8d758c309e5c",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b368ace8-7bfe-4147-9d7b-25bad3fe5444",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "96369426-abde-4c5b-9e7c-8da62b69e754",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a7eee95b-8d30-44be-a408-6abfe16b1e5c",
-    "rating_tier": "positive",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "fcd6c257-31dc-4d12-aa17-a28cbc323507",
-    "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "8976d72f-cc00-45ae-9bdd-0fa0d184e573",
-    "rating_tier": "positive",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "6a0afd9e-8196-43bc-b938-5918c1c77a3a",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "649bbba0-e4c6-47dc-ba69-74da37651bef",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "694bfe2b-dc16-44c3-a7e4-51ca32c3c8a5",
-    "rating_tier": "neutral",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "8f19a21a-dc21-4c90-8e8a-bfa53f48c107",
-    "rating_tier": "positive",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d2492483-533e-4b78-a672-9ce703864b0f",
-    "rating_tier": "negative",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "86fd4a13-4df1-4a92-8769-2c6d2b6f25ca",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "131d0f4c-52f0-48c5-bd70-d7504645be43",
-    "rating_tier": "negative",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "9e44f3bd-fe3a-415b-8dbd-b4daa75650a9",
-    "rating_tier": "positive",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "fcdcf690-b329-46fb-b653-880f9d038744",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d072e9c9-72b8-4b9c-ad79-b95c32d57d8a",
-    "rating_tier": "positive",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1d042cac-c422-4752-8cc5-18db24036405",
-    "rating_tier": "positive",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f26a6aa5-2ee5-4830-a1a0-8a2e0fb4443b",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "84abf13d-daeb-443a-ad87-ceeffc9e50a8",
-    "rating_tier": "neutral",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "e1b71930-06c9-4010-9625-b3238f304308",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b1e56aab-a4bc-405a-b770-a9038ccf3db4",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "16c0d835-96da-4ca0-a1e2-7bdfa82cbc75",
-    "rating_tier": "neutral",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "070e9ba9-c4f7-4e4c-8ac9-100c7f30a3be",
-    "rating_tier": "neutral",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "78a0fb1e-91f2-42a7-bfa8-abc8877f7868",
-    "rating_tier": "positive",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b6d1766f-465b-43d6-8634-fb05c1f97c69",
-    "rating_tier": "neutral",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "41d2ccb4-e362-4b40-878e-0836c6113e26",
-    "rating_tier": "positive",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a8b375d2-4413-4613-817a-120606811418",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1569fe1e-1b02-49e9-8274-5fe7d160ab2c",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "71b10650-8988-441d-8c85-48b5999be765",
-    "rating_tier": "negative",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "72bd3519-8cc6-4e64-9324-48416b5c1682",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "4637e0c6-a04e-4d7c-82f0-6097a06976c0",
-    "rating_tier": "negative",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "35c51815-f3d5-43ab-a1fe-fe771501cf3f",
-    "rating_tier": "positive",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c5b6d8a7-8b5e-42bd-be3c-e1543660229f",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "dbad2b54-d901-4c90-ac62-fe7529dc8b73",
-    "rating_tier": "neutral",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "fd0d2d92-6fbf-41e4-a02c-a83893ffc899",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1371c187-fd5c-4ff8-9885-8e79a262b412",
-    "rating_tier": "negative",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "5685156c-5a41-44c6-a30e-6cd75fad2426",
-    "rating_tier": "negative",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "2fbfde69-8f2f-4cc2-9322-db1ea05feee0",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "e4d8c792-9d16-4c38-9e23-5092fb1da958",
-    "rating_tier": "negative",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "349509e5-a886-4865-833b-c8d67a4bed87",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "9a7c43a5-d27f-4601-accc-80819f03c413",
-    "rating_tier": "neutral",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3d512df2-ffff-426e-b808-e5d13f5927ca",
-    "rating_tier": "positive",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "59500b38-6103-4075-9d23-232c705ba065",
-    "rating_tier": "neutral",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "ccbd022e-7349-4561-be6e-788e073eba33",
-    "rating_tier": "negative",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "36734b8a-c1d3-4f19-bfa2-5ae7896a8e8a",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "e34eeae9-6ca0-40f5-894a-4d02f1184ec2",
-    "rating_tier": "neutral",
-    "app_version": "9.1.40.1482",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "ed91e801-1358-4d6f-93f3-a9cee3f6c815",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "469b733e-8f63-4217-b35b-96104f871bf3",
-    "rating_tier": "negative",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3b42963a-9ffd-49f2-be08-087d62bd1d41",
-    "rating_tier": "negative",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d89b11f7-0b6f-4bea-bad0-e609b44896ae",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "8da644f6-6e77-4e15-a5e0-28533dffc95c",
-    "rating_tier": "positive",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "65f96e2b-ea72-4db2-8c73-f4ea8a7806ac",
-    "rating_tier": "negative",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "7acf20c2-d7c9-43f2-99d2-4c719b3b8557",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "5a80940b-b42f-4676-85cc-dace4d684d13",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3abacd50-8448-4c18-86d6-6fed55f2e913",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "80d2d8fd-a47f-4d29-ac33-4a94fa1e9fff",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f3d44d1d-7e12-4bfa-8b7b-22c55cb17114",
-    "rating_tier": "positive",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0504270d-fe7a-41da-85d3-37590ee1af73",
-    "rating_tier": "negative",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c8a20e18-50be-4c0a-ae5a-c2c0b7e63ed3",
-    "rating_tier": "negative",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "e4610309-b09e-453f-b73d-9f677f73d20b",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "796f87f8-f5b8-4523-b32a-2acb47f2f7c2",
-    "rating_tier": "neutral",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "de8f3af2-2832-49da-98a0-839b2db9b937",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "06faf4c2-fc45-432c-a674-ea574722645a",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c353b8f1-0318-43fd-980f-e12631de2e1d",
-    "rating_tier": "negative",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "469b9372-5c6c-4edb-b1dc-d25db63f9ef5",
-    "rating_tier": "positive",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "dce2640b-3557-4fed-8dce-b393e74fb6d1",
-    "rating_tier": "positive",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1a46cc0a-d05c-478d-bc87-0dbbeb597b5b",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "831b2baa-f3ec-4a62-b3a7-4d2ee3379a36",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "0c93f3cf-2a15-4d51-8088-8b811b1f5e37",
-    "rating_tier": "negative",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1a8bee91-5d8f-4dee-9572-60c28513e1cf",
-    "rating_tier": "neutral",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c3b21da7-a9a4-4933-abd9-1ce87bcec08e",
-    "rating_tier": "neutral",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a7f642bd-2b57-4076-8c98-61824b66ea77",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f326b773-0615-43c8-a2aa-c12f108e2f5b",
-    "rating_tier": "positive",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "20507753-8217-4fba-b935-4e1355c05f64",
-    "rating_tier": "negative",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "425cbeb2-3287-4ec0-a973-503799fc93ce",
-    "rating_tier": "negative",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "9e346367-3d54-4463-9267-6887ff7ec59e",
-    "rating_tier": "positive",
-    "app_version": "",
-    "inferred_segment": "mentions_free",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f19b245a-723b-4b1a-abee-19f3d4c7ecd7",
-    "rating_tier": "positive",
-    "app_version": "",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "e870adb0-1f06-4be3-894e-4b650d9f682f",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "d52ffd9d-fdba-40d7-a670-c39e8ff946c2",
-    "rating_tier": "neutral",
-    "app_version": "8.8.4.518",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "7b29fc8c-f5c3-4ddb-87cb-6327e103a5e1",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "69cf1e18-912e-493c-816e-33b097ed888a",
-    "rating_tier": "neutral",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "633f9f8c-a291-43b0-a44a-d6c89741e334",
-    "rating_tier": "neutral",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "2db68312-246d-4550-87f6-3fc71a338128",
-    "rating_tier": "positive",
-    "app_version": "9.0.74.1121",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c09becf5-9e78-49eb-9f90-f9041022b4ec",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "f323f496-ee72-4b3c-ac30-38f0e57838d3",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "825f68be-3ec0-4ecb-89b6-b721b11e2f47",
-    "rating_tier": "negative",
-    "app_version": "",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "dab95eba-a38f-4f52-a987-559faa6da616",
-    "rating_tier": "negative",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b322aeb5-6360-48e4-af54-2f13d3555071",
-    "rating_tier": "neutral",
-    "app_version": "9.1.42.2058",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "9eae282b-7ff9-4524-acf6-2c2f54a2c5be",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "ff7144d9-9fdd-476d-8de1-39b511d55238",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1c9c5a57-0981-45f3-8f35-386f3cfc25a6",
-    "rating_tier": "negative",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "de8dd4bb-bf22-4874-92a8-3cc9c7c6ab2d",
-    "rating_tier": "negative",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "fd67ae35-1bc5-4010-ba59-459571a671f7",
-    "rating_tier": "negative",
-    "app_version": "9.1.56.574",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "4c147bd9-ccaf-4506-9bdd-b1c64c52c8a3",
-    "rating_tier": "positive",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c0878bfe-eaa2-4940-9034-01fef8ba35d2",
-    "rating_tier": "negative",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "6198ed29-44d8-45b5-8e2f-42a4de706e68",
-    "rating_tier": "neutral",
-    "app_version": "9.1.44.2120",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "bc9fc235-352c-439f-8403-bcd069f1e4f4",
-    "rating_tier": "negative",
-    "app_version": "9.1.62.1601",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "912d9806-a718-41a1-a3aa-81222cdc466e",
-    "rating_tier": "negative",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "38275b00-fb2b-4dd1-8ec1-5d2da10236e5",
-    "rating_tier": "neutral",
-    "app_version": "9.0.30.642",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "a3960713-c1f9-4577-81d0-ef45facd7112",
-    "rating_tier": "positive",
-    "app_version": "9.1.40.1486",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "ca099d56-105b-4ad9-8370-edbe06b3de18",
-    "rating_tier": "positive",
-    "app_version": "9.1.50.1906",
-    "inferred_segment": "rating_positive",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "8e1eabff-87f3-4db9-bd0a-90bc08392201",
-    "rating_tier": "negative",
-    "app_version": "9.1.58.1567",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "9dcbcfbc-d806-4d28-a1d8-c4fc834eadec",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "mentions_ads",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "c944e910-034c-4643-8e5c-9b36503ecdb6",
-    "rating_tier": "neutral",
-    "app_version": "",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "b0b46d2e-037a-4896-9679-1f437da51ad4",
-    "rating_tier": "neutral",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3e3bcb6c-fff3-4793-b4a8-600d73718c8a",
-    "rating_tier": "negative",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "8ce7df53-9165-473c-8aae-1521b6f04b41",
-    "rating_tier": "negative",
-    "app_version": "9.1.60.1970",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3d76d6e1-97f4-40bb-9dcd-ac16a47d9369",
-    "rating_tier": "neutral",
-    "app_version": "8.9.34.590",
-    "inferred_segment": "rating_neutral",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "3ac0725d-3d71-4360-baa3-b4828401f078",
-    "rating_tier": "negative",
-    "app_version": "9.1.64.1676",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "9fc65e42-f7a2-4719-8a0e-b808e889152a",
-    "rating_tier": "negative",
-    "app_version": "9.1.68.1888",
-    "inferred_segment": "rating_negative",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "83ff77e8-4b12-4d9c-97c7-1e483eb2882f",
-    "rating_tier": "negative",
-    "app_version": "9.1.48.1663",
-    "inferred_segment": "mentions_premium",
-    "inferred": true,
-    "confidence": "heuristic"
-  },
-  {
-    "review_id": "1b9addf4-b372-4f84-83f3-28d00674d002",
-    "rating_tier": "neutral",
-    "app_version": "9.1.52.1394",
-    "inferred_segment": "rating_neutral",
     "inferred": true,
     "confidence": "heuristic"
   }
