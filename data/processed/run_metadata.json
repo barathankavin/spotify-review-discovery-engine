@@ -1,10 +1,10 @@
 {
-  "run_id": "20260817T065557Z",
+  "run_id": "20260824T065840Z",
   "prompt_version": "rule_baseline_v1",
   "model_id": "rule-based-keyword-cluster",
   "seed": 42,
   "sample_size": 450,
-  "unmet_subset_size": 50,
+  "unmet_subset_size": 48,
   "groq_call_count": 0,
   "estimated_tokens": 0,
   "cell_counts": {
@@ -26,6 +26,7 @@
     "negative|disc=True|2026-W31": 15,
     "negative|disc=True|2026-W32": 15,
     "negative|disc=True|2026-W33": 15,
+    "negative|disc=True|2026-W34": 15,
     "positive|disc=True|2026-W16": 5,
     "neutral|disc=True|2026-W16": 8,
     "positive|disc=True|2026-W17": 5,
@@ -62,6 +63,8 @@
     "neutral|disc=True|2026-W32": 8,
     "positive|disc=True|2026-W33": 5,
     "neutral|disc=True|2026-W33": 8,
+    "positive|disc=True|2026-W34": 5,
+    "neutral|disc=True|2026-W34": 8,
     "negative|disc=False|2026-W16": 3,
     "positive|disc=False|2026-W16": 1,
     "neutral|disc=False|2026-W16": 1,
@@ -115,7 +118,10 @@
     "neutral|disc=False|2026-W32": 1,
     "positive|disc=False|2026-W33": 1,
     "negative|disc=False|2026-W33": 3,
-    "neutral|disc=False|2026-W33": 1
+    "neutral|disc=False|2026-W33": 1,
+    "negative|disc=False|2026-W34": 3,
+    "positive|disc=False|2026-W34": 1,
+    "neutral|disc=False|2026-W34": 1
   },
   "theme_validation_ok": true,
   "theme_validation_errors": [],
